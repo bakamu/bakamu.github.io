@@ -27,7 +27,7 @@
   --character: url("/images/background/character.png");
   --chat: url("/images/background/aiChat.png");
 }
-.dark:root {
+[data-theme="dark"]:root {
   --color-card: #2b2b2b;
   --color-card-opacity: rgba(0,0,0,0.5);
   --color-text-1: #fff;
