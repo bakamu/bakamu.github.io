@@ -76,7 +76,7 @@
 <meta property="og:image" content="http://example.com/wzimg/2026-04-17-19-49-26.png">
 <meta property="og:image" content="http://example.com/wzimg/2026-04-17-20-06-55.png">
 <meta property="article:published_time" content="2026-04-15T08:30:00.000Z">
-<meta property="article:modified_time" content="2026-04-29T12:20:01.456Z">
+<meta property="article:modified_time" content="2026-05-14T12:01:04.842Z">
 <meta property="article:author" content="bakamu">
 <meta property="article:tag" content="应急响应">
 <meta name="twitter:card" content="summary">
@@ -86,21 +86,21 @@
 <link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
 
 
-<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1778759765180">
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1778760151696">
 
     <link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
 
-<link rel="stylesheet" href="/css/style.css?v=1778759765180">
+<link rel="stylesheet" href="/css/style.css?v=1778760151696">
 
 
 
 
     
-        <link rel="stylesheet" href="/custom.css?v=1778759765180">
+        <link rel="stylesheet" href="/custom.css?v=1778760151696">
     
-        <link rel="stylesheet" href="/themes/umaru/index.css?v=1778759765180">
+        <link rel="stylesheet" href="/themes/umaru/index.css?v=1778760151696">
     
-        <link rel="stylesheet" href="/themes/asuka/index.css?v=1778759765180">
+        <link rel="stylesheet" href="/themes/asuka/index.css?v=1778760151696">
     
 
 
@@ -110,7 +110,7 @@
 <script src="/lib/lax.min.js" async></script>
 
 
-<script async src="/js/app.js?v=1778759765180"></script>
+<script async src="/js/app.js?v=1778760151696"></script>
 
  
 
@@ -672,7 +672,7 @@
 </style>
 
 
-    <script async src="/js/search.js?v=1778759765180"></script>
+    <script async src="/js/search.js?v=1778760151696"></script>
         
 
             
@@ -808,10 +808,12 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tar -czvf html.tar.gz ./</span><br><span class="line">tar -czvf web.tar.gz ./*</span><br></pre></td></tr></table></figure>
 <p><code>web</code>，<code>html</code>是要dump的目录，dump下来后进行D盾查杀</p>
 <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><h2 id="日志分析-ssh日志分析-1"><a href="#日志分析-ssh日志分析-1" class="headerlink" title="日志分析-ssh日志分析"></a>日志分析-ssh日志分析</h2><h3 id="1-可以登录-SSH-的账号数量是多少"><a href="#1-可以登录-SSH-的账号数量是多少" class="headerlink" title="1.可以登录 SSH 的账号数量是多少"></a>1.可以登录 SSH 的账号数量是多少</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> /etc/ssh/sshd_config</span><br></pre></td></tr></table></figure>
+
 <p>查看配置文件</p>
 <p><img src="/wzimg/yjxy1.png"></p>
 <p>只允许SSHD_USER和root两个组访问<br>然后查看组</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep -E <span class="string">&#x27;^(root|SSHD_USER):&#x27;</span> /etc/group</span><br></pre></td></tr></table></figure>
+
 <p><code>-E</code> 参数表示启用扩展正则表达式，支持更多高级符号和语法，如“|”表示或、“()”用于分组、“+”表示重复等，使表达式更简洁易读，匹配功能更强大<br><code>^(root|SSHD_USER):</code> 表示匹配以“root:”或“SSHD_USER:”开头的行</p>
 <p><img src="/wzimg/yjxy2.png"></p>
 <p>可以看到是root组为空，而SSHD_USER组是两个,toor和root</p>
@@ -846,6 +848,7 @@
 <p><img src="/wzimg/yjxy6.png"></p>
 <p><code>Grep POST</code> 可以看到黑客ip地址，由于日志中没发现密码，所以查看数据库</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find / -name config.inc.php</span><br></pre></td></tr></table></figure>
+
 <p>配置文件 <code>config.inc.php</code> 是专门用于存放应用程序的配置参数，包括数据库连接信息</p>
 <p><img src="/wzimg/yjxy7.png"></p>
 <p>就看到了配置信息<br>数据库类型：pdo:mysql 数据库服务器：localhost 数据库用户名：root 数据库密码：mysql123 数据库名称：mirage<br>登录数据库</p>
@@ -858,12 +861,14 @@
 <p><img src="/wzimg/yjxy8.png"></p>
 <p>看user表呗</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * from cpg16x_users;</span><br></pre></td></tr></table></figure>
+
 <p>很可惜还是没找到密码，退出连接可以找一下流量包</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find / -name <span class="string">&quot;*.pcap&quot;</span></span><br></pre></td></tr></table></figure>
 
 <p><img src="/wzimg/yjxy9.png"></p>
 <p>果然有，finalshell连接一下下载下来，接下来就是流量分析了，找到login.php，逐个试一遍<br>Aa12345^</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;0ec527c43d058b733962566b827e5bf0&#125;</span><br></pre></td></tr></table></figure>
+
 <h3 id="2-攻击者在哪个PHP页面中成功上传了后门文件？"><a href="#2-攻击者在哪个PHP页面中成功上传了后门文件？" class="headerlink" title="2.攻击者在哪个PHP页面中成功上传了后门文件？"></a>2.攻击者在哪个PHP页面中成功上传了后门文件？</h3><p>接下来自己做了<br>依旧http过滤出POST，看见</p>
 <p><img src="/wzimg/yjxy10.png"></p>
 <p>有个upload,追踪发现上传了无加密zip和木马<br><img src="/wzimg/yjxy11.png"><br>pluginmgr.php<br>当然这里也可以在靶机中</p>
@@ -898,6 +903,7 @@
 
 <h3 id="8-攻击者加密了哪个数据库？"><a href="#8-攻击者加密了哪个数据库？" class="headerlink" title="8.攻击者加密了哪个数据库？"></a>8.攻击者加密了哪个数据库？</h3><p>看mysql文件，</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /var/lib/mysql</span><br></pre></td></tr></table></figure>
+
 <p>发现clockup.php<br><img src="/wzimg/yjxy16.png"><br>加密了&#x2F;var&#x2F;lib&#x2F;mysql&#x2F;JPMorgan@0020Chase，用的aes-256-cbc</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;0928a5424aa6126e5923980ca103560e&#125;</span><br></pre></td></tr></table></figure>
 
@@ -906,19 +912,25 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;6585817513b0ea96707ebb0d04d6aeff&#125;</span><br></pre></td></tr></table></figure>
 
 <h2 id="应急响应-Linux日志分析"><a href="#应急响应-Linux日志分析" class="headerlink" title="应急响应-Linux日志分析"></a>应急响应-Linux日志分析</h2><h3 id="1-有多少IP在爆破主机ssh的root帐号"><a href="#1-有多少IP在爆破主机ssh的root帐号" class="headerlink" title="1.有多少IP在爆破主机ssh的root帐号"></a>1.有多少IP在爆破主机ssh的root帐号</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> /var/log/auth.log* | grep -a <span class="string">&quot;Failed password for root&quot;</span> | awk <span class="string">&#x27;&#123;print $11&#125;&#x27;</span> | <span class="built_in">sort</span> -n | <span class="built_in">uniq</span> | <span class="built_in">tr</span> <span class="string">&#x27;\n&#x27;</span> <span class="string">&#x27;,&#x27;</span></span><br></pre></td></tr></table></figure>
+
 <p><img src="/wzimg/yjxy18.png"><br>主要是linux的命令学习</p>
 <h3 id="2-ssh爆破成功登陆的IP是多少"><a href="#2-ssh爆破成功登陆的IP是多少" class="headerlink" title="2.ssh爆破成功登陆的IP是多少"></a>2.ssh爆破成功登陆的IP是多少</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> /var/log/auth.log* | grep -a <span class="string">&quot;Accepted &quot;</span> | awk <span class="string">&#x27;&#123;print $11&#125;&#x27;</span> | <span class="built_in">sort</span> -n | <span class="built_in">uniq</span> -c</span><br></pre></td></tr></table></figure>
+
 <p><img src="/wzimg/yjxy19.png"><br>117.147.97.230是自己的ip</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;192.168.200.2&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="3-爆破用户名字典是什么？"><a href="#3-爆破用户名字典是什么？" class="headerlink" title="3.爆破用户名字典是什么？"></a>3.爆破用户名字典是什么？</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep -a <span class="string">&quot;Failed password&quot;</span> /var/log/auth.log.1|perl -e <span class="string">&#x27;while($_=&lt;&gt;)&#123; /for(.*?) from/; print &quot;$1\n&quot;;&#125;&#x27;</span>|<span class="built_in">uniq</span> -c|<span class="built_in">sort</span> -nr</span><br></pre></td></tr></table></figure>
+
 <p><img src="/wzimg/yjxy20.png"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;user,hello,root,test3,test2,test1&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="4-成功登录-root-用户的-ip-一共爆破了多少次？"><a href="#4-成功登录-root-用户的-ip-一共爆破了多少次？" class="headerlink" title="4.成功登录 root 用户的 ip 一共爆破了多少次？"></a>4.成功登录 root 用户的 ip 一共爆破了多少次？</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> /var/log/auth.log* | grep -a <span class="string">&quot;Failed password for root&quot;</span> | awk <span class="string">&#x27;&#123;print $11&#125;&#x27;</span> | <span class="built_in">sort</span> -n | <span class="built_in">uniq</span> -</span><br></pre></td></tr></table></figure>
+
 <p><img src="/wzimg/yjxy21.png"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;4&#125;</span><br></pre></td></tr></table></figure>
+
 <h3 id="5-黑客登陆主机后新建了一个后门用户，用户名是多少？"><a href="#5-黑客登陆主机后新建了一个后门用户，用户名是多少？" class="headerlink" title="5.黑客登陆主机后新建了一个后门用户，用户名是多少？"></a>5.黑客登陆主机后新建了一个后门用户，用户名是多少？</h3><p>跟上个题目一样，看</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> /var/log/auth.log* | grep -a <span class="string">&quot;useradd&quot;</span></span><br></pre></td></tr></table></figure>
+
 <p><img src="/wzimg/yjxy22.png"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;test2&#125;</span><br></pre></td></tr></table></figure>
 
@@ -944,14 +956,17 @@
 
 <h2 id="第一章日志分析-apache日志分析"><a href="#第一章日志分析-apache日志分析" class="headerlink" title="第一章日志分析-apache日志分析"></a>第一章日志分析-apache日志分析</h2><h3 id="1-提交当天访问次数最多的IP，即黑客IP"><a href="#1-提交当天访问次数最多的IP，即黑客IP" class="headerlink" title="1.提交当天访问次数最多的IP，即黑客IP"></a>1.提交当天访问次数最多的IP，即黑客IP</h3><p>和之前一样的<br><img src="/wzimg/yjxy30.png"><br>192.168.200.2<br>当然正确做法是查看access.log文件</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> access.log.1 access.log | awk <span class="string">&#x27;&#123;print $1&#125;&#x27;</span> | <span class="built_in">sort</span> |<span class="built_in">uniq</span> -c | <span class="built_in">sort</span> -nr</span><br></pre></td></tr></table></figure>
+
 <p><img src="/wzimg/yjxy31.png"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;192.168.200.2&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="2-黑客使用的浏览器指纹是什么？"><a href="#2-黑客使用的浏览器指纹是什么？" class="headerlink" title="2.黑客使用的浏览器指纹是什么？"></a>2.黑客使用的浏览器指纹是什么？</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> access.log.1 | grep 192.168.200.2 | awk -F<span class="string">&#x27;&quot;&#x27;</span> <span class="string">&#x27;&#123;print $6&#125;&#x27;</span> access.log.1 | <span class="built_in">sort</span> |<span class="built_in">uniq</span> -c | <span class="built_in">sort</span> -nr</span><br></pre></td></tr></table></figure>
+
 <p><img src="/wzimg/yjxy32.png"><br>得到Mozilla&#x2F;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Chrome&#x2F;87.0.4280.88 Safari&#x2F;537.36<br><img src="/wzimg/yjxy33.png"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;2d6330f380f44ac20f3a02eed0958f66&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="3-查看包含index-php页面被访问的次数，提交次数：-不包括-xxx-index-php只筛选-index-php"><a href="#3-查看包含index-php页面被访问的次数，提交次数：-不包括-xxx-index-php只筛选-index-php" class="headerlink" title="3.查看包含index.php页面被访问的次数，提交次数：(不包括&#x2F;xxx&#x2F;index.php只筛选&#x2F;index.php)"></a>3.查看包含index.php页面被访问的次数，提交次数：(不包括&#x2F;xxx&#x2F;index.php只筛选&#x2F;index.php)</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> access.log.1 access.log | grep <span class="string">&#x27;/index.php&#x27;</span> | <span class="built_in">wc</span> -l</span><br></pre></td></tr></table></figure>
+
 <p><img src="/wzimg/yjxy34.png"><br>这里的wc -l是我自己加的，确实有用诶</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;27&#125;</span><br></pre></td></tr></table></figure>
 
@@ -959,6 +974,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;6555&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="5-查看2023年8月03日8时这一个小时内有多少IP访问，提交次数。"><a href="#5-查看2023年8月03日8时这一个小时内有多少IP访问，提交次数。" class="headerlink" title="5.查看2023年8月03日8时这一个小时内有多少IP访问，提交次数。"></a>5.查看2023年8月03日8时这一个小时内有多少IP访问，提交次数。</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep <span class="string">&#x27;03/Aug/2023:08&#x27;</span> access.log.1 | awk <span class="string">&#x27;&#123;print $1&#125;&#x27;</span> | <span class="built_in">sort</span> | <span class="built_in">uniq</span> -c | <span class="built_in">sort</span> -nr | <span class="built_in">wc</span> -l</span><br></pre></td></tr></table></figure>
+
 <p><img src="/wzimg/yjxy35.png"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;5&#125;</span><br></pre></td></tr></table></figure>
 
@@ -1082,7 +1098,7 @@
 </div>
   
   
-    <script async src="/js/copy-codeblock.js?v=1778759765155"></script>
+    <script async src="/js/copy-codeblock.js?v=1778760151668"></script>
   
 
   
