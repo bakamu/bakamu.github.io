@@ -76,7 +76,7 @@
 <meta property="og:image" content="http://example.com/wzimg/2026-04-17-19-49-26.png">
 <meta property="og:image" content="http://example.com/wzimg/2026-04-17-20-06-55.png">
 <meta property="article:published_time" content="2026-04-15T08:30:00.000Z">
-<meta property="article:modified_time" content="2026-05-14T12:01:04.842Z">
+<meta property="article:modified_time" content="2026-05-14T12:13:23.682Z">
 <meta property="article:author" content="bakamu">
 <meta property="article:tag" content="应急响应">
 <meta name="twitter:card" content="summary">
@@ -86,21 +86,21 @@
 <link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
 
 
-<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1778760151696">
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1778760823564">
 
     <link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
 
-<link rel="stylesheet" href="/css/style.css?v=1778760151696">
+<link rel="stylesheet" href="/css/style.css?v=1778760823564">
 
 
 
 
     
-        <link rel="stylesheet" href="/custom.css?v=1778760151696">
+        <link rel="stylesheet" href="/custom.css?v=1778760823564">
     
-        <link rel="stylesheet" href="/themes/umaru/index.css?v=1778760151696">
+        <link rel="stylesheet" href="/themes/umaru/index.css?v=1778760823564">
     
-        <link rel="stylesheet" href="/themes/asuka/index.css?v=1778760151696">
+        <link rel="stylesheet" href="/themes/asuka/index.css?v=1778760823564">
     
 
 
@@ -110,7 +110,7 @@
 <script src="/lib/lax.min.js" async></script>
 
 
-<script async src="/js/app.js?v=1778760151696"></script>
+<script async src="/js/app.js?v=1778760823564"></script>
 
  
 
@@ -672,7 +672,7 @@
 </style>
 
 
-    <script async src="/js/search.js?v=1778760151696"></script>
+    <script async src="/js/search.js?v=1778760823565"></script>
         
 
             
@@ -871,7 +871,9 @@
 
 <h3 id="2-攻击者在哪个PHP页面中成功上传了后门文件？"><a href="#2-攻击者在哪个PHP页面中成功上传了后门文件？" class="headerlink" title="2.攻击者在哪个PHP页面中成功上传了后门文件？"></a>2.攻击者在哪个PHP页面中成功上传了后门文件？</h3><p>接下来自己做了<br>依旧http过滤出POST，看见</p>
 <p><img src="/wzimg/yjxy10.png"></p>
-<p>有个upload,追踪发现上传了无加密zip和木马<br><img src="/wzimg/yjxy11.png"><br>pluginmgr.php<br>当然这里也可以在靶机中</p>
+<p>有个upload,追踪发现上传了无加密zip和木马</p>
+<p><img src="/wzimg/yjxy11.png"></p>
+<p>pluginmgr.php<br>当然这里也可以在靶机中</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> /var/log/apache2/access.log | grep <span class="string">&quot;POST&quot;</span> | grep -i <span class="string">&quot;upload&quot;</span></span><br></pre></td></tr></table></figure>
 
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;b05c0be368ffa72e6cb2df7e1e1b27be&#125;</span><br></pre></td></tr></table></figure>
@@ -879,7 +881,8 @@
 <h3 id="3-找到攻击者上传的webshell文件，提交该文件的小写md5值"><a href="#3-找到攻击者上传的webshell文件，提交该文件的小写md5值" class="headerlink" title="3.找到攻击者上传的webshell文件，提交该文件的小写md5值"></a>3.找到攻击者上传的webshell文件，提交该文件的小写md5值</h3><p>zip源码也写了是cpg.php<br>不知道为什么md5值和wp有区别，可能实在查看文件的时候不小心做了改动吧。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;a097b773ced57bb7d51c6719fe8fe5f5&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="4-攻击者后续又下载了一个可执行的后门程序"><a href="#4-攻击者后续又下载了一个可执行的后门程序" class="headerlink" title="4.攻击者后续又下载了一个可执行的后门程序"></a>4.攻击者后续又下载了一个可执行的后门程序</h3><p>这里我是直接看GET请求的，应为是后门程序文件，看来看去感觉最可疑的就是is.world了<br><img src="/wzimg/yjxy12.png"></p>
+<h3 id="4-攻击者后续又下载了一个可执行的后门程序"><a href="#4-攻击者后续又下载了一个可执行的后门程序" class="headerlink" title="4.攻击者后续又下载了一个可执行的后门程序"></a>4.攻击者后续又下载了一个可执行的后门程序</h3><p>这里我是直接看GET请求的，应为是后门程序文件，看来看去感觉最可疑的就是is.world了</p>
+<p><img src="/wzimg/yjxy12.png"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;ee279c39bf3dcb225093bdbafeb9a439&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="5-攻击者创建了后门用户的名称是？"><a href="#5-攻击者创建了后门用户的名称是？" class="headerlink" title="5.攻击者创建了后门用户的名称是？"></a>5.攻击者创建了后门用户的名称是？</h3><p>直接查看useradd，追踪得到</p>
 <p><img src="/wzimg/yjxy13.png"></p>
@@ -893,7 +896,9 @@
 <p><code>/etc/init.d</code> 是一个系统服务管理脚本目录，用于存放系统服务的启动、停止、重启、状态查询等控制脚本，也就是shell脚本</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> etc/profile</span><br></pre></td></tr></table></figure>
 
-<p><code>/etc/profile</code> 是 Linux 系统中一个全局登录初始化脚本，它在每个用户登录时都会自动执行。“任意用户登录就会触发”。<br><img src="/wzimg/yjxy14.png"><br>profile</p>
+<p><code>/etc/profile</code> 是 Linux 系统中一个全局登录初始化脚本，它在每个用户登录时都会自动执行。“任意用户登录就会触发”。</p>
+<p><img src="/wzimg/yjxy14.png"></p>
+<p>profile</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;65bf3e4a9ac90d75ec28be0317775618&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="7-攻击者创建了一个持久化的配置项，导致只有root用户登录才会触发后门的连接。"><a href="#7-攻击者创建了一个持久化的配置项，导致只有root用户登录才会触发后门的连接。" class="headerlink" title="7.攻击者创建了一个持久化的配置项，导致只有root用户登录才会触发后门的连接。"></a>7.攻击者创建了一个持久化的配置项，导致只有root用户登录才会触发后门的连接。</h3><p>那就看root目录的.bashrc文件<br><code>.bashrc</code> 是 Bash Shell 的用户级配置文件，用于定义交互式非登录 Shell 的行为和环境。</p>
@@ -904,19 +909,25 @@
 <h3 id="8-攻击者加密了哪个数据库？"><a href="#8-攻击者加密了哪个数据库？" class="headerlink" title="8.攻击者加密了哪个数据库？"></a>8.攻击者加密了哪个数据库？</h3><p>看mysql文件，</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /var/lib/mysql</span><br></pre></td></tr></table></figure>
 
-<p>发现clockup.php<br><img src="/wzimg/yjxy16.png"><br>加密了&#x2F;var&#x2F;lib&#x2F;mysql&#x2F;JPMorgan@0020Chase，用的aes-256-cbc</p>
+<p>发现clockup.php</p>
+<p><img src="/wzimg/yjxy16.png"></p>
+<p>加密了&#x2F;var&#x2F;lib&#x2F;mysql&#x2F;JPMorgan@0020Chase，用的aes-256-cbc</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;0928a5424aa6126e5923980ca103560e&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="9-解密数据库，提交Harper用户对应Areer的值。"><a href="#9-解密数据库，提交Harper用户对应Areer的值。" class="headerlink" title="9.解密数据库，提交Harper用户对应Areer的值。"></a>9.解密数据库，提交Harper用户对应Areer的值。</h3><p>这个不会了</p>
-<h3 id="10-因为什么文件中的漏洞配置，导致了攻击者成功执行命令并提权。"><a href="#10-因为什么文件中的漏洞配置，导致了攻击者成功执行命令并提权。" class="headerlink" title="10.因为什么文件中的漏洞配置，导致了攻击者成功执行命令并提权。"></a>10.因为什么文件中的漏洞配置，导致了攻击者成功执行命令并提权。</h3><p>检查 <code>/etc/sudoers</code> 文件，<br><img src="/wzimg/yjxy17.png"><br><code>/etc/sudoers</code> 是 Linux 系统中控制 sudo 权限的配置文件。它定义了哪些用户&#x2F;组可以使用 sudo 命令执行哪些操作。<br><code>www-data ALL=(root) NOPASSWD: /bin/systemctl status apache2.service</code> 存在安全隐患</p>
+<h3 id="10-因为什么文件中的漏洞配置，导致了攻击者成功执行命令并提权。"><a href="#10-因为什么文件中的漏洞配置，导致了攻击者成功执行命令并提权。" class="headerlink" title="10.因为什么文件中的漏洞配置，导致了攻击者成功执行命令并提权。"></a>10.因为什么文件中的漏洞配置，导致了攻击者成功执行命令并提权。</h3><p>检查 <code>/etc/sudoers</code> 文件，</p>
+<p><img src="/wzimg/yjxy17.png"></p>
+<p><code>/etc/sudoers</code> 是 Linux 系统中控制 sudo 权限的配置文件。它定义了哪些用户&#x2F;组可以使用 sudo 命令执行哪些操作。<br><code>www-data ALL=(root) NOPASSWD: /bin/systemctl status apache2.service</code> 存在安全隐患</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;6585817513b0ea96707ebb0d04d6aeff&#125;</span><br></pre></td></tr></table></figure>
 
 <h2 id="应急响应-Linux日志分析"><a href="#应急响应-Linux日志分析" class="headerlink" title="应急响应-Linux日志分析"></a>应急响应-Linux日志分析</h2><h3 id="1-有多少IP在爆破主机ssh的root帐号"><a href="#1-有多少IP在爆破主机ssh的root帐号" class="headerlink" title="1.有多少IP在爆破主机ssh的root帐号"></a>1.有多少IP在爆破主机ssh的root帐号</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> /var/log/auth.log* | grep -a <span class="string">&quot;Failed password for root&quot;</span> | awk <span class="string">&#x27;&#123;print $11&#125;&#x27;</span> | <span class="built_in">sort</span> -n | <span class="built_in">uniq</span> | <span class="built_in">tr</span> <span class="string">&#x27;\n&#x27;</span> <span class="string">&#x27;,&#x27;</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="/wzimg/yjxy18.png"><br>主要是linux的命令学习</p>
+<p><img src="/wzimg/yjxy18.png"></p>
+<p>主要是linux的命令学习</p>
 <h3 id="2-ssh爆破成功登陆的IP是多少"><a href="#2-ssh爆破成功登陆的IP是多少" class="headerlink" title="2.ssh爆破成功登陆的IP是多少"></a>2.ssh爆破成功登陆的IP是多少</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> /var/log/auth.log* | grep -a <span class="string">&quot;Accepted &quot;</span> | awk <span class="string">&#x27;&#123;print $11&#125;&#x27;</span> | <span class="built_in">sort</span> -n | <span class="built_in">uniq</span> -c</span><br></pre></td></tr></table></figure>
 
-<p><img src="/wzimg/yjxy19.png"><br>117.147.97.230是自己的ip</p>
+<p><img src="/wzimg/yjxy19.png"></p>
+<p>117.147.97.230是自己的ip</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;192.168.200.2&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="3-爆破用户名字典是什么？"><a href="#3-爆破用户名字典是什么？" class="headerlink" title="3.爆破用户名字典是什么？"></a>3.爆破用户名字典是什么？</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep -a <span class="string">&quot;Failed password&quot;</span> /var/log/auth.log.1|perl -e <span class="string">&#x27;while($_=&lt;&gt;)&#123; /for(.*?) from/; print &quot;$1\n&quot;;&#125;&#x27;</span>|<span class="built_in">uniq</span> -c|<span class="built_in">sort</span> -nr</span><br></pre></td></tr></table></figure>
 
@@ -934,13 +945,15 @@
 <p><img src="/wzimg/yjxy22.png"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;test2&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="应急响应-webshell查杀"><a href="#应急响应-webshell查杀" class="headerlink" title="应急响应-webshell查杀"></a>应急响应-webshell查杀</h2><h3 id="1-黑客webshell里面的flag"><a href="#1-黑客webshell里面的flag" class="headerlink" title="1.黑客webshell里面的flag"></a>1.黑客webshell里面的flag</h3><p>用finalshell连接后在&#x2F;var&#x2F;www&#x2F;html&#x2F;include&#x2F;里面找到gz.php文件，打开看见flag<br><img src="/wzimg/yjxy24.png"></p>
+<h2 id="应急响应-webshell查杀"><a href="#应急响应-webshell查杀" class="headerlink" title="应急响应-webshell查杀"></a>应急响应-webshell查杀</h2><h3 id="1-黑客webshell里面的flag"><a href="#1-黑客webshell里面的flag" class="headerlink" title="1.黑客webshell里面的flag"></a>1.黑客webshell里面的flag</h3><p>用finalshell连接后在&#x2F;var&#x2F;www&#x2F;html&#x2F;include&#x2F;里面找到gz.php文件，打开看见flag</p>
+<p><img src="/wzimg/yjxy24.png"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;027ccd04-5065-48b6-a32d-77c704a5e26d&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="2-黑客使用的什么工具的shell"><a href="#2-黑客使用的什么工具的shell" class="headerlink" title="2.黑客使用的什么工具的shell"></a>2.黑客使用的什么工具的shell</h3><p>可以看出是哥斯拉木马，<a target="_blank" rel="noopener" href="https://github.com/BeichenDream/Godzilla">https://github.com/BeichenDream/Godzilla</a></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;39392de3218c333f794befef07ac9257&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="3-黑客隐藏shell的完整路径的md5"><a href="#3-黑客隐藏shell的完整路径的md5" class="headerlink" title="3.黑客隐藏shell的完整路径的md5"></a>3.黑客隐藏shell的完整路径的md5</h3><p>可以直接看，也可以dum出来用D盾扫描出来<br>&#x2F;var&#x2F;www&#x2F;html&#x2F;include&#x2F;Db&#x2F;.Mysqli.php<br><img src="/wzimg/yjxy25.png"></p>
+<h3 id="3-黑客隐藏shell的完整路径的md5"><a href="#3-黑客隐藏shell的完整路径的md5" class="headerlink" title="3.黑客隐藏shell的完整路径的md5"></a>3.黑客隐藏shell的完整路径的md5</h3><p>可以直接看，也可以dum出来用D盾扫描出来<br>&#x2F;var&#x2F;www&#x2F;html&#x2F;include&#x2F;Db&#x2F;.Mysqli.php</p>
+<p><img src="/wzimg/yjxy25.png"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;aebac0e58cd6c5fad1695ee4d1ac1919&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="4-黑客免杀马完整路径"><a href="#4-黑客免杀马完整路径" class="headerlink" title="4.黑客免杀马完整路径"></a>4.黑客免杀马完整路径</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> /var/log/apache2/access.log | awk <span class="string">&#x27;&#123;print $7&#125;&#x27;</span> | <span class="built_in">uniq</span></span><br></pre></td></tr></table></figure>
@@ -962,12 +975,15 @@
 
 <h3 id="2-黑客使用的浏览器指纹是什么？"><a href="#2-黑客使用的浏览器指纹是什么？" class="headerlink" title="2.黑客使用的浏览器指纹是什么？"></a>2.黑客使用的浏览器指纹是什么？</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> access.log.1 | grep 192.168.200.2 | awk -F<span class="string">&#x27;&quot;&#x27;</span> <span class="string">&#x27;&#123;print $6&#125;&#x27;</span> access.log.1 | <span class="built_in">sort</span> |<span class="built_in">uniq</span> -c | <span class="built_in">sort</span> -nr</span><br></pre></td></tr></table></figure>
 
-<p><img src="/wzimg/yjxy32.png"><br>得到Mozilla&#x2F;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Chrome&#x2F;87.0.4280.88 Safari&#x2F;537.36<br><img src="/wzimg/yjxy33.png"></p>
+<p><img src="/wzimg/yjxy32.png"></p>
+<p>得到Mozilla&#x2F;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Chrome&#x2F;87.0.4280.88 Safari&#x2F;537.36</p>
+<p><img src="/wzimg/yjxy33.png"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;2d6330f380f44ac20f3a02eed0958f66&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="3-查看包含index-php页面被访问的次数，提交次数：-不包括-xxx-index-php只筛选-index-php"><a href="#3-查看包含index-php页面被访问的次数，提交次数：-不包括-xxx-index-php只筛选-index-php" class="headerlink" title="3.查看包含index.php页面被访问的次数，提交次数：(不包括&#x2F;xxx&#x2F;index.php只筛选&#x2F;index.php)"></a>3.查看包含index.php页面被访问的次数，提交次数：(不包括&#x2F;xxx&#x2F;index.php只筛选&#x2F;index.php)</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> access.log.1 access.log | grep <span class="string">&#x27;/index.php&#x27;</span> | <span class="built_in">wc</span> -l</span><br></pre></td></tr></table></figure>
 
-<p><img src="/wzimg/yjxy34.png"><br>这里的wc -l是我自己加的，确实有用诶</p>
+<p><img src="/wzimg/yjxy34.png"></p>
+<p>这里的wc -l是我自己加的，确实有用诶</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;27&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="4-查看黑客IP访问了多少次，提交次数"><a href="#4-查看黑客IP访问了多少次，提交次数" class="headerlink" title="4.查看黑客IP访问了多少次，提交次数"></a>4.查看黑客IP访问了多少次，提交次数</h3><p>之前已经做出来了</p>
@@ -999,10 +1015,13 @@
 <h2 id="windows实战-emlog"><a href="#windows实战-emlog" class="headerlink" title="windows实战-emlog"></a>windows实战-emlog</h2><h3 id="1-通过本地-PC-RDP到服务器并且找到黑客植入-shell-将黑客植入-shell-的密码-作为-FLAG-提交"><a href="#1-通过本地-PC-RDP到服务器并且找到黑客植入-shell-将黑客植入-shell-的密码-作为-FLAG-提交" class="headerlink" title="1.通过本地 PC RDP到服务器并且找到黑客植入 shell,将黑客植入 shell 的密码 作为 FLAG 提交"></a>1.通过本地 PC RDP到服务器并且找到黑客植入 shell,将黑客植入 shell 的密码 作为 FLAG 提交</h3><p>太卡了这系统，总之D盾查杀找到shell木马<br><img src="/wzimg/yjxy39.png"><br><img src="/wzimg/yjxy40.png"><br>密码是rebeyond</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;rebeyond&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="2-通过本地-PC-RDP到服务器并且分析黑客攻击成功的-IP-为多少-将黑客-IP-作为-FLAG-提交"><a href="#2-通过本地-PC-RDP到服务器并且分析黑客攻击成功的-IP-为多少-将黑客-IP-作为-FLAG-提交" class="headerlink" title="2.通过本地 PC RDP到服务器并且分析黑客攻击成功的 IP 为多少,将黑客 IP 作为 FLAG 提交;"></a>2.通过本地 PC RDP到服务器并且分析黑客攻击成功的 IP 为多少,将黑客 IP 作为 FLAG 提交;</h3><p><img src="/wzimg/yjxy41.png"><br>在www&#x2F;www&#x2F;Extensions&#x2F;apache2&#x2F;logs找到log文件，查看后看见有大量的POST请求<br><img src="/wzimg/yjxy42.png"></p>
+<h3 id="2-通过本地-PC-RDP到服务器并且分析黑客攻击成功的-IP-为多少-将黑客-IP-作为-FLAG-提交"><a href="#2-通过本地-PC-RDP到服务器并且分析黑客攻击成功的-IP-为多少-将黑客-IP-作为-FLAG-提交" class="headerlink" title="2.通过本地 PC RDP到服务器并且分析黑客攻击成功的 IP 为多少,将黑客 IP 作为 FLAG 提交;"></a>2.通过本地 PC RDP到服务器并且分析黑客攻击成功的 IP 为多少,将黑客 IP 作为 FLAG 提交;</h3><p><img src="/wzimg/yjxy41.png"></p>
+<p>在www&#x2F;www&#x2F;Extensions&#x2F;apache2&#x2F;logs找到log文件，查看后看见有大量的POST请求</p>
+<p><img src="/wzimg/yjxy42.png"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;192.168.126.1&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="3-分析黑客的隐藏账户名称"><a href="#3-分析黑客的隐藏账户名称" class="headerlink" title="3.分析黑客的隐藏账户名称"></a>3.分析黑客的隐藏账户名称</h3><p>打开windows计算机管理器，在用户中找到账户<br><img src="/wzimg/yjxy43.png"></p>
+<h3 id="3-分析黑客的隐藏账户名称"><a href="#3-分析黑客的隐藏账户名称" class="headerlink" title="3.分析黑客的隐藏账户名称"></a>3.分析黑客的隐藏账户名称</h3><p>打开windows计算机管理器，在用户中找到账户</p>
+<p><img src="/wzimg/yjxy43.png"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;hacker138&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="4-分析黑客的挖矿程序的矿池域名"><a href="#4-分析黑客的挖矿程序的矿池域名" class="headerlink" title="4.分析黑客的挖矿程序的矿池域名"></a>4.分析黑客的挖矿程序的矿池域名</h3><p>不知道为什么，找不到py脚本，只能找到程序，这里是要用py脚本运行解包后反编译的，严重怀疑这个容器受污染了，这么卡还。</p>
@@ -1012,57 +1031,83 @@
 <p>用户管理事件：<br>4720：新建用户<br>4722：启用新用户<br>4724：修改用户密码<br>4726：删除用户<br>4731：创建用户组<br>4732：添加用户到用户组<br>4733：从组中删除用户<br>4734：删除用户组。<br>4735：安全组更改<br>4738：修改用户账户</p>
 <p>服务相关：<br>7030:服务创建失败<br>7040:服务类型从禁用更改成自动启动<br>7045：服务创建 等等</p>
 <h2 id="日志分析-IIS日志分析"><a href="#日志分析-IIS日志分析" class="headerlink" title="日志分析-IIS日志分析"></a>日志分析-IIS日志分析</h2><p>IIS 日志基础<br>日志位置<br>• 默认路径：%SystemDrive%\inetpub\logs\LogFiles<br>• 根据网站名称或站点ID分目录存储（如 W3SVC1）。<br>站点好像过期了</p>
-<h2 id="应急响应-vulntarget-b-01"><a href="#应急响应-vulntarget-b-01" class="headerlink" title="应急响应-vulntarget-b-01"></a>应急响应-vulntarget-b-01</h2><h3 id="1、黑客是从哪个端口作为入口点的？"><a href="#1、黑客是从哪个端口作为入口点的？" class="headerlink" title="1、黑客是从哪个端口作为入口点的？"></a>1、黑客是从哪个端口作为入口点的？</h3><p>有bt面板，在root中看到install.sh，可以看见bt的所有端口<br><img src="/wzimg/2026-04-15-21-23-51.png"><br>输入ss -tulnp查看所有被监视端口<br><img src="/wzimg/2026-04-15-21-25-57.png"><br>可以看见81号是额外的端口，所以猜测是81</p>
+<h2 id="应急响应-vulntarget-b-01"><a href="#应急响应-vulntarget-b-01" class="headerlink" title="应急响应-vulntarget-b-01"></a>应急响应-vulntarget-b-01</h2><h3 id="1、黑客是从哪个端口作为入口点的？"><a href="#1、黑客是从哪个端口作为入口点的？" class="headerlink" title="1、黑客是从哪个端口作为入口点的？"></a>1、黑客是从哪个端口作为入口点的？</h3><p>有bt面板，在root中看到install.sh，可以看见bt的所有端口</p>
+<p><img src="/wzimg/2026-04-15-21-23-51.png"></p>
+<p>输入ss -tulnp查看所有被监视端口</p>
+<p><img src="/wzimg/2026-04-15-21-25-57.png"></p>
+<p>可以看见81号是额外的端口，所以猜测是81</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;81&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="2、黑客使用了什么工具探测了ssh服务"><a href="#2、黑客使用了什么工具探测了ssh服务" class="headerlink" title="2、黑客使用了什么工具探测了ssh服务"></a>2、黑客使用了什么工具探测了ssh服务</h3><p>查看access.log<br><img src="/wzimg/2026-04-15-21-31-27.png"><br>发现是nmap探测工具</p>
+<h3 id="2、黑客使用了什么工具探测了ssh服务"><a href="#2、黑客使用了什么工具探测了ssh服务" class="headerlink" title="2、黑客使用了什么工具探测了ssh服务"></a>2、黑客使用了什么工具探测了ssh服务</h3><p>查看access.log</p>
+<p><img src="/wzimg/2026-04-15-21-31-27.png"></p>
+<p>发现是nmap探测工具</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;nmap&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="3、黑客使用了什么工具扫描了目录（格式flag-工具-版本号-）"><a href="#3、黑客使用了什么工具扫描了目录（格式flag-工具-版本号-）" class="headerlink" title="3、黑客使用了什么工具扫描了目录（格式flag{工具&#x2F;版本号}）"></a>3、黑客使用了什么工具扫描了目录（格式flag{工具&#x2F;版本号}）</h3><p>查看127.0.0.1.log文件，发现是gobuster&#x2F;3.6<br><img src="/wzimg/2026-04-15-21-36-00.png"></p>
+<h3 id="3、黑客使用了什么工具扫描了目录（格式flag-工具-版本号-）"><a href="#3、黑客使用了什么工具扫描了目录（格式flag-工具-版本号-）" class="headerlink" title="3、黑客使用了什么工具扫描了目录（格式flag{工具&#x2F;版本号}）"></a>3、黑客使用了什么工具扫描了目录（格式flag{工具&#x2F;版本号}）</h3><p>查看127.0.0.1.log文件，发现是gobuster&#x2F;3.6</p>
+<p><img src="/wzimg/2026-04-15-21-36-00.png"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;gobuster/3.6&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="4、黑客成功登录后台的IP地址？"><a href="#4、黑客成功登录后台的IP地址？" class="headerlink" title="4、黑客成功登录后台的IP地址？"></a>4、黑客成功登录后台的IP地址？</h3><p>就是扫描的端口</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;192.168.83.1&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="5、黑客上传的木马连接密钥是什么？"><a href="#5、黑客上传的木马连接密钥是什么？" class="headerlink" title="5、黑客上传的木马连接密钥是什么？"></a>5、黑客上传的木马连接密钥是什么？</h3><p>查看index.php，发现被篡改了<br><img src="/wzimg/2026-04-15-21-39-52.png"></p>
+<h3 id="5、黑客上传的木马连接密钥是什么？"><a href="#5、黑客上传的木马连接密钥是什么？" class="headerlink" title="5、黑客上传的木马连接密钥是什么？"></a>5、黑客上传的木马连接密钥是什么？</h3><p>查看index.php，发现被篡改了</p>
+<p><img src="/wzimg/2026-04-15-21-39-52.png"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;Admin@@&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="6、黑客留下的后门文件的路径为？"><a href="#6、黑客留下的后门文件的路径为？" class="headerlink" title="6、黑客留下的后门文件的路径为？"></a>6、黑客留下的后门文件的路径为？</h3><p>在tmp文件夹中找到index.elf</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;/tmp/index.elf&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="应急响应-vulntarget-j-01"><a href="#应急响应-vulntarget-j-01" class="headerlink" title="应急响应-vulntarget-j-01"></a>应急响应-vulntarget-j-01</h2><h3 id="1、主站进入后台的文件名称-格式flag-xxxxxxxxxx-php"><a href="#1、主站进入后台的文件名称-格式flag-xxxxxxxxxx-php" class="headerlink" title="1、主站进入后台的文件名称(格式flag{xxxxxxxxxx.php})"></a>1、主站进入后台的文件名称(格式flag{xxxxxxxxxx.php})</h3><p>打开桌面的phpstudio，打开网站的根目录，看见FNeSOgYGkp.php<br>打开后<br><img src="/wzimg/2026-04-16-18-12-58.png"><br><img src="/wzimg/2026-04-16-18-22-10.png"></p>
+<h2 id="应急响应-vulntarget-j-01"><a href="#应急响应-vulntarget-j-01" class="headerlink" title="应急响应-vulntarget-j-01"></a>应急响应-vulntarget-j-01</h2><h3 id="1、主站进入后台的文件名称-格式flag-xxxxxxxxxx-php"><a href="#1、主站进入后台的文件名称-格式flag-xxxxxxxxxx-php" class="headerlink" title="1、主站进入后台的文件名称(格式flag{xxxxxxxxxx.php})"></a>1、主站进入后台的文件名称(格式flag{xxxxxxxxxx.php})</h3><p>打开桌面的phpstudio，打开网站的根目录，看见FNeSOgYGkp.php<br>打开后</p>
+<p><img src="/wzimg/2026-04-16-18-12-58.png"><br><img src="/wzimg/2026-04-16-18-22-10.png"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;FNeSOgYGkp.php&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="2、黑客是从哪个端口上传木马文件的"><a href="#2、黑客是从哪个端口上传木马文件的" class="headerlink" title="2、黑客是从哪个端口上传木马文件的?"></a>2、黑客是从哪个端口上传木马文件的?</h3><p>打开phpstudio就显示80</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;80&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="3、黑客添加的木马文件名称和密码分别是什么，将黑客添加-的木马名称和密码作为flag提交-flag-名称-密码"><a href="#3、黑客添加的木马文件名称和密码分别是什么，将黑客添加-的木马名称和密码作为flag提交-flag-名称-密码" class="headerlink" title="3、黑客添加的木马文件名称和密码分别是什么，将黑客添加 的木马名称和密码作为flag提交{flag{名称:密码})"></a>3、黑客添加的木马文件名称和密码分别是什么，将黑客添加 的木马名称和密码作为flag提交{flag{名称:密码})</h3><p>就在php打开的同目录下，api3.php,打开后发现密码<br><img src="/wzimg/2026-04-16-18-30-03.png"></p>
+<h3 id="3、黑客添加的木马文件名称和密码分别是什么，将黑客添加-的木马名称和密码作为flag提交-flag-名称-密码"><a href="#3、黑客添加的木马文件名称和密码分别是什么，将黑客添加-的木马名称和密码作为flag提交-flag-名称-密码" class="headerlink" title="3、黑客添加的木马文件名称和密码分别是什么，将黑客添加 的木马名称和密码作为flag提交{flag{名称:密码})"></a>3、黑客添加的木马文件名称和密码分别是什么，将黑客添加 的木马名称和密码作为flag提交{flag{名称:密码})</h3><p>就在php打开的同目录下，api3.php,打开后发现密码</p>
+<p><img src="/wzimg/2026-04-16-18-30-03.png"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;api3.php:Admin&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="4、黑客攻击机IP地址是多少-因模拟环境故为内网地址"><a href="#4、黑客攻击机IP地址是多少-因模拟环境故为内网地址" class="headerlink" title="4、黑客攻击机IP地址是多少(因模拟环境故为内网地址)"></a>4、黑客攻击机IP地址是多少(因模拟环境故为内网地址)</h3><p>找到上传api3.php木马的操作日志<br><img src="/wzimg/2026-04-16-18-35-06.png"></p>
+<h3 id="4、黑客攻击机IP地址是多少-因模拟环境故为内网地址"><a href="#4、黑客攻击机IP地址是多少-因模拟环境故为内网地址" class="headerlink" title="4、黑客攻击机IP地址是多少(因模拟环境故为内网地址)"></a>4、黑客攻击机IP地址是多少(因模拟环境故为内网地址)</h3><p>找到上传api3.php木马的操作日志</p>
+<p><img src="/wzimg/2026-04-16-18-35-06.png"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;192.168.112.123&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="Linux后门应急"><a href="#Linux后门应急" class="headerlink" title="Linux后门应急"></a>Linux后门应急</h2><h3 id="1、主机后门用户名称：提交格式如：flag-backdoor"><a href="#1、主机后门用户名称：提交格式如：flag-backdoor" class="headerlink" title="1、主机后门用户名称：提交格式如：flag{backdoor}"></a>1、主机后门用户名称：提交格式如：flag{backdoor}</h3><p>打开finalshell连接<br>查看etc&#x2F;passwd，这里会放置后门用户密码信息<br><img src="/wzimg/2026-04-17-19-07-10.png"><br>猜测用户是backdoor</p>
+<h2 id="Linux后门应急"><a href="#Linux后门应急" class="headerlink" title="Linux后门应急"></a>Linux后门应急</h2><h3 id="1、主机后门用户名称：提交格式如：flag-backdoor"><a href="#1、主机后门用户名称：提交格式如：flag-backdoor" class="headerlink" title="1、主机后门用户名称：提交格式如：flag{backdoor}"></a>1、主机后门用户名称：提交格式如：flag{backdoor}</h3><p>打开finalshell连接<br>查看etc&#x2F;passwd，这里会放置后门用户密码信息</p>
+<p><img src="/wzimg/2026-04-17-19-07-10.png"></p>
+<p>猜测用户是backdoor</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;backdoor&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="2、主机排查项中可以发现到flag-内以i开头的flag，如flag-ixxxxxxx"><a href="#2、主机排查项中可以发现到flag-内以i开头的flag，如flag-ixxxxxxx" class="headerlink" title="2、主机排查项中可以发现到flag{}内以i开头的flag，如flag{ixxxxxxx}"></a>2、主机排查项中可以发现到flag{}内以i开头的flag，如flag{ixxxxxxx}</h3><p>提示查看主机排查项，也就是看查看该计算机所有进程，题目提示说有含i开头的flag{i~}，所以直接搜索<br>ps -ef | grep flag{i<br><img src="/wzimg/2026-04-17-19-12-18.png"></p>
+<h3 id="2、主机排查项中可以发现到flag-内以i开头的flag，如flag-ixxxxxxx"><a href="#2、主机排查项中可以发现到flag-内以i开头的flag，如flag-ixxxxxxx" class="headerlink" title="2、主机排查项中可以发现到flag{}内以i开头的flag，如flag{ixxxxxxx}"></a>2、主机排查项中可以发现到flag{}内以i开头的flag，如flag{ixxxxxxx}</h3><p>提示查看主机排查项，也就是看查看该计算机所有进程，题目提示说有含i开头的flag{i~}，所以直接搜索<br>ps -ef | grep flag{i</p>
+<p><img src="/wzimg/2026-04-17-19-12-18.png"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;infoFl4g&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="3、主机排查发现9999端口是通过哪个配置文件如何开机启动的，如-etc-crontab则填写-etc-crontab-的md5-，提交方式示例：flag-md5"><a href="#3、主机排查发现9999端口是通过哪个配置文件如何开机启动的，如-etc-crontab则填写-etc-crontab-的md5-，提交方式示例：flag-md5" class="headerlink" title="3、主机排查发现9999端口是通过哪个配置文件如何开机启动的，如&#x2F;etc&#x2F;crontab则填写&#x2F;etc&#x2F;crontab 的md5 ，提交方式示例：flag{md5}"></a>3、主机排查发现9999端口是通过哪个配置文件如何开机启动的，如&#x2F;etc&#x2F;crontab则填写&#x2F;etc&#x2F;crontab 的md5 ，提交方式示例：flag{md5}</h3><p>因为不是root用户，所以不好通过看pid查找，不过提示说改端口是开机自启的，所以可以查看开机自启文件<br><img src="/wzimg/2026-04-17-19-23-05.png"><br>找到rc.d&#x2F;rc.local<br><img src="/wzimg/2026-04-17-19-24-57.png"><br>d2hpbGUgdHJ1ZTtkbyBub2h1cCBuYyAtbHZwIDk5OTkgLWMgImZsYWd7aW5mb0ZsNGd9IiAyPiYxIDtzbGVlcCAxO2RvbmU7<br>解码后得到<br><img src="/wzimg/2026-04-17-19-26-58.png"><br>所以文件路径是&#x2F;etc&#x2F;rc.d&#x2F;rc.local</p>
+<h3 id="3、主机排查发现9999端口是通过哪个配置文件如何开机启动的，如-etc-crontab则填写-etc-crontab-的md5-，提交方式示例：flag-md5"><a href="#3、主机排查发现9999端口是通过哪个配置文件如何开机启动的，如-etc-crontab则填写-etc-crontab-的md5-，提交方式示例：flag-md5" class="headerlink" title="3、主机排查发现9999端口是通过哪个配置文件如何开机启动的，如&#x2F;etc&#x2F;crontab则填写&#x2F;etc&#x2F;crontab 的md5 ，提交方式示例：flag{md5}"></a>3、主机排查发现9999端口是通过哪个配置文件如何开机启动的，如&#x2F;etc&#x2F;crontab则填写&#x2F;etc&#x2F;crontab 的md5 ，提交方式示例：flag{md5}</h3><p>因为不是root用户，所以不好通过看pid查找，不过提示说改端口是开机自启的，所以可以查看开机自启文件</p>
+<p><img src="/wzimg/2026-04-17-19-23-05.png"></p>
+<p>找到rc.d&#x2F;rc.local</p>
+<p><img src="/wzimg/2026-04-17-19-24-57.png"></p>
+<p>d2hpbGUgdHJ1ZTtkbyBub2h1cCBuYyAtbHZwIDk5OTkgLWMgImZsYWd7aW5mb0ZsNGd9IiAyPiYxIDtzbGVlcCAxO2RvbmU7<br>解码后得到</p>
+<p><img src="/wzimg/2026-04-17-19-26-58.png"></p>
+<p>所以文件路径是&#x2F;etc&#x2F;rc.d&#x2F;rc.local</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;cf8a978fe83579e2e20ec158524d8c06&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="4、黑客3s做了记录所有用户的每次登陆的密码的手段，flag为黑客记录的登陆密码日志路径md5-提交方式示例：flag-md5-路径"><a href="#4、黑客3s做了记录所有用户的每次登陆的密码的手段，flag为黑客记录的登陆密码日志路径md5-提交方式示例：flag-md5-路径" class="headerlink" title="4、黑客3s做了记录所有用户的每次登陆的密码的手段，flag为黑客记录的登陆密码日志路径md5,提交方式示例：flag{md5(路径)}"></a>4、黑客3s做了记录所有用户的每次登陆的密码的手段，flag为黑客记录的登陆密码日志路径md5,提交方式示例：flag{md5(路径)}</h3><p>涉及到登录密码记录，查看tmp文件夹，发现.sshlog，打开后看见我的登录被记录下来了<br><img src="/wzimg/2026-04-17-19-35-53.png"><br>所以路径是&#x2F;tmp&#x2F;.sshlog</p>
+<h3 id="4、黑客3s做了记录所有用户的每次登陆的密码的手段，flag为黑客记录的登陆密码日志路径md5-提交方式示例：flag-md5-路径"><a href="#4、黑客3s做了记录所有用户的每次登陆的密码的手段，flag为黑客记录的登陆密码日志路径md5-提交方式示例：flag-md5-路径" class="headerlink" title="4、黑客3s做了记录所有用户的每次登陆的密码的手段，flag为黑客记录的登陆密码日志路径md5,提交方式示例：flag{md5(路径)}"></a>4、黑客3s做了记录所有用户的每次登陆的密码的手段，flag为黑客记录的登陆密码日志路径md5,提交方式示例：flag{md5(路径)}</h3><p>涉及到登录密码记录，查看tmp文件夹，发现.sshlog，打开后看见我的登录被记录下来了</p>
+<p><img src="/wzimg/2026-04-17-19-35-53.png"></p>
+<p>所以路径是&#x2F;tmp&#x2F;.sshlog</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;8997d5a1b8dcca5a4be75962250959f7&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="5、给出使用了-bin-bash-的RCE后门进程名称-端口号-如进程名称为sshd，端口号为22，则flag-sshd22"><a href="#5、给出使用了-bin-bash-的RCE后门进程名称-端口号-如进程名称为sshd，端口号为22，则flag-sshd22" class="headerlink" title="5、给出使用了&#x2F;bin&#x2F;bash 的RCE后门进程名称+端口号 如进程名称为sshd，端口号为22，则flag{sshd22}"></a>5、给出使用了&#x2F;bin&#x2F;bash 的RCE后门进程名称+端口号 如进程名称为sshd，端口号为22，则flag{sshd22}</h3><p>ss -nultp查看所有进程端口，发现异常端口8080，有python程序在监听<br><img src="/wzimg/2026-04-17-19-41-20.png"></p>
+<h3 id="5、给出使用了-bin-bash-的RCE后门进程名称-端口号-如进程名称为sshd，端口号为22，则flag-sshd22"><a href="#5、给出使用了-bin-bash-的RCE后门进程名称-端口号-如进程名称为sshd，端口号为22，则flag-sshd22" class="headerlink" title="5、给出使用了&#x2F;bin&#x2F;bash 的RCE后门进程名称+端口号 如进程名称为sshd，端口号为22，则flag{sshd22}"></a>5、给出使用了&#x2F;bin&#x2F;bash 的RCE后门进程名称+端口号 如进程名称为sshd，端口号为22，则flag{sshd22}</h3><p>ss -nultp查看所有进程端口，发现异常端口8080，有python程序在监听</p>
+<p><img src="/wzimg/2026-04-17-19-41-20.png"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;python38080&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="6、找出开机启动的后门服务名称MD5，提交flag-md5-服务名"><a href="#6、找出开机启动的后门服务名称MD5，提交flag-md5-服务名" class="headerlink" title="6、找出开机启动的后门服务名称MD5，提交flag{md5(服务名)}"></a>6、找出开机启动的后门服务名称MD5，提交flag{md5(服务名)}</h3><p>查看之前在passwd文件中看到的usr目录路径&#x2F;home&#x2F;user，看到一个文件Nomal.so较为可以，是黑客所创建的<br><img src="/wzimg/2026-04-17-19-45-02.png"></p>
+<h3 id="6、找出开机启动的后门服务名称MD5，提交flag-md5-服务名"><a href="#6、找出开机启动的后门服务名称MD5，提交flag-md5-服务名" class="headerlink" title="6、找出开机启动的后门服务名称MD5，提交flag{md5(服务名)}"></a>6、找出开机启动的后门服务名称MD5，提交flag{md5(服务名)}</h3><p>查看之前在passwd文件中看到的usr目录路径&#x2F;home&#x2F;user，看到一个文件Nomal.so较为可以，是黑客所创建的</p>
+<p><img src="/wzimg/2026-04-17-19-45-02.png"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;5213e47de16522f1dc3f9e9ecc0ab8b0&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <h3 id="7、渗透提权获得root目录下的flag"><a href="#7、渗透提权获得root目录下的flag" class="headerlink" title="7、渗透提权获得root目录下的flag"></a>7、渗透提权获得root目录下的flag</h3><p>find &#x2F; -perm -4000 -type f 2&gt;&#x2F;dev&#x2F;null<br><img src="/wzimg/2026-04-17-19-49-26.png"><br>不会</p>
 <h3 id="8、黑客3s埋了一个flag在权限维持过程中的地方，可以发现flag-括号内的首字母是c开头，如flag-cxxxxxxx"><a href="#8、黑客3s埋了一个flag在权限维持过程中的地方，可以发现flag-括号内的首字母是c开头，如flag-cxxxxxxx" class="headerlink" title="8、黑客3s埋了一个flag在权限维持过程中的地方，可以发现flag{}括号内的首字母是c开头，如flag{cxxxxxxx}"></a>8、黑客3s埋了一个flag在权限维持过程中的地方，可以发现flag{}括号内的首字母是c开头，如flag{cxxxxxxx}</h3><p>不会</p>
-<h3 id="9、黑客3s做了一个root用户执行cat命令就删除文件的操作，请发现删除了什么文件将文件名作为flag提交"><a href="#9、黑客3s做了一个root用户执行cat命令就删除文件的操作，请发现删除了什么文件将文件名作为flag提交" class="headerlink" title="9、黑客3s做了一个root用户执行cat命令就删除文件的操作，请发现删除了什么文件将文件名作为flag提交"></a>9、黑客3s做了一个root用户执行cat命令就删除文件的操作，请发现删除了什么文件将文件名作为flag提交</h3><p>用ida分析Nomal.so<br>找到修改的文件<br><img src="/wzimg/2026-04-17-20-06-55.png"><br>.bash_history</p>
+<h3 id="9、黑客3s做了一个root用户执行cat命令就删除文件的操作，请发现删除了什么文件将文件名作为flag提交"><a href="#9、黑客3s做了一个root用户执行cat命令就删除文件的操作，请发现删除了什么文件将文件名作为flag提交" class="headerlink" title="9、黑客3s做了一个root用户执行cat命令就删除文件的操作，请发现删除了什么文件将文件名作为flag提交"></a>9、黑客3s做了一个root用户执行cat命令就删除文件的操作，请发现删除了什么文件将文件名作为flag提交</h3><p>用ida分析Nomal.so<br>找到修改的文件</p>
+<p><img src="/wzimg/2026-04-17-20-06-55.png"></p>
+<p>.bash_history</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;.bash_history&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="10、黑客3s很执着清理痕迹，并做了一个持续删痕迹的手段，请发现手段并给出删除的完整黑客删除命令的md5，如flag-md5-rm-f-var-log-ssh-log-dev-stdout"><a href="#10、黑客3s很执着清理痕迹，并做了一个持续删痕迹的手段，请发现手段并给出删除的完整黑客删除命令的md5，如flag-md5-rm-f-var-log-ssh-log-dev-stdout" class="headerlink" title="10、黑客3s很执着清理痕迹，并做了一个持续删痕迹的手段，请发现手段并给出删除的完整黑客删除命令的md5，如flag{md5(rm -f &#x2F;var&#x2F;log&#x2F;ssh.log &gt;&#x2F;dev&#x2F;stdout)}"></a>10、黑客3s很执着清理痕迹，并做了一个持续删痕迹的手段，请发现手段并给出删除的完整黑客删除命令的md5，如flag{md5(rm -f &#x2F;var&#x2F;log&#x2F;ssh.log &gt;&#x2F;dev&#x2F;stdout)}</h3><p>上题的就是命令<br>rm -rf ~&#x2F;.bash_history &gt;&#x2F;dev&#x2F;null 2&gt;&amp;1</p>
@@ -1098,7 +1143,7 @@
 </div>
   
   
-    <script async src="/js/copy-codeblock.js?v=1778760151668"></script>
+    <script async src="/js/copy-codeblock.js?v=1778760823537"></script>
   
 
   

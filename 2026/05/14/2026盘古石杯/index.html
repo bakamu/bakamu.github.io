@@ -41,7 +41,7 @@
 <meta property="og:image" content="http://example.com/wzimg/2026-05-14-19-41-28.png">
 <meta property="og:image" content="http://example.com/wzimg/2026-05-14-19-42-39.png">
 <meta property="article:published_time" content="2026-05-14T10:00:00.000Z">
-<meta property="article:modified_time" content="2026-05-14T12:02:18.714Z">
+<meta property="article:modified_time" content="2026-05-14T12:09:45.416Z">
 <meta property="article:author" content="bakamu">
 <meta property="article:tag" content="电子取证">
 <meta name="twitter:card" content="summary">
@@ -51,21 +51,21 @@
 <link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
 
 
-<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1778760151687">
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1778760823556">
 
     <link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
 
-<link rel="stylesheet" href="/css/style.css?v=1778760151687">
+<link rel="stylesheet" href="/css/style.css?v=1778760823556">
 
 
 
 
     
-        <link rel="stylesheet" href="/custom.css?v=1778760151687">
+        <link rel="stylesheet" href="/custom.css?v=1778760823556">
     
-        <link rel="stylesheet" href="/themes/umaru/index.css?v=1778760151687">
+        <link rel="stylesheet" href="/themes/umaru/index.css?v=1778760823556">
     
-        <link rel="stylesheet" href="/themes/asuka/index.css?v=1778760151687">
+        <link rel="stylesheet" href="/themes/asuka/index.css?v=1778760823556">
     
 
 
@@ -75,7 +75,7 @@
 <script src="/lib/lax.min.js" async></script>
 
 
-<script async src="/js/app.js?v=1778760151687"></script>
+<script async src="/js/app.js?v=1778760823556"></script>
 
  
 
@@ -637,7 +637,7 @@
 </style>
 
 
-    <script async src="/js/search.js?v=1778760151687"></script>
+    <script async src="/js/search.js?v=1778760823556"></script>
         
 
             
@@ -749,31 +749,46 @@
 
     <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>这次比赛是大一下学期最后一个重要的取证比赛，也是继FIC之后的第二个国家比赛，感觉每次打都有进步吧，这段时间也是一直在学，不过很多是ai神力的，还得继续努力。然后第一次打有分数衰减的取证比赛，真是梦回ctf，还是有些慌张的，这次比赛的检材和题量真的大，一开始都搞混检材了。总的来说计算机做的效果挺理想的，apk也拿了大半分数，只可惜手机没做好，所以好好复盘了一下。队友也使相当给力，加油鸭！</p>
 <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>检材密码：VeZeTANHVkklvVljLnpOYeBwCJFYD5tFpf67f5kNuqP1G5jj</p>
-<h2 id="手机取证"><a href="#手机取证" class="headerlink" title="手机取证"></a>手机取证</h2><h3 id="1-分析黄志远phone-E01检材，黄志远手机总共安装了多少款短视频应用？"><a href="#1-分析黄志远phone-E01检材，黄志远手机总共安装了多少款短视频应用？" class="headerlink" title="1.分析黄志远phone.E01检材，黄志远手机总共安装了多少款短视频应用？"></a>1.分析黄志远phone.E01检材，黄志远手机总共安装了多少款短视频应用？</h3><p>打开apk列表，分析可知有4个短视频应用(抖音、快手、快手极速版、抖音极速版)（bilibili不是短视频应用）<br><img src="/wzimg/2026-05-12-18-10-13.png"></p>
+<h2 id="手机取证"><a href="#手机取证" class="headerlink" title="手机取证"></a>手机取证</h2><h3 id="1-分析黄志远phone-E01检材，黄志远手机总共安装了多少款短视频应用？"><a href="#1-分析黄志远phone-E01检材，黄志远手机总共安装了多少款短视频应用？" class="headerlink" title="1.分析黄志远phone.E01检材，黄志远手机总共安装了多少款短视频应用？"></a>1.分析黄志远phone.E01检材，黄志远手机总共安装了多少款短视频应用？</h3><p>打开apk列表，分析可知有4个短视频应用(抖音、快手、快手极速版、抖音极速版)（bilibili不是短视频应用）</p>
+<p><img src="/wzimg/2026-05-12-18-10-13.png"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4</span><br></pre></td></tr></table></figure>
 
-<h3 id="2-分析黄志远phone-E01检材，黄志远手机安装的龙虾应用的包名是什么？"><a href="#2-分析黄志远phone-E01检材，黄志远手机安装的龙虾应用的包名是什么？" class="headerlink" title="2.分析黄志远phone.E01检材，黄志远手机安装的龙虾应用的包名是什么？"></a>2.分析黄志远phone.E01检材，黄志远手机安装的龙虾应用的包名是什么？</h3><p>还是分析apk列表，找到<br><img src="/wzimg/2026-05-12-18-12-19.png"><br>所以是gptos.intelligence.assistant</p>
+<h3 id="2-分析黄志远phone-E01检材，黄志远手机安装的龙虾应用的包名是什么？"><a href="#2-分析黄志远phone-E01检材，黄志远手机安装的龙虾应用的包名是什么？" class="headerlink" title="2.分析黄志远phone.E01检材，黄志远手机安装的龙虾应用的包名是什么？"></a>2.分析黄志远phone.E01检材，黄志远手机安装的龙虾应用的包名是什么？</h3><p>还是分析apk列表，找到</p>
+<p><img src="/wzimg/2026-05-12-18-12-19.png"></p>
+<p>所以是gptos.intelligence.assistant</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gptos.intelligence.assistant</span><br></pre></td></tr></table></figure>
 
-<h3 id="3-接上题，首次打开应用的时间是？"><a href="#3-接上题，首次打开应用的时间是？" class="headerlink" title="3.接上题，首次打开应用的时间是？"></a>3.接上题，首次打开应用的时间是？</h3><p>这种题目的答案就可以在data文件系统重找，在里面找到gptos.intelligence.assistant文件夹，既然是找打开时间，我们可以查看shared_prefs文件夹<br><img src="/wzimg/2026-05-12-18-17-41.png"><br>查看xml文件，可以看见<long name="first_open_time" value="1776397998058" /><br><img src="/wzimg/2026-05-12-18-19-41.png"><br>转化后得到2026-04-17-11:53:18</p>
+<h3 id="3-接上题，首次打开应用的时间是？"><a href="#3-接上题，首次打开应用的时间是？" class="headerlink" title="3.接上题，首次打开应用的时间是？"></a>3.接上题，首次打开应用的时间是？</h3><p>这种题目的答案就可以在data文件系统重找，在里面找到gptos.intelligence.assistant文件夹，既然是找打开时间，我们可以查看shared_prefs文件夹</p>
+<p><img src="/wzimg/2026-05-12-18-17-41.png"></p>
+<p>查看xml文件，可以看见<long name="first_open_time" value="1776397998058" /></p>
+<p><img src="/wzimg/2026-05-12-18-19-41.png"></p>
+<p>转化后得到2026-04-17-11:53:18</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2026-04-17-11:53:18</span><br></pre></td></tr></table></figure>
 
 <h3 id="4-分析黄志远phone-E01检材，黄志远使用此应用攻击过多少台主机？"><a href="#4-分析黄志远phone-E01检材，黄志远使用此应用攻击过多少台主机？" class="headerlink" title="4.分析黄志远phone.E01检材，黄志远使用此应用攻击过多少台主机？"></a>4.分析黄志远phone.E01检材，黄志远使用此应用攻击过多少台主机？</h3><p>服了，找不到信息，所以答案是0</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0</span><br></pre></td></tr></table></figure>
 
-<h3 id="5-分析黄志远phone-E01检材，黄志远使用哪款应用控制了其PC的agent工具？"><a href="#5-分析黄志远phone-E01检材，黄志远使用哪款应用控制了其PC的agent工具？" class="headerlink" title="5.分析黄志远phone.E01检材，黄志远使用哪款应用控制了其PC的agent工具？"></a>5.分析黄志远phone.E01检材，黄志远使用哪款应用控制了其PC的agent工具？</h3><p>这道题目比赛的时候被ai误导了，意味是termux，导致后面都没做出来，诶，手机取证还是得自己好好做的<br>在discord包的文件系统中可以找到类似<br><img src="/wzimg/2026-05-12-18-29-53.png"><br>的数据，推测是discord应用</p>
+<h3 id="5-分析黄志远phone-E01检材，黄志远使用哪款应用控制了其PC的agent工具？"><a href="#5-分析黄志远phone-E01检材，黄志远使用哪款应用控制了其PC的agent工具？" class="headerlink" title="5.分析黄志远phone.E01检材，黄志远使用哪款应用控制了其PC的agent工具？"></a>5.分析黄志远phone.E01检材，黄志远使用哪款应用控制了其PC的agent工具？</h3><p>这道题目比赛的时候被ai误导了，意味是termux，导致后面都没做出来，诶，手机取证还是得自己好好做的，在discord包的文件系统中可以找到类似</p>
+<p><img src="/wzimg/2026-05-12-18-29-53.png"></p>
+<p>的数据，推测是discord应用</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">discord</span><br></pre></td></tr></table></figure>
 
-<h3 id="6-分析黄志远phone-E01检材，黄志远使用这款应用的版本是多少？"><a href="#6-分析黄志远phone-E01检材，黄志远使用这款应用的版本是多少？" class="headerlink" title="6.分析黄志远phone.E01检材，黄志远使用这款应用的版本是多少？"></a>6.分析黄志远phone.E01检材，黄志远使用这款应用的版本是多少？</h3><p>依旧查看shared_prefs文件夹，在BundleUpdater.xml中找到<br><img src="/wzimg/2026-05-12-18-36-59.png"></p>
+<h3 id="6-分析黄志远phone-E01检材，黄志远使用这款应用的版本是多少？"><a href="#6-分析黄志远phone-E01检材，黄志远使用这款应用的版本是多少？" class="headerlink" title="6.分析黄志远phone.E01检材，黄志远使用这款应用的版本是多少？"></a>6.分析黄志远phone.E01检材，黄志远使用这款应用的版本是多少？</h3><p>依旧查看shared_prefs文件夹，在BundleUpdater.xml中找到</p>
+<p><img src="/wzimg/2026-05-12-18-36-59.png"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">311.20</span><br></pre></td></tr></table></figure>
 
 <h3 id="7-分析黄志远phone-E01检材，接上题，登录的用户名是什么？"><a href="#7-分析黄志远phone-E01检材，接上题，登录的用户名是什么？" class="headerlink" title="7.分析黄志远phone.E01检材，接上题，登录的用户名是什么？"></a>7.分析黄志远phone.E01检材，接上题，登录的用户名是什么？</h3><p><img src="/wzimg/2026-05-12-18-39-50.png"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">test901234</span><br></pre></td></tr></table></figure>
 
-<h3 id="8-分析黄志远phone-E01检材，该应用与pc端agent的配对码是什么？"><a href="#8-分析黄志远phone-E01检材，该应用与pc端agent的配对码是什么？" class="headerlink" title="8.分析黄志远phone.E01检材，该应用与pc端agent的配对码是什么？"></a>8.分析黄志远phone.E01检材，该应用与pc端agent的配对码是什么？</h3><p>没招了，看wp说是在files\kv-storage@account.1457974771206852664\a-wal中，在私聊消息中可见 Here’s your pairing code: HNZ6UFW6<br>(-wal文件是最新的就还没被写入数据库的文件，也就是还没转化成sql文件的文件)<br>诶，不对，火眼显示这里的第一个文件是db文件<br><img src="/wzimg/2026-05-12-18-53-06.png"><br>所以把他导出来，改后缀用db browser打开，可以发现就是转换好后的数据库，在massage0中可以找到<br><img src="/wzimg/2026-05-12-18-59-56.png"></p>
+<h3 id="8-分析黄志远phone-E01检材，该应用与pc端agent的配对码是什么？"><a href="#8-分析黄志远phone-E01检材，该应用与pc端agent的配对码是什么？" class="headerlink" title="8.分析黄志远phone.E01检材，该应用与pc端agent的配对码是什么？"></a>8.分析黄志远phone.E01检材，该应用与pc端agent的配对码是什么？</h3><p>没招了，看wp说是在files\kv-storage@account.1457974771206852664\a-wal中，在私聊消息中可见 Here’s your pairing code: HNZ6UFW6(.wal文件是最新的就还没被写入数据库的文件，也就是还没转化成sql文件的文件).<br>诶，不对，火眼显示这里的第一个文件是db文件</p>
+<p><img src="/wzimg/2026-05-12-18-53-06.png"></p>
+<p>所以把他导出来，改后缀用db browser打开，可以发现就是转换好后的数据库，在massage0中可以找到</p>
+<p><img src="/wzimg/2026-05-12-18-59-56.png"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HNZ6UFW6</span><br></pre></td></tr></table></figure>
 
-<h3 id="9-分析黄志远phone-E01检材，该应用共对几个ip进行扫描？"><a href="#9-分析黄志远phone-E01检材，该应用共对几个ip进行扫描？" class="headerlink" title="9.分析黄志远phone.E01检材，该应用共对几个ip进行扫描？"></a>9.分析黄志远phone.E01检材，该应用共对几个ip进行扫描？</h3><p>在聊天数据中可以看到只有两个<br><img src="/wzimg/2026-05-12-19-01-15.png"><br><img src="/wzimg/2026-05-12-19-02-04.png"><br>192.168.1.16 和 192.168.61.135</p>
+<h3 id="9-分析黄志远phone-E01检材，该应用共对几个ip进行扫描？"><a href="#9-分析黄志远phone-E01检材，该应用共对几个ip进行扫描？" class="headerlink" title="9.分析黄志远phone.E01检材，该应用共对几个ip进行扫描？"></a>9.分析黄志远phone.E01检材，该应用共对几个ip进行扫描？</h3><p>在聊天数据中可以看到只有两个</p>
+<p><img src="/wzimg/2026-05-12-19-01-15.png"><br><img src="/wzimg/2026-05-12-19-02-04.png"></p>
+<p>192.168.1.16 和 192.168.61.135</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2</span><br></pre></td></tr></table></figure>
 
 <h3 id="10-分析黄志远phone-E01检材，该应用总共调用了几个暴力破解工具？"><a href="#10-分析黄志远phone-E01检材，该应用总共调用了几个暴力破解工具？" class="headerlink" title="10.分析黄志远phone.E01检材，该应用总共调用了几个暴力破解工具？"></a>10.分析黄志远phone.E01检材，该应用总共调用了几个暴力破解工具？</h3><p>只有hydra</p>
@@ -782,7 +797,8 @@
 <h3 id="11-分析黄志远phone-E01检材，黄志远使用其内部通联工具进行沟通，其账号的登陆密码是多少？"><a href="#11-分析黄志远phone-E01检材，黄志远使用其内部通联工具进行沟通，其账号的登陆密码是多少？" class="headerlink" title="11.分析黄志远phone.E01检材，黄志远使用其内部通联工具进行沟通，其账号的登陆密码是多少？"></a>11.分析黄志远phone.E01检材，黄志远使用其内部通联工具进行沟通，其账号的登陆密码是多少？</h3><h3 id="12-分析黄志远phone-E01检材，黄志远一共发送过几个文件给代号军师的嫌疑人？"><a href="#12-分析黄志远phone-E01检材，黄志远一共发送过几个文件给代号军师的嫌疑人？" class="headerlink" title="12.分析黄志远phone.E01检材，黄志远一共发送过几个文件给代号军师的嫌疑人？"></a>12.分析黄志远phone.E01检材，黄志远一共发送过几个文件给代号军师的嫌疑人？</h3><h3 id="13-分析方俊朗phone-E01检材，方俊郎手机总共安装了多少款理财应用？"><a href="#13-分析方俊朗phone-E01检材，方俊郎手机总共安装了多少款理财应用？" class="headerlink" title="13.分析方俊朗phone.E01检材，方俊郎手机总共安装了多少款理财应用？"></a>13.分析方俊朗phone.E01检材，方俊郎手机总共安装了多少款理财应用？</h3><p>依旧分析应用列表，找到股参谋、京东金融、东方财富共 3 款应用</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3</span><br></pre></td></tr></table></figure>
 
-<h3 id="14-分析方俊朗phone-E01检材，方俊朗使用筛选优质客户的应用包名是什么？"><a href="#14-分析方俊朗phone-E01检材，方俊朗使用筛选优质客户的应用包名是什么？" class="headerlink" title="14.分析方俊朗phone.E01检材，方俊朗使用筛选优质客户的应用包名是什么？"></a>14.分析方俊朗phone.E01检材，方俊朗使用筛选优质客户的应用包名是什么？</h3><p>很明显是优质客户AI判定<br><img src="/wzimg/2026-05-12-19-14-45.png"></p>
+<h3 id="14-分析方俊朗phone-E01检材，方俊朗使用筛选优质客户的应用包名是什么？"><a href="#14-分析方俊朗phone-E01检材，方俊朗使用筛选优质客户的应用包名是什么？" class="headerlink" title="14.分析方俊朗phone.E01检材，方俊朗使用筛选优质客户的应用包名是什么？"></a>14.分析方俊朗phone.E01检材，方俊朗使用筛选优质客户的应用包名是什么？</h3><p>很明显是优质客户AI判定</p>
+<p><img src="/wzimg/2026-05-12-19-14-45.png"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">com.example.predictor</span><br></pre></td></tr></table></figure>
 
 <h2 id="计算机取证"><a href="#计算机取证" class="headerlink" title="计算机取证"></a>计算机取证</h2><p>bitlocker秘钥：560615-577522-342881-216865-242561-312356-584837-421597</p>
@@ -792,38 +808,48 @@
 <h3 id="2-分析刘洋liuyang-pc-E01检材，计算机系统Build版本为？"><a href="#2-分析刘洋liuyang-pc-E01检材，计算机系统Build版本为？" class="headerlink" title="2.分析刘洋liuyang_pc.E01检材，计算机系统Build版本为？"></a>2.分析刘洋liuyang_pc.E01检材，计算机系统Build版本为？</h3><p><img src="/wzimg/2026-05-12-22-28-40.png"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">26100.1742</span><br></pre></td></tr></table></figure>
 
-<h3 id="3-分析刘洋liuyang-pc-E01检材，计算机最后一次正常关机的时间为？（UTC-0）"><a href="#3-分析刘洋liuyang-pc-E01检材，计算机最后一次正常关机的时间为？（UTC-0）" class="headerlink" title="3.分析刘洋liuyang_pc.E01检材，计算机最后一次正常关机的时间为？（UTC +0）"></a>3.分析刘洋liuyang_pc.E01检材，计算机最后一次正常关机的时间为？（UTC +0）</h3><p><img src="/wzimg/2026-05-12-22-29-36.png"><br>注意这是UTF8时间,要转换成UTF0，怪不得之前经常错</p>
+<h3 id="3-分析刘洋liuyang-pc-E01检材，计算机最后一次正常关机的时间为？（UTC-0）"><a href="#3-分析刘洋liuyang-pc-E01检材，计算机最后一次正常关机的时间为？（UTC-0）" class="headerlink" title="3.分析刘洋liuyang_pc.E01检材，计算机最后一次正常关机的时间为？（UTC +0）"></a>3.分析刘洋liuyang_pc.E01检材，计算机最后一次正常关机的时间为？（UTC +0）</h3><p><img src="/wzimg/2026-05-12-22-29-36.png"></p>
+<p>注意这是UTF8时间,要转换成UTF0，怪不得之前经常错</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2026-04-20 16:25:35</span><br></pre></td></tr></table></figure>
 
 <h3 id="4-分析刘洋liuyang-pc-E01检材，计算机网卡的MAC地址为？"><a href="#4-分析刘洋liuyang-pc-E01检材，计算机网卡的MAC地址为？" class="headerlink" title="4.分析刘洋liuyang_pc.E01检材，计算机网卡的MAC地址为？"></a>4.分析刘洋liuyang_pc.E01检材，计算机网卡的MAC地址为？</h3><p><img src="/wzimg/2026-05-12-22-31-49.png"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">00-50-56-30-26-1C</span><br></pre></td></tr></table></figure>
 
-<h3 id="5-分析刘洋liuyang-pc-E01检材，分析机主是从哪里下载的typora-答案格式：阿里云-？"><a href="#5-分析刘洋liuyang-pc-E01检材，分析机主是从哪里下载的typora-答案格式：阿里云-？" class="headerlink" title="5.分析刘洋liuyang_pc.E01检材，分析机主是从哪里下载的typora[答案格式：阿里云] ？"></a>5.分析刘洋liuyang_pc.E01检材，分析机主是从哪里下载的typora[答案格式：阿里云] ？</h3><p>在谷歌的历史记录中找到<br><img src="/wzimg/2026-05-12-22-47-03.png"></p>
+<h3 id="5-分析刘洋liuyang-pc-E01检材，分析机主是从哪里下载的typora-答案格式：阿里云-？"><a href="#5-分析刘洋liuyang-pc-E01检材，分析机主是从哪里下载的typora-答案格式：阿里云-？" class="headerlink" title="5.分析刘洋liuyang_pc.E01检材，分析机主是从哪里下载的typora[答案格式：阿里云] ？"></a>5.分析刘洋liuyang_pc.E01检材，分析机主是从哪里下载的typora[答案格式：阿里云] ？</h3><p>在谷歌的历史记录中找到</p>
+<p><img src="/wzimg/2026-05-12-22-47-03.png"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">蓝奏云</span><br></pre></td></tr></table></figure>
 
-<h3 id="6-分析刘洋liuyang-pc-E01检材，刘洋在2026-04-19-13-46-01（UTC-0）曾访问过百度云盘，请给云盘的打开密码？"><a href="#6-分析刘洋liuyang-pc-E01检材，刘洋在2026-04-19-13-46-01（UTC-0）曾访问过百度云盘，请给云盘的打开密码？" class="headerlink" title="6.分析刘洋liuyang_pc.E01检材，刘洋在2026-04-19 13:46:01（UTC +0）曾访问过百度云盘，请给云盘的打开密码？"></a>6.分析刘洋liuyang_pc.E01检材，刘洋在2026-04-19 13:46:01（UTC +0）曾访问过百度云盘，请给云盘的打开密码？</h3><p>首先把时间转化为UTF+8:2026-04-19 21:46:01 直接火眼搜索得到答案<br><img src="/wzimg/2026-05-12-22-52-24.png"></p>
+<h3 id="6-分析刘洋liuyang-pc-E01检材，刘洋在2026-04-19-13-46-01（UTC-0）曾访问过百度云盘，请给云盘的打开密码？"><a href="#6-分析刘洋liuyang-pc-E01检材，刘洋在2026-04-19-13-46-01（UTC-0）曾访问过百度云盘，请给云盘的打开密码？" class="headerlink" title="6.分析刘洋liuyang_pc.E01检材，刘洋在2026-04-19 13:46:01（UTC +0）曾访问过百度云盘，请给云盘的打开密码？"></a>6.分析刘洋liuyang_pc.E01检材，刘洋在2026-04-19 13:46:01（UTC +0）曾访问过百度云盘，请给云盘的打开密码？</h3><p>首先把时间转化为UTF+8:2026-04-19 21:46:01 直接火眼搜索得到答案</p>
+<p><img src="/wzimg/2026-05-12-22-52-24.png"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">48gy</span><br></pre></td></tr></table></figure>
 
-<h3 id="7-分析刘洋liuyang-pc-E01检材，请给出刘洋管理pve集群所用的端口号？"><a href="#7-分析刘洋liuyang-pc-E01检材，请给出刘洋管理pve集群所用的端口号？" class="headerlink" title="7.分析刘洋liuyang_pc.E01检材，请给出刘洋管理pve集群所用的端口号？"></a>7.分析刘洋liuyang_pc.E01检材，请给出刘洋管理pve集群所用的端口号？</h3><p>直接搜索<br><img src="/wzimg/2026-05-12-22-53-59.png"></p>
+<h3 id="7-分析刘洋liuyang-pc-E01检材，请给出刘洋管理pve集群所用的端口号？"><a href="#7-分析刘洋liuyang-pc-E01检材，请给出刘洋管理pve集群所用的端口号？" class="headerlink" title="7.分析刘洋liuyang_pc.E01检材，请给出刘洋管理pve集群所用的端口号？"></a>7.分析刘洋liuyang_pc.E01检材，请给出刘洋管理pve集群所用的端口号？</h3><p>直接搜索</p>
+<p><img src="/wzimg/2026-05-12-22-53-59.png"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">8006</span><br></pre></td></tr></table></figure>
 
-<h3 id="8-分析刘洋liuyang-pc-E01检材，请给出刘洋登录理财网站所使用的密码？"><a href="#8-分析刘洋liuyang-pc-E01检材，请给出刘洋登录理财网站所使用的密码？" class="headerlink" title="8.分析刘洋liuyang_pc.E01检材，请给出刘洋登录理财网站所使用的密码？"></a>8.分析刘洋liuyang_pc.E01检材，请给出刘洋登录理财网站所使用的密码？</h3><p>应该是这个<br><img src="/wzimg/2026-05-12-22-56-28.png"></p>
-<h3 id="9-分析刘洋liuyang-pc-E01检材，请给出理财网站的IP地址？"><a href="#9-分析刘洋liuyang-pc-E01检材，请给出理财网站的IP地址？" class="headerlink" title="9.分析刘洋liuyang_pc.E01检材，请给出理财网站的IP地址？"></a>9.分析刘洋liuyang_pc.E01检材，请给出理财网站的IP地址？</h3><p>查看C:\Windows\System32\drivers\etc\hosts，找到<br><img src="/wzimg/2026-05-12-23-08-37.png"></p>
+<h3 id="8-分析刘洋liuyang-pc-E01检材，请给出刘洋登录理财网站所使用的密码？"><a href="#8-分析刘洋liuyang-pc-E01检材，请给出刘洋登录理财网站所使用的密码？" class="headerlink" title="8.分析刘洋liuyang_pc.E01检材，请给出刘洋登录理财网站所使用的密码？"></a>8.分析刘洋liuyang_pc.E01检材，请给出刘洋登录理财网站所使用的密码？</h3><p>应该是这个</p>
+<p><img src="/wzimg/2026-05-12-22-56-28.png"></p>
+<h3 id="9-分析刘洋liuyang-pc-E01检材，请给出理财网站的IP地址？"><a href="#9-分析刘洋liuyang-pc-E01检材，请给出理财网站的IP地址？" class="headerlink" title="9.分析刘洋liuyang_pc.E01检材，请给出理财网站的IP地址？"></a>9.分析刘洋liuyang_pc.E01检材，请给出理财网站的IP地址？</h3><p>查看C:\Windows\System32\drivers\etc\hosts，找到</p>
+<p><img src="/wzimg/2026-05-12-23-08-37.png"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">192.168.0.70</span><br></pre></td></tr></table></figure>
 
 <h3 id="10-分析刘洋liuyang-pc-E01检材，请给出计算机内Bitlocker加密分区恢复密钥的前6位？"><a href="#10-分析刘洋liuyang-pc-E01检材，请给出计算机内Bitlocker加密分区恢复密钥的前6位？" class="headerlink" title="10.分析刘洋liuyang_pc.E01检材，请给出计算机内Bitlocker加密分区恢复密钥的前6位？"></a>10.分析刘洋liuyang_pc.E01检材，请给出计算机内Bitlocker加密分区恢复密钥的前6位？</h3><p>用efdd就可以恢复出来</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">560615</span><br></pre></td></tr></table></figure>
 
-<h3 id="11-分析刘洋liuyang-pc-E01检材，找出VC加密容器的密钥文件，给出该密钥文件的绝对路径？"><a href="#11-分析刘洋liuyang-pc-E01检材，找出VC加密容器的密钥文件，给出该密钥文件的绝对路径？" class="headerlink" title="11.分析刘洋liuyang_pc.E01检材，找出VC加密容器的密钥文件，给出该密钥文件的绝对路径？"></a>11.分析刘洋liuyang_pc.E01检材，找出VC加密容器的密钥文件，给出该密钥文件的绝对路径？</h3><p>在加解密后的D盘的baidu中，有个无标题png,修改宽高后得到<br><img src="/wzimg/2026-05-12-23-14-20.png"></p>
+<h3 id="11-分析刘洋liuyang-pc-E01检材，找出VC加密容器的密钥文件，给出该密钥文件的绝对路径？"><a href="#11-分析刘洋liuyang-pc-E01检材，找出VC加密容器的密钥文件，给出该密钥文件的绝对路径？" class="headerlink" title="11.分析刘洋liuyang_pc.E01检材，找出VC加密容器的密钥文件，给出该密钥文件的绝对路径？"></a>11.分析刘洋liuyang_pc.E01检材，找出VC加密容器的密钥文件，给出该密钥文件的绝对路径？</h3><p>在加解密后的D盘的baidu中，有个无标题png,修改宽高后得到</p>
+<p><img src="/wzimg/2026-05-12-23-14-20.png"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">无标题.png</span><br></pre></td></tr></table></figure>
 
-<h3 id="12-接上题，该VC加密容器的密钥文件的图像高度是多少像素？"><a href="#12-接上题，该VC加密容器的密钥文件的图像高度是多少像素？" class="headerlink" title="12.接上题，该VC加密容器的密钥文件的图像高度是多少像素？"></a>12.接上题，该VC加密容器的密钥文件的图像高度是多少像素？</h3><p>修改完宽高后直接exiftool<br><img src="/wzimg/2026-05-12-23-15-51.png"></p>
+<h3 id="12-接上题，该VC加密容器的密钥文件的图像高度是多少像素？"><a href="#12-接上题，该VC加密容器的密钥文件的图像高度是多少像素？" class="headerlink" title="12.接上题，该VC加密容器的密钥文件的图像高度是多少像素？"></a>12.接上题，该VC加密容器的密钥文件的图像高度是多少像素？</h3><p>修改完宽高后直接exiftool</p>
+<p><img src="/wzimg/2026-05-12-23-15-51.png"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1080</span><br></pre></td></tr></table></figure>
 
-<h3 id="13-分析刘洋liuyang-pc-E01检材，请给出团队重要信息加密保存的软件名？"><a href="#13-分析刘洋liuyang-pc-E01检材，请给出团队重要信息加密保存的软件名？" class="headerlink" title="13.分析刘洋liuyang_pc.E01检材，请给出团队重要信息加密保存的软件名？"></a>13.分析刘洋liuyang_pc.E01检材，请给出团队重要信息加密保存的软件名？</h3><p>会发现一个1password.rar文件，打开后发现<br><img src="/wzimg/2026-05-12-23-19-32.png"></p>
+<h3 id="13-分析刘洋liuyang-pc-E01检材，请给出团队重要信息加密保存的软件名？"><a href="#13-分析刘洋liuyang-pc-E01检材，请给出团队重要信息加密保存的软件名？" class="headerlink" title="13.分析刘洋liuyang_pc.E01检材，请给出团队重要信息加密保存的软件名？"></a>13.分析刘洋liuyang_pc.E01检材，请给出团队重要信息加密保存的软件名？</h3><p>会发现一个1password.rar文件，打开后发现</p>
+<p><img src="/wzimg/2026-05-12-23-19-32.png"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1password</span><br></pre></td></tr></table></figure>
 
-<h3 id="14-分析刘洋liuyang-pc-E01检材，该软件的保险库文件名为什么？"><a href="#14-分析刘洋liuyang-pc-E01检材，该软件的保险库文件名为什么？" class="headerlink" title="14.分析刘洋liuyang_pc.E01检材，该软件的保险库文件名为什么？"></a>14.分析刘洋liuyang_pc.E01检材，该软件的保险库文件名为什么？</h3><p>随便翻一下就找到了<br><img src="/wzimg/2026-05-12-23-24-29.png"></p>
+<h3 id="14-分析刘洋liuyang-pc-E01检材，该软件的保险库文件名为什么？"><a href="#14-分析刘洋liuyang-pc-E01检材，该软件的保险库文件名为什么？" class="headerlink" title="14.分析刘洋liuyang_pc.E01检材，该软件的保险库文件名为什么？"></a>14.分析刘洋liuyang_pc.E01检材，该软件的保险库文件名为什么？</h3><p>随便翻一下就找到了</p>
+<p><img src="/wzimg/2026-05-12-23-24-29.png"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">liuyang.opvault</span><br></pre></td></tr></table></figure>
 
 <h3 id="15-分析刘洋liuyang-pc-E01检材，该软件的保险库文件打开密码是什么？"><a href="#15-分析刘洋liuyang-pc-E01检材，该软件的保险库文件打开密码是什么？" class="headerlink" title="15.分析刘洋liuyang_pc.E01检材，该软件的保险库文件打开密码是什么？"></a>15.分析刘洋liuyang_pc.E01检材，该软件的保险库文件打开密码是什么？</h3><p>前面的rar已经有了提示，用ai跑一下就可以跑出来</p>
@@ -835,10 +861,15 @@
 <h3 id="17-分析刘洋liuyang-pc-E01检材，请给出pve服务器的管理密码？"><a href="#17-分析刘洋liuyang-pc-E01检材，请给出pve服务器的管理密码？" class="headerlink" title="17.分析刘洋liuyang_pc.E01检材，请给出pve服务器的管理密码？"></a>17.分析刘洋liuyang_pc.E01检材，请给出pve服务器的管理密码？</h3><p>同理</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pgscup2o@6</span><br></pre></td></tr></table></figure>
 
-<h3 id="18-分析刘洋liuyang-pc-E01检材，找出计算机内的脚本加密工具，给出该加密工具的SHA1的前6位？"><a href="#18-分析刘洋liuyang-pc-E01检材，找出计算机内的脚本加密工具，给出该加密工具的SHA1的前6位？" class="headerlink" title="18.分析刘洋liuyang_pc.E01检材，找出计算机内的脚本加密工具，给出该加密工具的SHA1的前6位？"></a>18.分析刘洋liuyang_pc.E01检材，找出计算机内的脚本加密工具，给出该加密工具的SHA1的前6位？</h3><p>用火眼的特征分析可以定位到VC容器是和无标题.png同目录的那个3GB的exe文件，用修改宽高后的图片作为密钥文件，再usePIM输入2026（这是在1password中可以得到）,就可以挂载了，找到加密工具<br><img src="/wzimg/2026-05-14-19-40-00.png"><br>加密工具就是encrypt_tool.py<br>算哈希<br><img src="/wzimg/2026-05-14-19-41-28.png"></p>
+<h3 id="18-分析刘洋liuyang-pc-E01检材，找出计算机内的脚本加密工具，给出该加密工具的SHA1的前6位？"><a href="#18-分析刘洋liuyang-pc-E01检材，找出计算机内的脚本加密工具，给出该加密工具的SHA1的前6位？" class="headerlink" title="18.分析刘洋liuyang_pc.E01检材，找出计算机内的脚本加密工具，给出该加密工具的SHA1的前6位？"></a>18.分析刘洋liuyang_pc.E01检材，找出计算机内的脚本加密工具，给出该加密工具的SHA1的前6位？</h3><p>用火眼的特征分析可以定位到VC容器是和无标题.png同目录的那个3GB的exe文件，用修改宽高后的图片作为密钥文件，再usePIM输入2026（这是在1password中可以得到）,就可以挂载了，找到加密工具</p>
+<p><img src="/wzimg/2026-05-14-19-40-00.png"></p>
+<p>加密工具就是encrypt_tool.py<br>算哈希</p>
+<p><img src="/wzimg/2026-05-14-19-41-28.png"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">7860dc</span><br></pre></td></tr></table></figure>
 
-<h3 id="19-分析刘洋liuyang-pc-E01检材，该脚本加密工具在进行脚本加密时，最后一层是进行什么操作？"><a href="#19-分析刘洋liuyang-pc-E01检材，该脚本加密工具在进行脚本加密时，最后一层是进行什么操作？" class="headerlink" title="19.分析刘洋liuyang_pc.E01检材，该脚本加密工具在进行脚本加密时，最后一层是进行什么操作？"></a>19.分析刘洋liuyang_pc.E01检材，该脚本加密工具在进行脚本加密时，最后一层是进行什么操作？</h3><p>打开py文件后里面开头就写了<br><img src="/wzimg/2026-05-14-19-42-39.png"><br>不确定的话可以看代码验证一下</p>
+<h3 id="19-分析刘洋liuyang-pc-E01检材，该脚本加密工具在进行脚本加密时，最后一层是进行什么操作？"><a href="#19-分析刘洋liuyang-pc-E01检材，该脚本加密工具在进行脚本加密时，最后一层是进行什么操作？" class="headerlink" title="19.分析刘洋liuyang_pc.E01检材，该脚本加密工具在进行脚本加密时，最后一层是进行什么操作？"></a>19.分析刘洋liuyang_pc.E01检材，该脚本加密工具在进行脚本加密时，最后一层是进行什么操作？</h3><p>打开py文件后里面开头就写了</p>
+<p><img src="/wzimg/2026-05-14-19-42-39.png"></p>
+<p>不确定的话可以看代码验证一下</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">十六进制转换</span><br></pre></td></tr></table></figure>
 
 <h3 id="20-分析刘洋liuyang-pc-E01检材，请解密database-php-obf，给出该文件内的数据库密码？"><a href="#20-分析刘洋liuyang-pc-E01检材，请解密database-php-obf，给出该文件内的数据库密码？" class="headerlink" title="20.分析刘洋liuyang_pc.E01检材，请解密database.php.obf，给出该文件内的数据库密码？"></a>20.分析刘洋liuyang_pc.E01检材，请解密database.php.obf，给出该文件内的数据库密码？</h3><p>之前的保险库中有</p>
@@ -880,7 +911,7 @@
 </div>
   
   
-    <script async src="/js/copy-codeblock.js?v=1778760151667"></script>
+    <script async src="/js/copy-codeblock.js?v=1778760823536"></script>
   
 
   
