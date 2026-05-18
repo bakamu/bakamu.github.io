@@ -9,41 +9,39 @@ window.addEventListener('load', () => {
         let copiedTimeout = null;
 
         copyWrapper.addEventListener('click', ev => {
-            const highlightDom = ev.target.parentElement;
-            const code = highlightDom.querySelector('code');
+            ev.preventDefault();
+            ev.stopPropagation();
+            
+            const preElement = codeBlock.querySelector('.code pre');
+            if (!preElement) {
+                console.error('Copy failed: code block not found');
+                return;
+            }
 
             let copiedCode = '';
-
-            (function traverseChildNodes(node) {
-                const childNodes = node.childNodes;
-                childNodes.forEach(child => {
-                    switch (child.nodeName) {
-                        case '#text': // 文本节点
-                            copiedCode += child.nodeValue;
-                            break;
-                        case 'BR': // <br />
-                            copiedCode += '\n';
-                            break;
-                        default:
-                            traverseChildNodes(child);
-                    }
+            const lineSpans = preElement.querySelectorAll('span.line');
+            
+            if (lineSpans.length > 0) {
+                lineSpans.forEach((span, index) => {
+                    if (index > 0) copiedCode += '\n';
+                    copiedCode += span.textContent || span.innerText || '';
                 });
-            }(code));
+            } else {
+                copiedCode = preElement.textContent || preElement.innerText || '';
+            }
 
-            navigator.clipboard.writeText(
-
-                /* 去掉最后的换行 */
-                copiedCode.slice(0, -1)
-            ).then(() => {
+            navigator.clipboard.writeText(copiedCode.trimEnd()).then(() => {
                 if (copiedTimeout) clearTimeout(copiedTimeout);
-
                 copyWrapper.classList.add('codeblock-copy-wrapper-copied');
                 copiedTimeout = setTimeout(() => {
                     copyWrapper.classList.remove('codeblock-copy-wrapper-copied');
                     copiedTimeout = null;
-                }, 1500);
+                }, 2000);
+            }).catch(err => {
+                console.error('Copy failed:', err);
             });
         });
+        
         codeBlock.appendChild(copyWrapper);
     };
 
