@@ -1,40 +1,55 @@
 <!doctype html>
 <html lang="zh"><head>
-<title>分类：电子取证 - bakamu的博客</title>
+<title>工控流量分析 bakamu - bakamu的博客</title>
 <meta charset="UTF-8">
 <meta name="keywords" content="ctf，取证，misc">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 <link rel="shortcut icon" href="/img/fluid.png" type="image/png" />
-<meta name="description" content="空灵">
-<meta property="og:type" content="website">
-<meta property="og:title" content="bakamu的博客">
-<meta property="og:url" content="http://example.com/categories/%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/index.html">
+<meta name="description" content="Modbus 工控流量分析文章https:&#x2F;&#x2F;blog.csdn.net&#x2F;song123sh&#x2F;article&#x2F;details&#x2F;128387982 Modbus流量分为三类，Modbus TCP | Modbus ASCLL | Modbus RTUTCP中主要考查功能码如下 123456781：读线圈 2：读离散输入 3：读保持 4：读输入 5：写单个线圈 6：写单个保持 15：写多个线圈 16：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="工控流量分析 bakamu">
+<meta property="og:url" content="http://example.com/2026/05/18/%E5%B7%A5%E6%8E%A7%E6%B5%81%E9%87%8F%E5%88%86%E6%9E%90/index.html">
 <meta property="og:site_name" content="bakamu的博客">
-<meta property="og:description" content="空灵">
+<meta property="og:description" content="Modbus 工控流量分析文章https:&#x2F;&#x2F;blog.csdn.net&#x2F;song123sh&#x2F;article&#x2F;details&#x2F;128387982 Modbus流量分为三类，Modbus TCP | Modbus ASCLL | Modbus RTUTCP中主要考查功能码如下 123456781：读线圈 2：读离散输入 3：读保持 4：读输入 5：写单个线圈 6：写单个保持 15：写多个线圈 16：">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/wzimg/2026-05-18-23-05-15.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-05-18-23-07-55.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-05-18-23-23-38.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-05-18-23-27-08.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-05-18-23-27-18.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-05-18-23-34-19.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-05-19-18-50-50.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-05-19-18-49-18.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-05-19-19-02-20.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-05-19-19-16-40.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-05-19-20-42-00.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-05-19-20-29-22.png">
+<meta property="article:published_time" content="2026-05-18T09:30:00.000Z">
+<meta property="article:modified_time" content="2026-05-19T12:46:40.557Z">
 <meta property="article:author" content="bakamu">
-<meta property="article:tag" content="ctf，取证，misc">
+<meta property="article:tag" content="misc">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/wzimg/2026-05-18-23-05-15.png">
 
 <link rel="stylesheet" href="/lib/fancybox/fancybox.css">
 <link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
 
 
-<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1779194807329">
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1779194807309">
 
     <link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
 
-<link rel="stylesheet" href="/css/style.css?v=1779194807329">
+<link rel="stylesheet" href="/css/style.css?v=1779194807309">
 
 
 
 
     
-        <link rel="stylesheet" href="/custom.css?v=1779194807329">
+        <link rel="stylesheet" href="/custom.css?v=1779194807309">
     
-        <link rel="stylesheet" href="/themes/umaru/index.css?v=1779194807329">
+        <link rel="stylesheet" href="/themes/umaru/index.css?v=1779194807309">
     
-        <link rel="stylesheet" href="/themes/asuka/index.css?v=1779194807329">
+        <link rel="stylesheet" href="/themes/asuka/index.css?v=1779194807309">
     
 
 
@@ -44,7 +59,7 @@
 <script src="/lib/lax.min.js" async></script>
 
 
-<script async src="/js/app.js?v=1779194807329"></script>
+<script async src="/js/app.js?v=1779194807309"></script>
 
  
 
@@ -606,7 +621,7 @@
 </style>
 
 
-    <script async src="/js/search.js?v=1779194807329"></script>
+    <script async src="/js/search.js?v=1779194807310"></script>
         
 
             
@@ -692,22 +707,20 @@
 </div>
 
     </div>
-</div><!-- .nexmoe-drawer --></div><div id="nexmoe-content"><div class="nexmoe-primary"><section class="nexmoe-posts">
-    <div class="nexmoe-post">
-        <a href="/2026/05/14/2026%E7%9B%98%E5%8F%A4%E7%9F%B3%E6%9D%AF/">
-            
-                <div class="nexmoe-post-cover mdui-ripple absolute" style="padding-top: NaN%;"> 
-                    <img src="/img/luotianyi.png" alt="2026盘古石杯（手机、计算机） bakamu" loading="lazy">
-                    <h1>2026盘古石杯（手机、计算机） bakamu</h1>
-                </div>
-                
-        </a>
-
-        <div class="nexmoe-post-meta">
-    <div class="nexmoe-rainbow">
-        <a class="nexmoefont icon-calendar-fill">2026年05月14日</a>
+</div><!-- .nexmoe-drawer --></div><div id="nexmoe-content"><div class="nexmoe-primary"><div class="nexmoe-post">
+  <article>
+    
+        <div class="nexmoe-post-cover absolute" style="padding-top: NaN%;"> 
+            <img src="/img/xia1.webp" alt="工控流量分析 bakamu" loading="lazy">
+            <h1>工控流量分析 bakamu</h1>
+        </div>
         
-            <a class="nexmoefont icon-appstore-fill -link" href="/categories/%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/">电子取证</a><a class="nexmoefont icon-appstore-fill -link" href="/categories/%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/%E5%81%9A%E9%A2%98%E7%AC%94%E8%AE%B0/">做题笔记</a>
+    
+    <div class="nexmoe-post-meta">
+    <div class="nexmoe-rainbow">
+        <a class="nexmoefont icon-calendar-fill">2026年05月18日</a>
+        
+            <a class="nexmoefont icon-appstore-fill -link" href="/categories/CTF/">CTF</a><a class="nexmoefont icon-appstore-fill -link" href="/categories/CTF/%E5%81%9A%E9%A2%98%E7%AC%94%E8%AE%B0/">做题笔记</a>
         
         
     </div>
@@ -718,46 +731,124 @@
     
 </div>
 
-        <article>
-            
-        </article>
+    <h1 id="Modbus-工控流量分析"><a href="#Modbus-工控流量分析" class="headerlink" title="Modbus 工控流量分析"></a>Modbus 工控流量分析</h1><p>文章<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/song123sh/article/details/128387982">https://blog.csdn.net/song123sh/article/details/128387982</a></p>
+<p>Modbus流量分为三类，Modbus TCP | Modbus ASCLL | Modbus RTU<br>TCP中主要考查功能码如下</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1：读线圈 </span><br><span class="line">2：读离散输入 </span><br><span class="line">3：读保持 </span><br><span class="line">4：读输入 </span><br><span class="line">5：写单个线圈 </span><br><span class="line">6：写单个保持 </span><br><span class="line">15：写多个线圈 </span><br><span class="line">16：写多个保持</span><br></pre></td></tr></table></figure>
+
+<p>先过滤出所有modbus流量<br>可以在这里过滤想要的特定功能的流量</p>
+<p><img src="/wzimg/2026-05-18-23-05-15.png"></p>
+<p>右键选定作为过滤器应用</p>
+<p>常规过滤命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(((_ws.col.protocol == &quot;Modbus/TCP&quot;) ) &amp;&amp; (modbus.byte_cnt)) &amp;&amp; (modbus.func_code == 16)</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><h3 id="2025振兴杯-modbus-玄机"><a href="#2025振兴杯-modbus-玄机" class="headerlink" title="2025振兴杯-modbus-玄机"></a>2025振兴杯-modbus-玄机</h3><p><img src="/wzimg/2026-05-18-23-07-55.png"></p>
+<p>由于是温度问题，所以可能是写入操作存在问题，查看func:16并过滤<br>找到温度设定的操作</p>
+<p><img src="/wzimg/2026-05-18-23-23-38.png"></p>
+<p>依次把末四位转化为浮点数，看一下有没有超过温度<br>最终发现</p>
+<p><img src="/wzimg/2026-05-18-23-27-08.png"></p>
+<p><img src="/wzimg/2026-05-18-23-27-18.png"></p>
+<p>复制Modbus&#x2F;TCP16进制内容</p>
+<p><img src="/wzimg/2026-05-18-23-34-19.png"></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;0c010000000b01100016000204441fe3d7&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="MMS工控流量分析"><a href="#MMS工控流量分析" class="headerlink" title="MMS工控流量分析"></a>MMS工控流量分析</h1><p>一般出现在智能电子设备中<br>流量包类型有</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">initiate（可以理解为握手）</span><br><span class="line"></span><br><span class="line">initiate-RequestPDU</span><br><span class="line"></span><br><span class="line">initiate-ResponsePDU</span><br><span class="line"></span><br><span class="line">confirmed（可以理解为交互，即传数据）</span><br><span class="line"></span><br><span class="line">confirmed-RequestPDU</span><br><span class="line"></span><br><span class="line">confirmed-ResponsePDU</span><br></pre></td></tr></table></figure>
+
+<p>常见的confirmedService有</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">对象操作</span><br><span class="line">getNameList (1)(获取对象名)</span><br><span class="line"><span class="built_in">read</span> (4)</span><br><span class="line">write (5)</span><br><span class="line">getVariableAccessAttributes (6)</span><br><span class="line">getNamedVariableListAttributes (12)</span><br><span class="line"></span><br><span class="line">文件操作</span><br><span class="line">fileOpen (72)</span><br><span class="line">fileRead (73)</span><br><span class="line">fileClose (74)</span><br><span class="line">fileDirectory (77)</span><br></pre></td></tr></table></figure>
+
+<p>常见解题方法：查看统计中分组长度、协议占比找到异常流量；统计itemId查看异常数据</p>
+<h2 id="题目-1"><a href="#题目-1" class="headerlink" title="题目"></a>题目</h2><h3 id="工控-MMS协议分析-玄机"><a href="#工控-MMS协议分析-玄机" class="headerlink" title="工控-MMS协议分析-玄机"></a>工控-MMS协议分析-玄机</h3><p>打开流量包后显示MMS&#x2F;IEC6185流量<br>首先是过滤出MMS流量包<br>注意到请求基本是一请求一恢复</p>
+<p><img src="/wzimg/2026-05-19-18-50-50.png"></p>
+<p>分析read(4)</p>
+<p><img src="/wzimg/2026-05-19-18-49-18.png"></p>
+<p>会发现itemId存在变化</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tshark -r <span class="string">&#x27;/mnt/d/mis杂项/玄机/miscer/工控/12.MMS协议分析/MMS协议分析.pcap&#x27;</span> -d tcp.port==102,tpkt -T fields -e mms.itemId | <span class="built_in">sort</span> | <span class="built_in">uniq</span> -c | <span class="built_in">sort</span> -nr</span><br></pre></td></tr></table></figure>
+
+<p>统计所有itemTd的种类和数量</p>
+<p><img src="/wzimg/2026-05-19-19-02-20.png"></p>
+<p>可以发现最后两个itemId除去L是16进制，66开头像是flag的开头</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">7h756h7d646173617g</span><br><span class="line">666f61677e49435366</span><br></pre></td></tr></table></figure>
+
+<p>但是直接解密并不对<br>而666c是fl，所以猜测对其进行了移位处理，即向后移了3位，导致c变成f，于是凯撒3位后再转换成ascll得到flag</p>
+<p>666c61677b49435366I7e756e7a646173617d</p>
+<p><img src="/wzimg/2026-05-19-19-16-40.png"></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;ICSf~unzdasa&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h1 id="S7comm工控流量分析"><a href="#S7comm工控流量分析" class="headerlink" title="S7comm工控流量分析"></a>S7comm工控流量分析</h1><p>西门子设备的工控协议，基于 COTP 实现，是COTP的上层协议<br>它运行在 TCP&#x2F;IP 之上，默认使用 102 端口<br>主要有三种类型<br>Job(1)、Ack_Data(3)&#x2F;Ack(2)、Userdata(7)<br>Job：下发任务&#x2F;指令<br>Ack_Data：带有返回数据<br>Ack：单纯确认，含有数据<br>Userdata：用户自定义数据区，也包含功能指令</p>
+<p>常规做题方法：查看返回数据、任务数据<br>tshark -r 1.pcap -T fields -e s7comm.resp.data | uniq</p>
+<h2 id="题目-2"><a href="#题目-2" class="headerlink" title="题目"></a>题目</h2><h3 id="工控-S7协议-玄机"><a href="#工控-S7协议-玄机" class="headerlink" title="工控-S7协议-玄机"></a>工控-S7协议-玄机</h3><p>依旧先过滤出s7comm流量包</p>
+<p><img src="/wzimg/2026-05-19-20-42-00.png"></p>
+<p>也是一下发任务一个回复，查看Ack_Data返回数据有没有信息<br>搜索发现flag</p>
+<p><img src="/wzimg/2026-05-19-20-29-22.png"></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;Congratulationsonthethrough&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+    
+  </article>
+
+  
+      
+    <div class="nexmoe-post-copyright">
+        <strong>本文作者：</strong>bakamu<br>
+        
+        <strong>本文链接：</strong><a href="http://example.com/2026/05/18/%E5%B7%A5%E6%8E%A7%E6%B5%81%E9%87%8F%E5%88%86%E6%9E%90/" title="http:&#x2F;&#x2F;example.com&#x2F;2026&#x2F;05&#x2F;18&#x2F;%E5%B7%A5%E6%8E%A7%E6%B5%81%E9%87%8F%E5%88%86%E6%9E%90&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;example.com&#x2F;2026&#x2F;05&#x2F;18&#x2F;%E5%B7%A5%E6%8E%A7%E6%B5%81%E9%87%8F%E5%88%86%E6%9E%90&#x2F;</a><br>
+
+        
+            <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+
+        
     </div>
 
-    <div class="nexmoe-post">
-        <a href="/2026/04/27/2026FIC%E5%85%A8%E5%9B%BD%E7%BD%91%E7%BB%9C%E7%A9%BA%E9%97%B4%E5%8F%96%E8%AF%81%E5%A4%A7%E8%B5%9B%E5%88%9D%E8%B5%9B/">
-            
-                <div class="nexmoe-post-cover mdui-ripple absolute" style="padding-top: NaN%;"> 
-                    <img src="/img/R-C.jpg" alt="2026年FIC（手机、计算机） bakamu" loading="lazy">
-                    <h1>2026年FIC（手机、计算机） bakamu</h1>
-                </div>
-                
-        </a>
 
-        <div class="nexmoe-post-meta">
-    <div class="nexmoe-rainbow">
-        <a class="nexmoefont icon-calendar-fill">2026年04月27日</a>
-        
-            <a class="nexmoefont icon-appstore-fill -link" href="/categories/%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/">电子取证</a><a class="nexmoefont icon-appstore-fill -link" href="/categories/%E7%94%B5%E5%AD%90%E5%8F%96%E8%AF%81/%E5%81%9A%E9%A2%98%E7%AC%94%E8%AE%B0/">做题笔记</a>
-        
-        
-    </div>
+  
+  
+  <div class="nexmoe-post-meta nexmoe-rainbow">
+   
     
-    
-    
-    
+        <a class="nexmoefont icon-tag-fill -none-link" href="/tags/misc/" rel="tag">misc</a>
     
 </div>
+  
+  
+    <script async src="/js/copy-codeblock.js?v=1779194807287"></script>
+  
 
-        <article>
-            
-        </article>
-    </div>
-</section> </div><div class="nexmoe-post-right">    <div class="nexmoe-fixed">
+  
+      <div class="nexmoe-post-footer">
+          <div class="valine"></div>
+<script src='https://lib.baomitu.com/valine/1.3.9/Valine.min.js'></script>
+<script>
+  new Valine({
+      el: '.valine',
+      appId: 'r5zxC0st0DDjPA9auXzMV7HY-gzGzoHsz',
+      appKey: '3bqCsovpyfTPHUzTHovd3V3V'
+  })
+</script>
+
+      </div>
+  
+</div></div><div class="nexmoe-post-right">    <div class="nexmoe-fixed">
         <div class="nexmoe-tool">
 
             
 
             
+            
+            <button class="mdui-fab catalog" style="overflow:unset;">
+                <i class="nexmoefont icon-i-catalog"></i>
+                <div class="nexmoe-toc">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Modbus-%E5%B7%A5%E6%8E%A7%E6%B5%81%E9%87%8F%E5%88%86%E6%9E%90"><span class="toc-number">1.</span> <span class="toc-text">Modbus 工控流量分析</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE"><span class="toc-number">1.1.</span> <span class="toc-text">题目</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2025%E6%8C%AF%E5%85%B4%E6%9D%AF-modbus-%E7%8E%84%E6%9C%BA"><span class="toc-number">1.1.1.</span> <span class="toc-text">2025振兴杯-modbus-玄机</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#MMS%E5%B7%A5%E6%8E%A7%E6%B5%81%E9%87%8F%E5%88%86%E6%9E%90"><span class="toc-number">2.</span> <span class="toc-text">MMS工控流量分析</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE-1"><span class="toc-number">2.1.</span> <span class="toc-text">题目</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%A5%E6%8E%A7-MMS%E5%8D%8F%E8%AE%AE%E5%88%86%E6%9E%90-%E7%8E%84%E6%9C%BA"><span class="toc-number">2.1.1.</span> <span class="toc-text">工控-MMS协议分析-玄机</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#S7comm%E5%B7%A5%E6%8E%A7%E6%B5%81%E9%87%8F%E5%88%86%E6%9E%90"><span class="toc-number">3.</span> <span class="toc-text">S7comm工控流量分析</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE-2"><span class="toc-number">3.1.</span> <span class="toc-text">题目</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%A5%E6%8E%A7-S7%E5%8D%8F%E8%AE%AE-%E7%8E%84%E6%9C%BA"><span class="toc-number">3.1.1.</span> <span class="toc-text">工控-S7协议-玄机</span></a></li></ol></li></ol></li></ol>
+                </div>
+            </button>
             
 
             
