@@ -41,21 +41,21 @@
 <link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
 
 
-<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1779629707344">
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1779712834660">
 
     <link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
 
-<link rel="stylesheet" href="/css/style.css?v=1779629707344">
+<link rel="stylesheet" href="/css/style.css?v=1779712834660">
 
 
 
 
     
-        <link rel="stylesheet" href="/custom.css?v=1779629707344">
+        <link rel="stylesheet" href="/custom.css?v=1779712834660">
     
-        <link rel="stylesheet" href="/themes/umaru/index.css?v=1779629707344">
+        <link rel="stylesheet" href="/themes/umaru/index.css?v=1779712834660">
     
-        <link rel="stylesheet" href="/themes/asuka/index.css?v=1779629707344">
+        <link rel="stylesheet" href="/themes/asuka/index.css?v=1779712834660">
     
 
 
@@ -65,7 +65,17 @@
 <script src="/lib/lax.min.js" async></script>
 
 
-<script async src="/js/app.js?v=1779629707344"></script>
+<script>
+(function waitFancybox() {
+  if (typeof Fancybox !== 'undefined') {
+    Fancybox.bind('[data-fancybox]', { Hash: false });
+  } else {
+    setTimeout(waitFancybox, 100);
+  }
+})();
+</script>
+
+<script async src="/js/app.js?v=1779712834660"></script>
 
  
 
@@ -124,53 +134,67 @@
         
     </div>
     
-    <!-- 文章分类组件 -->
+    
     <div class="nexmoe-widget-wrap">
         <h3 class="nexmoe-widget-title">文章分类</h3>
         <div class="nexmoe-widget">
             <ul class="category-list">
-                <!-- 手动构建分类树 -->
-                <li class="category-list-item">
+                
+                <li class="category-list-item" style="padding-left: 0px;">
+                    
                     <span class="category-toggle" onclick="toggleCategory(this)">
                         <i class="nexmoefont iconfont icon-caret-down"></i>
                     </span>
+                    
                     <a class="category-list-link" href="/categories/CTF/">CTF</a>
-                    <span class="category-list-count">3</span>
+                    <span class="category-list-count">6</span>
+                    
                     <ul class="category-children">
-                        <li class="category-list-item" style="padding-left: 15px;">
-                            <a class="category-list-link" href="/categories/CTF/做题笔记/">做题笔记</a>
-                            <span class="category-list-count">1</span>
-                        </li>
-                        <li class="category-list-item" style="padding-left: 15px;">
-                            <a class="category-list-link" href="/categories/CTF/心得/">心得</a>
-                            <span class="category-list-count">2</span>
-                        </li>
-                        <li class="category-list-item" style="padding-left: 15px;">
-                            <a class="category-list-link" href="/categories/CTF/我的wp/">我的wp</a>
-                            <span class="category-list-count">0</span>
-                        </li>
-                    </ul>
+                        
+                <li class="category-list-item" style="padding-left: 15px;">
+                    
+                    <a class="category-list-link" href="/categories/CTF/做题笔记/">做题笔记</a>
+                    <span class="category-list-count">4</span>
+                    
                 </li>
-                <li class="category-list-item">
+                
+                <li class="category-list-item" style="padding-left: 15px;">
+                    
+                    <a class="category-list-link" href="/categories/CTF/心得/">心得</a>
+                    <span class="category-list-count">2</span>
+                    
+                </li>
+                
+                    </ul>
+                    
+                </li>
+                
+                <li class="category-list-item" style="padding-left: 0px;">
+                    
                     <span class="category-toggle" onclick="toggleCategory(this)">
                         <i class="nexmoefont iconfont icon-caret-down"></i>
                     </span>
+                    
                     <a class="category-list-link" href="/categories/电子取证/">电子取证</a>
                     <span class="category-list-count">2</span>
+                    
                     <ul class="category-children">
-                        <li class="category-list-item" style="padding-left: 15px;">
-                            <a class="category-list-link" href="/categories/电子取证/做题笔记/">做题笔记</a>
-                            <span class="category-list-count">2</span>
-                        </li>
-                        <li class="category-list-item" style="padding-left: 15px;">
-                            <a class="category-list-link" href="/categories/电子取证/心得/">心得</a>
-                            <span class="category-list-count">0</span>
-                        </li>
-                    </ul>
+                        
+                <li class="category-list-item" style="padding-left: 15px;">
+                    
+                    <a class="category-list-link" href="/categories/电子取证/做题笔记/">做题笔记</a>
+                    <span class="category-list-count">2</span>
+                    
                 </li>
+                
+                    </ul>
+                    
+                </li>
+                
             </ul>
         </div>
     </div>
+    
     
     <style>
         .category-toggle {
@@ -627,7 +651,7 @@
 </style>
 
 
-    <script async src="/js/search.js?v=1779629707344"></script>
+    <script async src="/js/search.js?v=1779712834661"></script>
         
 
             
@@ -742,7 +766,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1：读线圈 </span><br><span class="line">2：读离散输入 </span><br><span class="line">3：读保持 </span><br><span class="line">4：读输入 </span><br><span class="line">5：写单个线圈 </span><br><span class="line">6：写单个保持 </span><br><span class="line">15：写多个线圈 </span><br><span class="line">16：写多个保持</span><br></pre></td></tr></table></figure>
 
 <p>先过滤出所有modbus流量<br>可以在这里过滤想要的特定功能的流量</p>
-<p><img src="/wzimg/2026-05-18-23-05-15.png"></p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-05-18-23-05-15.png" alt="" data-caption="" loading="lazy"></p>
 <p>右键选定作为过滤器应用</p>
 <p>常规过滤命令</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(((_ws.col.protocol == &quot;Modbus/TCP&quot;) ) &amp;&amp; (modbus.byte_cnt)) &amp;&amp; (modbus.func_code == 16)</span><br></pre></td></tr></table></figure>
@@ -751,35 +775,35 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">起始地址（2字节）</span><br><span class="line">寄存器数量（2字节）</span><br><span class="line">字节计数（1字节）</span><br><span class="line">寄存器值（N字节）</span><br></pre></td></tr></table></figure>
 
 
-<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><h3 id="2025振兴杯-modbus-玄机"><a href="#2025振兴杯-modbus-玄机" class="headerlink" title="2025振兴杯-modbus-玄机"></a>2025振兴杯-modbus-玄机</h3><p><img src="/wzimg/2026-05-18-23-07-55.png"></p>
+<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><h3 id="2025振兴杯-modbus-玄机"><a href="#2025振兴杯-modbus-玄机" class="headerlink" title="2025振兴杯-modbus-玄机"></a>2025振兴杯-modbus-玄机</h3><p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-05-18-23-07-55.png" alt="" data-caption="" loading="lazy"></p>
 <p>由于是温度问题，所以可能是写入操作存在问题，查看func:16并过滤<br>找到温度设定的操作</p>
-<p><img src="/wzimg/2026-05-18-23-23-38.png"></p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-05-18-23-23-38.png" alt="" data-caption="" loading="lazy"></p>
 <p>依次把末四位转化为浮点数，看一下有没有超过温度<br>最终发现</p>
-<p><img src="/wzimg/2026-05-18-23-27-08.png"></p>
-<p><img src="/wzimg/2026-05-18-23-27-18.png"></p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-05-18-23-27-08.png" alt="" data-caption="" loading="lazy"></p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-05-18-23-27-18.png" alt="" data-caption="" loading="lazy"></p>
 <p>复制Modbus&#x2F;TCP16进制内容</p>
-<p><img src="/wzimg/2026-05-18-23-34-19.png"></p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-05-18-23-34-19.png" alt="" data-caption="" loading="lazy"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;0c010000000b01100016000204441fe3d7&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="老鸡汤-公交车司机-循镜"><a href="#老鸡汤-公交车司机-循镜" class="headerlink" title="老鸡汤-公交车司机-循镜"></a>老鸡汤-公交车司机-循镜</h3><p><img src="/wzimg/2026-05-21-14-43-23.png"></p>
+<h3 id="老鸡汤-公交车司机-循镜"><a href="#老鸡汤-公交车司机-循镜" class="headerlink" title="老鸡汤-公交车司机-循镜"></a>老鸡汤-公交车司机-循镜</h3><p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-05-21-14-43-23.png" alt="" data-caption="" loading="lazy"></p>
 <p>拿到流量包后，统计发现都是写入操作的流量，总共150条</p>
-<p><img src="/wzimg/2026-05-21-14-44-21.png"></p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-05-21-14-44-21.png" alt="" data-caption="" loading="lazy"></p>
 <p>分析tcp流量并无异常，于是提取出所有写入寄存器的值</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tshark -r modbus.pcapng -Y <span class="string">&quot;modbus.func_code == 16&quot;</span> -V | grep -E <span class="string">&quot;Register Value \(UINT16\):&quot;</span> | sed <span class="string">&#x27;s/.*: //&#x27;</span> | awk <span class="string">&#x27;&#123;printf &quot;%02x&quot;, $1&#125;&#x27;</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="/wzimg/2026-05-21-14-57-48.png"></p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-05-21-14-57-48.png" alt="" data-caption="" loading="lazy"></p>
 <p>得到所有值的16进制表示</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">00000000000001020304050607050401070805797c06070220b201bb422e1705382005392d03252d343817192f2b01102d050400000000000000000000000000000000363636633631363737623331333433323334333033313335333932643337363633333336326433343633333333363264363233343336363132643337333436313336363133363634363536343338333436313764</span><br></pre></td></tr></table></figure>
 
 <p>转化为10进制可以发现flag的16进制表示</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tshark -r modbus.pcapng -Y <span class="string">&quot;modbus.func_code == 16&quot;</span> -V | grep -E <span class="string">&quot;Register Value \(UINT16\):&quot;</span> | sed <span class="string">&#x27;s/.*: //&#x27;</span> | awk <span class="string">&#x27;&#123;printf &quot;%c&quot;, $1&#125;&#x27;</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="/wzimg/2026-05-21-14-59-19.png"></p>
-<p>或者<br><img src="/wzimg/2026-05-21-15-02-32.png"></p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-05-21-14-59-19.png" alt="" data-caption="" loading="lazy"></p>
+<p>或者<br><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-05-21-15-02-32.png" alt="" data-caption="" loading="lazy"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">666c61677b31343234303135392d376633362d346333362d623436612d3734613661366465643834617d</span><br></pre></td></tr></table></figure>
 
 <p>得到flag</p>
-<p><img src="/wzimg/2026-05-21-14-59-56.png"></p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-05-21-14-59-56.png" alt="" data-caption="" loading="lazy"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;14240159-7f36-4c36-b46a-74a6a6ded84a&#125;</span><br></pre></td></tr></table></figure>
 
 
@@ -792,29 +816,29 @@
 
 <p>常见解题方法：查看统计中分组长度、协议占比找到异常流量；统计itemId查看异常数据</p>
 <h2 id="题目-1"><a href="#题目-1" class="headerlink" title="题目"></a>题目</h2><h3 id="工控-MMS协议分析-玄机"><a href="#工控-MMS协议分析-玄机" class="headerlink" title="工控-MMS协议分析-玄机"></a>工控-MMS协议分析-玄机</h3><p>打开流量包后显示MMS&#x2F;IEC6185流量<br>首先是过滤出MMS流量包<br>注意到请求基本是一请求一恢复</p>
-<p><img src="/wzimg/2026-05-19-18-50-50.png"></p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-05-19-18-50-50.png" alt="" data-caption="" loading="lazy"></p>
 <p>分析read(4)</p>
-<p><img src="/wzimg/2026-05-19-18-49-18.png"></p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-05-19-18-49-18.png" alt="" data-caption="" loading="lazy"></p>
 <p>会发现itemId存在变化</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tshark -r <span class="string">&#x27;/mnt/d/mis杂项/玄机/miscer/工控/12.MMS协议分析/MMS协议分析.pcap&#x27;</span> -d tcp.port==102,tpkt -T fields -e mms.itemId | <span class="built_in">sort</span> | <span class="built_in">uniq</span> -c | <span class="built_in">sort</span> -nr</span><br></pre></td></tr></table></figure>
 
 <p>统计所有itemTd的种类和数量</p>
-<p><img src="/wzimg/2026-05-19-19-02-20.png"></p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-05-19-19-02-20.png" alt="" data-caption="" loading="lazy"></p>
 <p>可以发现最后两个itemId除去L是16进制，66开头像是flag的开头</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">7h756h7d646173617g</span><br><span class="line">666f61677e49435366</span><br></pre></td></tr></table></figure>
 
 <p>但是直接解密并不对<br>而666c是fl，所以猜测对其进行了移位处理，即向后移了3位，导致c变成f，于是凯撒3位后再转换成ascll得到flag</p>
 <p>666c61677b49435366I7e756e7a646173617d</p>
-<p><img src="/wzimg/2026-05-19-19-16-40.png"></p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-05-19-19-16-40.png" alt="" data-caption="" loading="lazy"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;ICSf~unzdasa&#125;</span><br></pre></td></tr></table></figure>
 
 
 <h1 id="S7comm工控流量分析"><a href="#S7comm工控流量分析" class="headerlink" title="S7comm工控流量分析"></a>S7comm工控流量分析</h1><p>西门子设备的工控协议，基于 COTP 实现，是COTP的上层协议<br>它运行在 TCP&#x2F;IP 之上，默认使用 102 端口<br>主要有三种类型<br>Job(1)、Ack_Data(3)&#x2F;Ack(2)、Userdata(7)<br>Job：下发任务&#x2F;指令<br>Ack_Data：带有返回数据<br>Ack：单纯确认，含有数据<br>Userdata：用户自定义数据区，也包含功能指令</p>
 <p>常规做题方法：查看返回数据、任务数据<br>tshark -r 1.pcap -T fields -e s7comm.resp.data | uniq</p>
 <h2 id="题目-2"><a href="#题目-2" class="headerlink" title="题目"></a>题目</h2><h3 id="工控-S7协议-玄机"><a href="#工控-S7协议-玄机" class="headerlink" title="工控-S7协议-玄机"></a>工控-S7协议-玄机</h3><p>依旧先过滤出s7comm流量包</p>
-<p><img src="/wzimg/2026-05-19-20-42-00.png"></p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-05-19-20-42-00.png" alt="" data-caption="" loading="lazy"></p>
 <p>也是一下发任务一个回复，查看Ack_Data返回数据有没有信息<br>搜索发现flag</p>
-<p><img src="/wzimg/2026-05-19-20-29-22.png"></p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-05-19-20-29-22.png" alt="" data-caption="" loading="lazy"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;Congratulationsonthethrough&#125;</span><br></pre></td></tr></table></figure>
 
 
@@ -851,7 +875,7 @@
 </div>
   
   
-    <script async src="/js/copy-codeblock.js?v=1779629707307"></script>
+    <script async src="/js/copy-codeblock.js?v=1779712834631"></script>
   
 
   

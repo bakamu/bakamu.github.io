@@ -45,21 +45,21 @@
 <link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
 
 
-<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1779629707340">
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1779712834657">
 
     <link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
 
-<link rel="stylesheet" href="/css/style.css?v=1779629707340">
+<link rel="stylesheet" href="/css/style.css?v=1779712834657">
 
 
 
 
     
-        <link rel="stylesheet" href="/custom.css?v=1779629707340">
+        <link rel="stylesheet" href="/custom.css?v=1779712834657">
     
-        <link rel="stylesheet" href="/themes/umaru/index.css?v=1779629707340">
+        <link rel="stylesheet" href="/themes/umaru/index.css?v=1779712834657">
     
-        <link rel="stylesheet" href="/themes/asuka/index.css?v=1779629707340">
+        <link rel="stylesheet" href="/themes/asuka/index.css?v=1779712834657">
     
 
 
@@ -69,7 +69,17 @@
 <script src="/lib/lax.min.js" async></script>
 
 
-<script async src="/js/app.js?v=1779629707340"></script>
+<script>
+(function waitFancybox() {
+  if (typeof Fancybox !== 'undefined') {
+    Fancybox.bind('[data-fancybox]', { Hash: false });
+  } else {
+    setTimeout(waitFancybox, 100);
+  }
+})();
+</script>
+
+<script async src="/js/app.js?v=1779712834657"></script>
 
  
 
@@ -128,53 +138,67 @@
         
     </div>
     
-    <!-- 文章分类组件 -->
+    
     <div class="nexmoe-widget-wrap">
         <h3 class="nexmoe-widget-title">文章分类</h3>
         <div class="nexmoe-widget">
             <ul class="category-list">
-                <!-- 手动构建分类树 -->
-                <li class="category-list-item">
+                
+                <li class="category-list-item" style="padding-left: 0px;">
+                    
                     <span class="category-toggle" onclick="toggleCategory(this)">
                         <i class="nexmoefont iconfont icon-caret-down"></i>
                     </span>
+                    
                     <a class="category-list-link" href="/categories/CTF/">CTF</a>
-                    <span class="category-list-count">3</span>
+                    <span class="category-list-count">6</span>
+                    
                     <ul class="category-children">
-                        <li class="category-list-item" style="padding-left: 15px;">
-                            <a class="category-list-link" href="/categories/CTF/做题笔记/">做题笔记</a>
-                            <span class="category-list-count">1</span>
-                        </li>
-                        <li class="category-list-item" style="padding-left: 15px;">
-                            <a class="category-list-link" href="/categories/CTF/心得/">心得</a>
-                            <span class="category-list-count">2</span>
-                        </li>
-                        <li class="category-list-item" style="padding-left: 15px;">
-                            <a class="category-list-link" href="/categories/CTF/我的wp/">我的wp</a>
-                            <span class="category-list-count">0</span>
-                        </li>
-                    </ul>
+                        
+                <li class="category-list-item" style="padding-left: 15px;">
+                    
+                    <a class="category-list-link" href="/categories/CTF/做题笔记/">做题笔记</a>
+                    <span class="category-list-count">4</span>
+                    
                 </li>
-                <li class="category-list-item">
+                
+                <li class="category-list-item" style="padding-left: 15px;">
+                    
+                    <a class="category-list-link" href="/categories/CTF/心得/">心得</a>
+                    <span class="category-list-count">2</span>
+                    
+                </li>
+                
+                    </ul>
+                    
+                </li>
+                
+                <li class="category-list-item" style="padding-left: 0px;">
+                    
                     <span class="category-toggle" onclick="toggleCategory(this)">
                         <i class="nexmoefont iconfont icon-caret-down"></i>
                     </span>
+                    
                     <a class="category-list-link" href="/categories/电子取证/">电子取证</a>
                     <span class="category-list-count">2</span>
+                    
                     <ul class="category-children">
-                        <li class="category-list-item" style="padding-left: 15px;">
-                            <a class="category-list-link" href="/categories/电子取证/做题笔记/">做题笔记</a>
-                            <span class="category-list-count">2</span>
-                        </li>
-                        <li class="category-list-item" style="padding-left: 15px;">
-                            <a class="category-list-link" href="/categories/电子取证/心得/">心得</a>
-                            <span class="category-list-count">0</span>
-                        </li>
-                    </ul>
+                        
+                <li class="category-list-item" style="padding-left: 15px;">
+                    
+                    <a class="category-list-link" href="/categories/电子取证/做题笔记/">做题笔记</a>
+                    <span class="category-list-count">2</span>
+                    
                 </li>
+                
+                    </ul>
+                    
+                </li>
+                
             </ul>
         </div>
     </div>
+    
     
     <style>
         .category-toggle {
@@ -631,7 +655,7 @@
 </style>
 
 
-    <script async src="/js/search.js?v=1779629707341"></script>
+    <script async src="/js/search.js?v=1779712834658"></script>
         
 
             
@@ -741,39 +765,39 @@
     
 </div>
 
-    <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><h2 id="Misc-01-StarTrail-星轨校验"><a href="#Misc-01-StarTrail-星轨校验" class="headerlink" title="Misc_01.StarTrail &#x2F; 星轨校验"></a>Misc_01.StarTrail &#x2F; 星轨校验</h2><h3 id="信息"><a href="#信息" class="headerlink" title="信息"></a>信息</h3><p><img src="/wzimg/2026-05-23-11-59-12.png"></p>
-<p>README.txt:<br><img src="/wzimg/2026-05-23-13-24-04.png"></p>
+    <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><h2 id="Misc-01-StarTrail-星轨校验"><a href="#Misc-01-StarTrail-星轨校验" class="headerlink" title="Misc_01.StarTrail &#x2F; 星轨校验"></a>Misc_01.StarTrail &#x2F; 星轨校验</h2><h3 id="信息"><a href="#信息" class="headerlink" title="信息"></a>信息</h3><p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-05-23-11-59-12.png" alt="" data-caption="" loading="lazy"></p>
+<p>README.txt:<br><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-05-23-13-24-04.png" alt="" data-caption="" loading="lazy"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">ZeroG-CTF StarTrail</span><br><span class="line"></span><br><span class="line">Files:</span><br><span class="line">- ground_control.log : launch day ground control <span class="built_in">log</span></span><br><span class="line">- telemetry.bin      : encrypted telemetry frame</span><br><span class="line"></span><br><span class="line">Message from Fen:</span><br><span class="line"><span class="string">&quot;轨迹会告诉你顺序，队伍会告诉你钥匙。&quot;</span></span><br><span class="line"></span><br><span class="line">Flag format:</span><br><span class="line">flag&#123;&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="做题"><a href="#做题" class="headerlink" title="做题"></a>做题</h3><p>拿到附件，先分析log日志，里面有疑似base64编码，还有顺序</p>
-<p><img src="/wzimg/2026-05-23-12-00-28.png"></p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-05-23-12-00-28.png" alt="" data-caption="" loading="lazy"></p>
 <p>按照顺序把所有编码拼接起来，解码后得到zlib压缩数据</p>
-<p><img src="/wzimg/2026-05-23-12-01-24.png"></p>
-<p><img src="/wzimg/2026-05-23-12-01-34.png"></p>
-<p>逐个分析<br>“nonce”:”5a45524f472d3031”<br>解码得到<br><img src="/wzimg/2026-05-23-12-03-50.png"></p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-05-23-12-01-24.png" alt="" data-caption="" loading="lazy"></p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-05-23-12-01-34.png" alt="" data-caption="" loading="lazy"></p>
+<p>逐个分析<br>“nonce”:”5a45524f472d3031”<br>解码得到<br><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-05-23-12-03-50.png" alt="" data-caption="" loading="lazy"></p>
 <p>cipher: xorstream-sha256-ctr<br>加密方式：<br>xorstream → 流加密，按字节异或<br>sha256 → 用于派生密钥流<br>ctr → 计数器模式，每个块的密钥流由 SHA256( key + counter ) 生成</p>
 <p>kdf: sha256(‘Pwnstars::’ + ‘-‘.join(crew) + ‘::’ + domain)<br>密钥派生函数：<br>先计算 ‘Pwnstars::N1-A-Hugo-Gnaw-Fen::<a target="_blank" rel="noopener" href="http://www.pwnstars.online/">www.pwnstars.online</a>‘<br>再取 SHA256，得到加密用的密钥</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">- crew : [<span class="string">&quot;N1&quot;</span>,<span class="string">&quot;A&quot;</span>,<span class="string">&quot;Hugo&quot;</span>,<span class="string">&quot;Gnaw&quot;</span>,<span class="string">&quot;Fen&quot;</span>]</span><br><span class="line">- domain : www.pwnstars.online</span><br><span class="line">- nonce : 5a45524f472d3031 → ZEROG-01</span><br><span class="line">- cipher : xorstream-sha256-ctr</span><br><span class="line">- KDF : sha256(<span class="string">&#x27;Pwnstars::&#x27;</span> + <span class="string">&#x27;-&#x27;</span>.<span class="built_in">join</span>(crew) + <span class="string">&#x27;::&#x27;</span> + domain)</span><br></pre></td></tr></table></figure>
 
-<p>在附件的README中有提示<br><img src="/wzimg/2026-05-23-12-04-59.png"></p>
+<p>在附件的README中有提示<br><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-05-23-12-04-59.png" alt="" data-caption="" loading="lazy"></p>
 <p>同时题目提示pwnstar五位成员和官网作为派生秘钥</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">KDF = sha256(<span class="string">&quot;Pwnstars::N1-A-Hugo-Gnaw-Fen::www.pwnstars.online&quot;</span>)</span><br><span class="line">    = c0ffb03aedafa1ca8de33ed820f5f22d1b02e88ac3bf7b06034e3ee046e33394</span><br></pre></td></tr></table></figure>
 
 <p>解密telemetry.bin</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">import hashlib</span><br><span class="line"></span><br><span class="line">dk = hashlib.sha256(</span><br><span class="line">    b<span class="string">&quot;Pwnstars::N1-A-Hugo-Gnaw-Fen::www.pwnstars.online&quot;</span></span><br><span class="line">).digest()</span><br><span class="line"></span><br><span class="line">nonce = bytes.fromhex(<span class="string">&quot;5a45524f472d3031&quot;</span>)</span><br><span class="line"></span><br><span class="line">with open(<span class="string">&quot;telemetry.bin&quot;</span>, <span class="string">&quot;rb&quot;</span>) as f:</span><br><span class="line">    ciphertext = f.read()</span><br><span class="line"></span><br><span class="line">plaintext = bytearray()</span><br><span class="line">counter = 0</span><br><span class="line"><span class="keyword">while</span> len(plaintext) &lt; len(ciphertext):</span><br><span class="line">    keystream = hashlib.sha256(dk + nonce + counter.to_bytes(4, <span class="string">&#x27;big&#x27;</span>)).digest()</span><br><span class="line">    <span class="keyword">for</span> i, k <span class="keyword">in</span> enumerate(keystream):</span><br><span class="line">        <span class="keyword">if</span> counter * 32 + i &gt;= len(ciphertext):</span><br><span class="line">            <span class="built_in">break</span></span><br><span class="line">        plaintext.append(ciphertext[counter * 32 + i] ^ k)</span><br><span class="line">    counter += 1</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(bytes(plaintext).decode(errors=<span class="string">&#x27;replace&#x27;</span>))</span><br></pre></td></tr></table></figure>
 
-<p><img src="/wzimg/2026-05-23-12-14-42.png"></p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-05-23-12-14-42.png" alt="" data-caption="" loading="lazy"></p>
 <p>得到flag编码，解密<br>base64-&gt;rot13</p>
-<p><img src="/wzimg/2026-05-23-12-15-19.png"></p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-05-23-12-15-19.png" alt="" data-caption="" loading="lazy"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;ZeroG_startrail_from_pwnstars&#125;</span><br></pre></td></tr></table></figure>
 
 
 
-<h2 id="Misc-02-Moonlight-Radio-月光电台"><a href="#Misc-02-Moonlight-Radio-月光电台" class="headerlink" title="Misc_02.Moonlight Radio &#x2F; 月光电台"></a>Misc_02.Moonlight Radio &#x2F; 月光电台</h2><h3 id="信息-1"><a href="#信息-1" class="headerlink" title="信息"></a>信息</h3><p><img src="/wzimg/2026-05-23-12-17-56.png"></p>
-<p>README.txt:<br><img src="/wzimg/2026-05-23-12-20-47.png"></p>
+<h2 id="Misc-02-Moonlight-Radio-月光电台"><a href="#Misc-02-Moonlight-Radio-月光电台" class="headerlink" title="Misc_02.Moonlight Radio &#x2F; 月光电台"></a>Misc_02.Moonlight Radio &#x2F; 月光电台</h2><h3 id="信息-1"><a href="#信息-1" class="headerlink" title="信息"></a>信息</h3><p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-05-23-12-17-56.png" alt="" data-caption="" loading="lazy"></p>
+<p>README.txt:<br><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-05-23-12-20-47.png" alt="" data-caption="" loading="lazy"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">ZeroG-CTF Moonlight Radio</span><br><span class="line"></span><br><span class="line">Recovered files:</span><br><span class="line"></span><br><span class="line">- radio.wav</span><br><span class="line">- telemetry.dat</span><br><span class="line"></span><br><span class="line">Fen<span class="string">&#x27;s note:</span></span><br><span class="line"><span class="string">    &quot;The moon does not speak Morse tonight.&quot;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">A&#x27;</span>s note:</span><br><span class="line">    key = sha256(<span class="string">&quot;ZeroG::&quot;</span> + radio_password + <span class="string">&quot;::www.pwnstars.online&quot;</span>)</span><br><span class="line"></span><br><span class="line">Gnaw<span class="string">&#x27;s note:</span></span><br><span class="line"><span class="string">    &quot;Numbers may become characters again.&quot;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Flag format:</span></span><br><span class="line"><span class="string">    flag&#123;...&#125; or Pwnsatrs&#123;...&#125;</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="做题-1"><a href="#做题-1" class="headerlink" title="做题"></a>做题</h3><p>提示wav是电话按键音，直接DTMF2NUM播音号识别<br><img src="/wzimg/2026-05-23-12-19-55.png"></p>
+<h3 id="做题-1"><a href="#做题-1" class="headerlink" title="做题"></a>做题</h3><p>提示wav是电话按键音，直接DTMF2NUM播音号识别<br><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-05-23-12-19-55.png" alt="" data-caption="" loading="lazy"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">108117110097114045049055048049</span><br></pre></td></tr></table></figure>
 <p>观察发现可以分为每三个一组</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">108 117 110 097 114 045 049 055 048 049</span><br></pre></td></tr></table></figure>
@@ -784,37 +808,37 @@
 <p>得到秘钥</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sha256:ZeroG::lunar-1701::www.pwnstars.online</span><br><span class="line"></span><br><span class="line">658446226393e73367bfd2b9f83ff6238b1c6b6adcbbcf349c936337f2de9cd7</span><br></pre></td></tr></table></figure>
 
-<p>然后打开telemetry.dat发现有特殊字符<br><img src="/wzimg/2026-05-23-13-54-02.png"></p>
+<p>然后打开telemetry.dat发现有特殊字符<br><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-05-23-13-54-02.png" alt="" data-caption="" loading="lazy"></p>
 <p>推测nonce:ZGRMOON2<br>跟上道题目一样xorstream-sha256-ctr解密得到flag的编码</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FINAL=c3ludHtNcmViVF96YmJheXZ0dWdfZW5xdmJfcWd6c30=</span><br></pre></td></tr></table></figure>
 
-<p>再Base64+rot13解密得到flag<br><img src="/wzimg/2026-05-23-13-55-56.png"></p>
+<p>再Base64+rot13解密得到flag<br><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-05-23-13-55-56.png" alt="" data-caption="" loading="lazy"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;ZeroG_moonlight_radio_dtmf&#125;</span><br></pre></td></tr></table></figure>
 
 
 
-<h2 id="Misc-03-Blackbox-Telemetry-黑匣子遥测"><a href="#Misc-03-Blackbox-Telemetry-黑匣子遥测" class="headerlink" title="Misc_03.Blackbox Telemetry &#x2F; 黑匣子遥测"></a>Misc_03.Blackbox Telemetry &#x2F; 黑匣子遥测</h2><h3 id="信息-2"><a href="#信息-2" class="headerlink" title="信息"></a>信息</h3><p><img src="/wzimg/2026-05-23-12-45-46.png"></p>
-<p>README.txt:<br><img src="/wzimg/2026-05-23-12-46-22.png"></p>
+<h2 id="Misc-03-Blackbox-Telemetry-黑匣子遥测"><a href="#Misc-03-Blackbox-Telemetry-黑匣子遥测" class="headerlink" title="Misc_03.Blackbox Telemetry &#x2F; 黑匣子遥测"></a>Misc_03.Blackbox Telemetry &#x2F; 黑匣子遥测</h2><h3 id="信息-2"><a href="#信息-2" class="headerlink" title="信息"></a>信息</h3><p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-05-23-12-45-46.png" alt="" data-caption="" loading="lazy"></p>
+<p>README.txt:<br><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-05-23-12-46-22.png" alt="" data-caption="" loading="lazy"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">ZeroG-CTF Blackbox Telemetry</span><br><span class="line"></span><br><span class="line">Recovered files:</span><br><span class="line"></span><br><span class="line">- blackbox.db</span><br><span class="line">- events.log</span><br><span class="line">- fragment.bin</span><br><span class="line"></span><br><span class="line">Fen:</span><br><span class="line">    <span class="string">&quot;按正确的时间看，碎片会重新排列；用任务名开箱。&quot;</span></span><br><span class="line"></span><br><span class="line">Notes:</span><br><span class="line">    Some timestamps inside the database are unreliable.</span><br><span class="line">    The event stream may know <span class="built_in">which</span> frames were accepted.</span><br><span class="line"></span><br><span class="line">Flag format:</span><br><span class="line">    flag&#123;...&#125; or Pwnsatrs&#123;...&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="做题-2"><a href="#做题-2" class="headerlink" title="做题"></a>做题</h3><p>查看db文件<br><img src="/wzimg/2026-05-23-12-48-34.png"></p>
+<h3 id="做题-2"><a href="#做题-2" class="headerlink" title="做题"></a>做题</h3><p>查看db文件<br><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-05-23-12-48-34.png" alt="" data-caption="" loading="lazy"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">6	ZG-FRAME-4B	2026-04-27T00:00:06Z	<span class="built_in">base64</span>+zlib eJxjYMADDofGri/a7fJG3ch70dubO+M27GL9YR7YsChow8XjTVP0AQjREJU=</span><br><span class="line">1	ZG-FRAME-2E	2026-04-27T00:00:12Z	<span class="built_in">base64</span>+zlib	eJzrkdy2819rOp+grtblGSfNlHT51K/fX+yzRsRV+wdzgDcziwgDAwMHw6lZS2KWn2p4oQPkqQMxDxCnAgCusxLy</span><br><span class="line">5	ZG-FRAME-9F	2026-04-27T00:00:15Z	<span class="built_in">base64</span>+zlib	eJwBPADD/5IPRUopVdNFriQMPjB8eDMvIbu7Erx82pxvaVTcB3AT8d4GOiIiQw5OF2myC02fBDl3Hw4Iqnr/AAAAOStGRk=</span><br><span class="line">2	ZG-FRAME-8D	2026-04-27T00:00:18Z	<span class="built_in">base64</span>+zlib	eJwBNwDI/25jX2ZsYWcuYmluAScA2P/qJX2weJAnY8ArMeNJnJCn7o93mcE0ixIbT1SmtHIUOOM/eaVmrj+f8xii</span><br><span class="line">3	ZG-FRAME-1C	2026-04-27T00:00:03Z	<span class="built_in">base64</span>+zlib	eJwBPADD/4GCEGLqUjkXtzklOUf2NUf+PXdqO+HF0nvW82fvWGWDLwO5vpFf/GYnM+uCnxIZYEsNlqrxKwWLpAavMk9pG20=</span><br><span class="line">4	ZG-FRAME-7A	2026-04-27T00:00:09Z	<span class="built_in">base64</span>+zlib	eJwL8GZmEWFgYOBgODVrSUwn+wVz4E8b0aQCAODn+Iq15JRUnqBEP/ww48reX/uVYLc8xi5Gzz0OG4CADKHBC3</span><br></pre></td></tr></table></figure>
 
-<p>提示说根据log文件能得到正确顺序<br><img src="/wzimg/2026-05-23-13-02-06.png"></p>
+<p>提示说根据log文件能得到正确顺序<br><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-05-23-13-02-06.png" alt="" data-caption="" loading="lazy"></p>
 <p>根据ZG-FRAME-7A~~来一一对应ZG-FRAME-7A	2026-04-27T00:00:09Z	base64+zlib	eJwL8GZmEWFgYOBgODVrSUwn+wVz4E8b0aQCAODn+Iq15JRUnqBEP&#x2F;ww48reX&#x2F;uVYLc8xi5Gzz0OG4CADKHBC3<br>然后依次base64+zlib inflate解码出hex形式拼接得到zip文件的16进制表示</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">504b0304140000000800ca9aa45c89039ba8e70000004b010000080000004e4f54452e7478746590314fc3400c8577ff0aab13089a010986482c08d181821062ea523917b739253947f63547fe3d776a3be1c5d27bd6f367ef5865832f03b9be915ffc662733eb829f1219604b0d96aaf12b058ba406af32920f454a2955d345ae240c3e307c78332f21bbbb12bc7ef36a71bda553701dc04fc77818e888890c39385da6c82d367c10e5dc7c3822a9ebfccc6d05f0ce0bb6ac7ea698336b8082d267f119ada387c7a79bf1bc6e1f6864bc0000000000000000000000000000000000000000000000000000000000000000c3555daf72bb44ec27324ba2edd9b95eb0ba05f8375180a252b0d1c782942f8c19b6b9fe85670e112d2ad398c936222d0e27d7dfa34cac14452bf803504b0304140000000800ca9aa45ca7ca80e82c000000270000000c000000656e635f666c61672e62696e012700d8ffea257db078902763c02b31e3499c90a7ee8f7799c1348b121b4f54a6b4721438e33f79a566ae3f</span><br></pre></td></tr></table></figure>
 
-<p>根据文件头可知有NOTE.txt和enc_flag.bin文件，但是没有源目录数据区，所以用winRAR修复<br>得到两个文件<br>NOTE.txt:<br><img src="/wzimg/2026-05-23-13-15-59.png"></p>
+<p>根据文件头可知有NOTE.txt和enc_flag.bin文件，但是没有源目录数据区，所以用winRAR修复<br>得到两个文件<br>NOTE.txt:<br><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-05-23-13-15-59.png" alt="" data-caption="" loading="lazy"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">ZeroG Blackbox Recovery Note</span><br><span class="line"></span><br><span class="line">Lab     : Pwnstars</span><br><span class="line">Domain  : www.pwnstars.online</span><br><span class="line">Mission : ZeroG-First-Launch</span><br><span class="line"></span><br><span class="line">The flag was encrypted before being archived.</span><br><span class="line"></span><br><span class="line">Key derivation:</span><br><span class="line"></span><br><span class="line">    key = sha256(mission_name + <span class="string">&quot;::&quot;</span> + archive_password + <span class="string">&quot;::Pwnstars&quot;</span>)</span><br><span class="line"></span><br><span class="line">archive_password was transmitted <span class="keyword">in</span> the blackbox event stream.</span><br><span class="line"></span><br><span class="line">Good luck, operator.</span><br></pre></td></tr></table></figure>
 
-<p>知道解密方式后就可以得到flag了<br>archive_password在log文件中<br><img src="/wzimg/2026-05-23-13-19-48.png"></p>
-<p>mission_name<br><img src="/wzimg/2026-05-23-13-20-21.png"></p>
+<p>知道解密方式后就可以得到flag了<br>archive_password在log文件中<br><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-05-23-13-19-48.png" alt="" data-caption="" loading="lazy"></p>
+<p>mission_name<br><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-05-23-13-20-21.png" alt="" data-caption="" loading="lazy"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">mission_name    = <span class="string">&quot;ZeroG-First-Launch&quot;</span>    <span class="comment"># 来自 events.log line 3</span></span><br><span class="line">archive_password = <span class="string">&quot;timeline-0427&quot;</span>         <span class="comment"># 来自 events.log line 12+15</span></span><br><span class="line"></span><br><span class="line">key_material = <span class="string">&quot;ZeroG-First-Launch::timeline-0427::Pwnstars&quot;</span></span><br><span class="line">key = sha256(key_material)</span><br><span class="line"><span class="comment"># key = 8c491cd703ca4211af6c6e8125fdf3cc8ce00fc6b55de67777263ac3eb00715b</span></span><br></pre></td></tr></table></figure>
 
 <p>最后循环异或enc_flag.bin</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">import hashlib</span><br><span class="line"></span><br><span class="line">mission_name = <span class="string">&quot;ZeroG-First-Launch&quot;</span></span><br><span class="line">archive_password = <span class="string">&quot;timeline-0427&quot;</span></span><br><span class="line"></span><br><span class="line">key_material = mission_name + <span class="string">&quot;::&quot;</span> + archive_password + <span class="string">&quot;::Pwnstars&quot;</span></span><br><span class="line">key = hashlib.sha256(key_material.encode()).digest()</span><br><span class="line">with open(<span class="string">&#x27;enc_flag.bin&#x27;</span>, <span class="string">&#x27;rb&#x27;</span>) as f:</span><br><span class="line">    enc_data = f.read()</span><br><span class="line"></span><br><span class="line">flag = bytes(enc_data[i] ^ key[i % 32] <span class="keyword">for</span> i <span class="keyword">in</span> range(len(enc_data)))</span><br><span class="line"><span class="built_in">print</span>(flag.decode())</span><br></pre></td></tr></table></figure>
 
-<p>得到flag<br><img src="/wzimg/2026-05-23-13-22-36.png"></p>
+<p>得到flag<br><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-05-23-13-22-36.png" alt="" data-caption="" loading="lazy"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;ZeroG_blackbox_timeline_recovered&#125;</span><br></pre></td></tr></table></figure>
 
 
@@ -849,7 +873,7 @@
 </div>
   
   
-    <script async src="/js/copy-codeblock.js?v=1779629707307"></script>
+    <script async src="/js/copy-codeblock.js?v=1779712834630"></script>
   
 
   

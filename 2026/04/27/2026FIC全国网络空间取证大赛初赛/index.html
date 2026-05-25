@@ -48,21 +48,21 @@
 <link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
 
 
-<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1779629707352">
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1779712834668">
 
     <link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
 
-<link rel="stylesheet" href="/css/style.css?v=1779629707352">
+<link rel="stylesheet" href="/css/style.css?v=1779712834668">
 
 
 
 
     
-        <link rel="stylesheet" href="/custom.css?v=1779629707352">
+        <link rel="stylesheet" href="/custom.css?v=1779712834668">
     
-        <link rel="stylesheet" href="/themes/umaru/index.css?v=1779629707352">
+        <link rel="stylesheet" href="/themes/umaru/index.css?v=1779712834668">
     
-        <link rel="stylesheet" href="/themes/asuka/index.css?v=1779629707352">
+        <link rel="stylesheet" href="/themes/asuka/index.css?v=1779712834668">
     
 
 
@@ -72,7 +72,17 @@
 <script src="/lib/lax.min.js" async></script>
 
 
-<script async src="/js/app.js?v=1779629707352"></script>
+<script>
+(function waitFancybox() {
+  if (typeof Fancybox !== 'undefined') {
+    Fancybox.bind('[data-fancybox]', { Hash: false });
+  } else {
+    setTimeout(waitFancybox, 100);
+  }
+})();
+</script>
+
+<script async src="/js/app.js?v=1779712834668"></script>
 
  
 
@@ -131,53 +141,67 @@
         
     </div>
     
-    <!-- 文章分类组件 -->
+    
     <div class="nexmoe-widget-wrap">
         <h3 class="nexmoe-widget-title">文章分类</h3>
         <div class="nexmoe-widget">
             <ul class="category-list">
-                <!-- 手动构建分类树 -->
-                <li class="category-list-item">
+                
+                <li class="category-list-item" style="padding-left: 0px;">
+                    
                     <span class="category-toggle" onclick="toggleCategory(this)">
                         <i class="nexmoefont iconfont icon-caret-down"></i>
                     </span>
+                    
                     <a class="category-list-link" href="/categories/CTF/">CTF</a>
-                    <span class="category-list-count">3</span>
+                    <span class="category-list-count">6</span>
+                    
                     <ul class="category-children">
-                        <li class="category-list-item" style="padding-left: 15px;">
-                            <a class="category-list-link" href="/categories/CTF/做题笔记/">做题笔记</a>
-                            <span class="category-list-count">1</span>
-                        </li>
-                        <li class="category-list-item" style="padding-left: 15px;">
-                            <a class="category-list-link" href="/categories/CTF/心得/">心得</a>
-                            <span class="category-list-count">2</span>
-                        </li>
-                        <li class="category-list-item" style="padding-left: 15px;">
-                            <a class="category-list-link" href="/categories/CTF/我的wp/">我的wp</a>
-                            <span class="category-list-count">0</span>
-                        </li>
-                    </ul>
+                        
+                <li class="category-list-item" style="padding-left: 15px;">
+                    
+                    <a class="category-list-link" href="/categories/CTF/做题笔记/">做题笔记</a>
+                    <span class="category-list-count">4</span>
+                    
                 </li>
-                <li class="category-list-item">
+                
+                <li class="category-list-item" style="padding-left: 15px;">
+                    
+                    <a class="category-list-link" href="/categories/CTF/心得/">心得</a>
+                    <span class="category-list-count">2</span>
+                    
+                </li>
+                
+                    </ul>
+                    
+                </li>
+                
+                <li class="category-list-item" style="padding-left: 0px;">
+                    
                     <span class="category-toggle" onclick="toggleCategory(this)">
                         <i class="nexmoefont iconfont icon-caret-down"></i>
                     </span>
+                    
                     <a class="category-list-link" href="/categories/电子取证/">电子取证</a>
                     <span class="category-list-count">2</span>
+                    
                     <ul class="category-children">
-                        <li class="category-list-item" style="padding-left: 15px;">
-                            <a class="category-list-link" href="/categories/电子取证/做题笔记/">做题笔记</a>
-                            <span class="category-list-count">2</span>
-                        </li>
-                        <li class="category-list-item" style="padding-left: 15px;">
-                            <a class="category-list-link" href="/categories/电子取证/心得/">心得</a>
-                            <span class="category-list-count">0</span>
-                        </li>
-                    </ul>
+                        
+                <li class="category-list-item" style="padding-left: 15px;">
+                    
+                    <a class="category-list-link" href="/categories/电子取证/做题笔记/">做题笔记</a>
+                    <span class="category-list-count">2</span>
+                    
                 </li>
+                
+                    </ul>
+                    
+                </li>
+                
             </ul>
         </div>
     </div>
+    
     
     <style>
         .category-toggle {
@@ -634,7 +658,7 @@
 </style>
 
 
-    <script async src="/js/search.js?v=1779629707352"></script>
+    <script async src="/js/search.js?v=1779712834668"></script>
         
 
             
@@ -746,87 +770,87 @@
 
     <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>这次比赛感觉还算不错吧，我负责手机取证和计算机取证，手机差不多剩了三道，计算机在队友的基础上又做了四五道，最后拿了三等奖，已经超出预期了，可惜服务器没碰到这情况，没拿几分。</p>
 <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>检材密码：FIC-{e404d6e66586e9460c23755afab5a872bcf78ab4}</p>
-<h2 id="手机取证"><a href="#手机取证" class="headerlink" title="手机取证"></a>手机取证</h2><h3 id="1、分析手机检材，该手机型号为"><a href="#1、分析手机检材，该手机型号为" class="headerlink" title="1、分析手机检材，该手机型号为"></a>1、分析手机检材，该手机型号为</h3><p><img src="/wzimg/2026-04-27-18-59-23.png"></p>
+<h2 id="手机取证"><a href="#手机取证" class="headerlink" title="手机取证"></a>手机取证</h2><h3 id="1、分析手机检材，该手机型号为"><a href="#1、分析手机检材，该手机型号为" class="headerlink" title="1、分析手机检材，该手机型号为"></a>1、分析手机检材，该手机型号为</h3><p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-04-27-18-59-23.png" alt="" data-caption="" loading="lazy"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Redmi Note 7 Pro</span><br></pre></td></tr></table></figure>
 
 <h3 id="2、分析手机检材，李安弘手机计划前往迪拜的日期是"><a href="#2、分析手机检材，李安弘手机计划前往迪拜的日期是" class="headerlink" title="2、分析手机检材，李安弘手机计划前往迪拜的日期是"></a>2、分析手机检材，李安弘手机计划前往迪拜的日期是</h3><p>这道题目当时没做出来，后来发现可以在todo.db中看见notes信息</p>
-<p><img src="/wzimg/2026-04-27-19-16-35.png"></p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-04-27-19-16-35.png" alt="" data-caption="" loading="lazy"></p>
 <p>所以时间是20260606</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">20260606</span><br></pre></td></tr></table></figure>
 
 <h3 id="3、分析手机检材，李安弘手机中与网站搭建人员沟通所使用的app安装日期为"><a href="#3、分析手机检材，李安弘手机中与网站搭建人员沟通所使用的app安装日期为" class="headerlink" title="3、分析手机检材，李安弘手机中与网站搭建人员沟通所使用的app安装日期为"></a>3、分析手机检材，李安弘手机中与网站搭建人员沟通所使用的app安装日期为</h3><p>找到APK列表，查看可能的聊天沟通应用，应该是uUUTalk</p>
-<p><img src="/wzimg/2026-04-27-19-20-02.png"></p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-04-27-19-20-02.png" alt="" data-caption="" loading="lazy"></p>
 <p>跳转到源文件知道是uuuim文件安装，于是搜索手机文件系统的package.xml文件，查看uuuim安装时间（packages.xml是手机的注册信息登记本，记载了手机更新、应用修改等信息，查看安装信息可以找it值，即firstInstallTime，lt是lastUpdateTime，最后更新时间）</p>
-<p><img src="/wzimg/2026-04-27-19-33-16.png"></p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-04-27-19-33-16.png" alt="" data-caption="" loading="lazy"></p>
 <p>时间是19d8b6fd571，即it值，转换时间戳就是2026-04-14 18:00:54</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">20260414</span><br></pre></td></tr></table></figure>
 
 <h3 id="4、分析手机检材，李安弘手机中与网站搭建人员沟通所使用的app，存放聊天数据的数据库为"><a href="#4、分析手机检材，李安弘手机中与网站搭建人员沟通所使用的app，存放聊天数据的数据库为" class="headerlink" title="4、分析手机检材，李安弘手机中与网站搭建人员沟通所使用的app，存放聊天数据的数据库为"></a>4、分析手机检材，李安弘手机中与网站搭建人员沟通所使用的app，存放聊天数据的数据库为</h3><p>说实话这道题目有点漏洞，下一题都说了是加密数据库，那么直接看火眼分析出来的加密文件就可以找到了，当然在之前找到的databases里面也能找到，在不济也可以分析APK文件查看记录数据库名</p>
-<p><img src="/wzimg/2026-04-27-19-49-46.png"></p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-04-27-19-49-46.png" alt="" data-caption="" loading="lazy"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wk_9628874a3c6b403593766496fa985893.db</span><br></pre></td></tr></table></figure>
 
 <h3 id="5、分析手机检材，存放聊天数据的数据库的解密密码为"><a href="#5、分析手机检材，存放聊天数据的数据库的解密密码为" class="headerlink" title="5、分析手机检材，存放聊天数据的数据库的解密密码为"></a>5、分析手机检材，存放聊天数据的数据库的解密密码为</h3><p>这道题目是猜测的，因为文件名中的数字是32位，这极有可能是SQL加密算法SEE生成的文件，所以猜测密码就是9628874a3c6b403593766496fa985893<br>在ubuntu中解密</p>
-<p><img src="/wzimg/2026-04-27-19-56-40.png"></p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-04-27-19-56-40.png" alt="" data-caption="" loading="lazy"></p>
 <p>可以看见是解密成功的<br>也可以在DB Browser for SQLCipher.exe导入后输入密码解密得到数据</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">9628874a3c6b403593766496fa985893</span><br></pre></td></tr></table></figure>
 
 <h3 id="6、分析手机检材，李安弘购买云服务器商家的收款备用钱包地址为"><a href="#6、分析手机检材，李安弘购买云服务器商家的收款备用钱包地址为" class="headerlink" title="6、分析手机检材，李安弘购买云服务器商家的收款备用钱包地址为"></a>6、分析手机检材，李安弘购买云服务器商家的收款备用钱包地址为</h3><p>在解密的wk_9628874a3c6b403593766496fa985893.db的massage数据中可以找到</p>
-<p><img src="/wzimg/2026-05-20-19-56-32.png"></p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-05-20-19-56-32.png" alt="" data-caption="" loading="lazy"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">TP6mR2hS9vX8tY1nZ4kL9otSzgjLj6tQ9u</span><br></pre></td></tr></table></figure>
 
-<h3 id="7、分析手机检材，李安弘手机中给网站搭建人员第一次转账的交易hash前6位为"><a href="#7、分析手机检材，李安弘手机中给网站搭建人员第一次转账的交易hash前6位为" class="headerlink" title="7、分析手机检材，李安弘手机中给网站搭建人员第一次转账的交易hash前6位为"></a>7、分析手机检材，李安弘手机中给网站搭建人员第一次转账的交易hash前6位为</h3><p><img src="/wzimg/2026-04-27-20-15-47.png"></p>
+<h3 id="7、分析手机检材，李安弘手机中给网站搭建人员第一次转账的交易hash前6位为"><a href="#7、分析手机检材，李安弘手机中给网站搭建人员第一次转账的交易hash前6位为" class="headerlink" title="7、分析手机检材，李安弘手机中给网站搭建人员第一次转账的交易hash前6位为"></a>7、分析手机检材，李安弘手机中给网站搭建人员第一次转账的交易hash前6位为</h3><p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-04-27-20-15-47.png" alt="" data-caption="" loading="lazy"></p>
 <p>在cache文件夹中可以看到三张转账交易截图<br>那么根据交易地址可以确定给网站搭建人员转账的交易哈希</p>
-<p><img src="/wzimg/2026-04-27-20-20-33.png"></p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-04-27-20-20-33.png" alt="" data-caption="" loading="lazy"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">26226f</span><br></pre></td></tr></table></figure>
 
 <h3 id="8、分析手机检材，手机中使用的AI软件李安弘主动向AI提问了几次"><a href="#8、分析手机检材，手机中使用的AI软件李安弘主动向AI提问了几次" class="headerlink" title="8、分析手机检材，手机中使用的AI软件李安弘主动向AI提问了几次"></a>8、分析手机检材，手机中使用的AI软件李安弘主动向AI提问了几次</h3><p>找到ai软件，是pocketpal，查看packetpalai.db,可以看到主动提问了5次</p>
-<p><img src="/wzimg/2026-04-27-20-26-29.png"></p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-04-27-20-26-29.png" alt="" data-caption="" loading="lazy"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">5</span><br></pre></td></tr></table></figure>
 
 <h3 id="9、分析手机检材，李安弘手机使用的AI软件调用本地AI模型及版本为"><a href="#9、分析手机检材，李安弘手机使用的AI软件调用本地AI模型及版本为" class="headerlink" title="9、分析手机检材，李安弘手机使用的AI软件调用本地AI模型及版本为"></a>9、分析手机检材，李安弘手机使用的AI软件调用本地AI模型及版本为</h3><p>在pocketpal的APK的同一个目录下可以看到qween模型</p>
-<p><img src="/wzimg/2026-04-27-20-27-42.png"></p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-04-27-20-27-42.png" alt="" data-caption="" loading="lazy"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Qwen3.5</span><br></pre></td></tr></table></figure>
 
 <h3 id="10、分析手机检材，李安弘曾使用无人机航拍-分析其飞行轨迹，其在哪个县进行飞行"><a href="#10、分析手机检材，李安弘曾使用无人机航拍-分析其飞行轨迹，其在哪个县进行飞行" class="headerlink" title="10、分析手机检材，李安弘曾使用无人机航拍,分析其飞行轨迹，其在哪个县进行飞行"></a>10、分析手机检材，李安弘曾使用无人机航拍,分析其飞行轨迹，其在哪个县进行飞行</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">米脂县</span><br></pre></td></tr></table></figure>
 
 <h3 id="11、分析手机检材，李安弘最近安装了一个视频类APP，该APP声明了多个敏感权限用于收集用户隐私。请选择其中涉及用户隐私的敏感权限"><a href="#11、分析手机检材，李安弘最近安装了一个视频类APP，该APP声明了多个敏感权限用于收集用户隐私。请选择其中涉及用户隐私的敏感权限" class="headerlink" title="11、分析手机检材，李安弘最近安装了一个视频类APP，该APP声明了多个敏感权限用于收集用户隐私。请选择其中涉及用户隐私的敏感权限"></a>11、分析手机检材，李安弘最近安装了一个视频类APP，该APP声明了多个敏感权限用于收集用户隐私。请选择其中涉及用户隐私的敏感权限</h3><p>找到视频类软件影视红波，进行APK分析，可以看到涉及隐私的敏感权限</p>
-<p><img src="/wzimg/2026-04-27-20-30-59.png"></p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-04-27-20-30-59.png" alt="" data-caption="" loading="lazy"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">A、B、D</span><br></pre></td></tr></table></figure>
 
 <h3 id="12、上述APP启动后会加载一个色情网站。请找出该APP当网络不可用时APP加载的本地离线页面路径。"><a href="#12、上述APP启动后会加载一个色情网站。请找出该APP当网络不可用时APP加载的本地离线页面路径。" class="headerlink" title="12、上述APP启动后会加载一个色情网站。请找出该APP当网络不可用时APP加载的本地离线页面路径。"></a>12、上述APP启动后会加载一个色情网站。请找出该APP当网络不可用时APP加载的本地离线页面路径。</h3><p>用雷电app分析，可以找到一个离线地址</p>
-<p><img src="/wzimg/2026-04-28-08-50-11.png"></p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-04-28-08-50-11.png" alt="" data-caption="" loading="lazy"></p>
 <p>就在Mainaudacity的index中</p>
-<p><img src="/wzimg/2026-04-28-08-52-53.png"></p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-04-28-08-52-53.png" alt="" data-caption="" loading="lazy"></p>
 <p>可以看到离线和在线模式下的网址</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">file:///android_asset/www/index.html</span><br></pre></td></tr></table></figure>
 
 <h3 id="13、上述APP将非法收集的用户隐私数据上传至远程服务器。上传地址在代码中经过编码处理。请找出编码方式，还原出完整的上传服务器URL"><a href="#13、上述APP将非法收集的用户隐私数据上传至远程服务器。上传地址在代码中经过编码处理。请找出编码方式，还原出完整的上传服务器URL" class="headerlink" title="13、上述APP将非法收集的用户隐私数据上传至远程服务器。上传地址在代码中经过编码处理。请找出编码方式，还原出完整的上传服务器URL"></a>13、上述APP将非法收集的用户隐私数据上传至远程服务器。上传地址在代码中经过编码处理。请找出编码方式，还原出完整的上传服务器URL</h3><p>查看上传地址，可以看Datauploader函数</p>
-<p><img src="/wzimg/2026-04-28-09-00-04.png"></p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-04-28-09-00-04.png" alt="" data-caption="" loading="lazy"></p>
 <p>找到了上传地址编码，Base64解码后可以得到地址</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://api.sp-live88.com/collect/userdata</span><br></pre></td></tr></table></figure>
 
 <h3 id="14、该APP在本地创建了SQLite数据库存储收集到的用户信息。请分析代码，写出用于存储用户信息的表名"><a href="#14、该APP在本地创建了SQLite数据库存储收集到的用户信息。请分析代码，写出用于存储用户信息的表名" class="headerlink" title="14、该APP在本地创建了SQLite数据库存储收集到的用户信息。请分析代码，写出用于存储用户信息的表名"></a>14、该APP在本地创建了SQLite数据库存储收集到的用户信息。请分析代码，写出用于存储用户信息的表名</h3><p>靠ai找到的，在p0.a中，找到存储用户信息的表名</p>
-<p><img src="/wzimg/2026-04-28-09-02-26.png"><br><img src="/wzimg/2026-04-28-09-03-07.png"></p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-04-28-09-02-26.png" alt="" data-caption="" loading="lazy"><br><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-04-28-09-03-07.png" alt="" data-caption="" loading="lazy"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">user_collection</span><br></pre></td></tr></table></figure>
 
 <h3 id="15、该APP的assets目录中存在一个加密配置文件config-dat。请解密该文件，写出其中的USDT钱包地址"><a href="#15、该APP的assets目录中存在一个加密配置文件config-dat。请解密该文件，写出其中的USDT钱包地址" class="headerlink" title="15、该APP的assets目录中存在一个加密配置文件config.dat。请解密该文件，写出其中的USDT钱包地址"></a>15、该APP的assets目录中存在一个加密配置文件config.dat。请解密该文件，写出其中的USDT钱包地址</h3><p>解密的方法在libsecurity.so，导出这两个文件，由于还不会逆向，这道题最终还是靠ai解出来的</p>
 <h3 id="16、该APP前端JS代码可以直接调用Android原生方法获取用户隐私数据。请分析暴露了哪些方法用于获取通讯录？"><a href="#16、该APP前端JS代码可以直接调用Android原生方法获取用户隐私数据。请分析暴露了哪些方法用于获取通讯录？" class="headerlink" title="16、该APP前端JS代码可以直接调用Android原生方法获取用户隐私数据。请分析暴露了哪些方法用于获取通讯录？"></a>16、该APP前端JS代码可以直接调用Android原生方法获取用户隐私数据。请分析暴露了哪些方法用于获取通讯录？</h3><p>搜索找到函数getContactsList()</p>
-<p><img src="/wzimg/2026-04-28-09-21-30.png"></p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-04-28-09-21-30.png" alt="" data-caption="" loading="lazy"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">getContactsList()</span><br></pre></td></tr></table></figure>
 
 <h3 id="17、当主上传服务器不可达时，APP会获取备用服务器地址。请分析备用服务器的完整域名和端口"><a href="#17、当主上传服务器不可达时，APP会获取备用服务器地址。请分析备用服务器的完整域名和端口" class="headerlink" title="17、当主上传服务器不可达时，APP会获取备用服务器地址。请分析备用服务器的完整域名和端口"></a>17、当主上传服务器不可达时，APP会获取备用服务器地址。请分析备用服务器的完整域名和端口</h3><p>这道题目没做出来</p>
 <h2 id="计算机取证"><a href="#计算机取证" class="headerlink" title="计算机取证"></a>计算机取证</h2><p>在手机检材中有分区三的解密密码，直接在火眼输入密码就能解密</p>
-<p><img src="/wzimg/2026-04-28-11-25-18.png"></p>
-<p><a href="mailto:&#x39;&#x65;&#x64;&#50;&#x40;&#57;&#57;&#x79;&#x38;&#46;&#99;&#111;&#x6d;&#46;&#99;&#x6e;">9ed2@99y8.com.cn</a></p>
-<h3 id="1、分析计算机检材，操作系统版本号为"><a href="#1、分析计算机检材，操作系统版本号为" class="headerlink" title="1、分析计算机检材，操作系统版本号为"></a>1、分析计算机检材，操作系统版本号为</h3><p><img src="/wzimg/2026-04-28-11-22-41.png"></p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-04-28-11-25-18.png" alt="" data-caption="" loading="lazy"></p>
+<p><a href="mailto:&#57;&#101;&#x64;&#x32;&#x40;&#57;&#x39;&#121;&#x38;&#46;&#99;&#111;&#x6d;&#x2e;&#x63;&#x6e;">9ed2@99y8.com.cn</a></p>
+<h3 id="1、分析计算机检材，操作系统版本号为"><a href="#1、分析计算机检材，操作系统版本号为" class="headerlink" title="1、分析计算机检材，操作系统版本号为"></a>1、分析计算机检材，操作系统版本号为</h3><p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-04-28-11-22-41.png" alt="" data-caption="" loading="lazy"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">23.1</span><br></pre></td></tr></table></figure>
 
 <h3 id="2、分析计算机检材，李安弘曾收到一份免费领取token的邮件的疑似钓鱼邮件，其发送用户邮箱为"><a href="#2、分析计算机检材，李安弘曾收到一份免费领取token的邮件的疑似钓鱼邮件，其发送用户邮箱为" class="headerlink" title="2、分析计算机检材，李安弘曾收到一份免费领取token的邮件的疑似钓鱼邮件，其发送用户邮箱为"></a>2、分析计算机检材，李安弘曾收到一份免费领取token的邮件的疑似钓鱼邮件，其发送用户邮箱为</h3><p>查看邮箱</p>
-<p><img src="/wzimg/2026-04-28-11-28-39.png"></p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-04-28-11-28-39.png" alt="" data-caption="" loading="lazy"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hf13338261292@outlook.com</span><br></pre></td></tr></table></figure>
 
 <h3 id="3、分析计算机检材，李安弘电脑中记录的黄金换现金的商家联系方式为"><a href="#3、分析计算机检材，李安弘电脑中记录的黄金换现金的商家联系方式为" class="headerlink" title="3、分析计算机检材，李安弘电脑中记录的黄金换现金的商家联系方式为"></a>3、分析计算机检材，李安弘电脑中记录的黄金换现金的商家联系方式为</h3><p>在语音记事本中</p>
-<p><img src="/wzimg/2026-04-29-12-01-05.png"></p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-04-29-12-01-05.png" alt="" data-caption="" loading="lazy"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">13612817854</span><br></pre></td></tr></table></figure>
 
 
@@ -834,18 +858,18 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://drive.google.com/file/d/1z3aRS-lkaJYKm7Cp1XjtUmVPsOEVW2fV/view?usp=sharing</span><br></pre></td></tr></table></figure>
 
 <h3 id="5、分析计算机检材，李安弘电脑vpn软件开放的代理端口为"><a href="#5、分析计算机检材，李安弘电脑vpn软件开放的代理端口为" class="headerlink" title="5、分析计算机检材，李安弘电脑vpn软件开放的代理端口为"></a>5、分析计算机检材，李安弘电脑vpn软件开放的代理端口为</h3><p>在设置的网络设置中</p>
-<p><img src="/wzimg/2026-04-29-11-59-33.png"></p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-04-29-11-59-33.png" alt="" data-caption="" loading="lazy"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">9527</span><br></pre></td></tr></table></figure>
 
 <h3 id="6、分析计算机检材，李安弘电脑中AI软件当前使用的模型类型为"><a href="#6、分析计算机检材，李安弘电脑中AI软件当前使用的模型类型为" class="headerlink" title="6、分析计算机检材，李安弘电脑中AI软件当前使用的模型类型为"></a>6、分析计算机检材，李安弘电脑中AI软件当前使用的模型类型为</h3><p>仿真后右下角有个UOS AI，点开后打开设置，可以找到</p>
-<p><img src="/wzimg/2026-04-29-11-15-36.png"></p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-04-29-11-15-36.png" alt="" data-caption="" loading="lazy"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">OpenRouter</span><br></pre></td></tr></table></figure>
 
 <h3 id="7、分析计算机检材，李安弘电脑中AI软件当前使用的模型apiKey为"><a href="#7、分析计算机检材，李安弘电脑中AI软件当前使用的模型apiKey为" class="headerlink" title="7、分析计算机检材，李安弘电脑中AI软件当前使用的模型apiKey为"></a>7、分析计算机检材，李安弘电脑中AI软件当前使用的模型apiKey为</h3><p>在左下角剪切板中可以找到apikey</p>
-<p><img src="/wzimg/2026-04-29-11-28-35.png"></p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-04-29-11-28-35.png" alt="" data-caption="" loading="lazy"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">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</span><br></pre></td></tr></table></figure>
 
-<h3 id="8、分析计算机检材，李安弘电脑中勒索软件提供的解密服务联系方式为"><a href="#8、分析计算机检材，李安弘电脑中勒索软件提供的解密服务联系方式为" class="headerlink" title="8、分析计算机检材，李安弘电脑中勒索软件提供的解密服务联系方式为"></a>8、分析计算机检材，李安弘电脑中勒索软件提供的解密服务联系方式为</h3><p>分析可知勒索软件是get_token_linux，<br>反汇编后可以找到main_a和main_main函数，分析后可知是<a href="mailto:&#98;&#101;&#105;&#106;&#x69;&#120;&#x69;&#110;&#57;&#x39;&#x36;&#64;&#x74;&#117;&#x74;&#97;&#110;&#111;&#x74;&#x61;&#x2e;&#x63;&#x6f;&#x6d;">beijixin996@tutanota.com</a></p>
+<h3 id="8、分析计算机检材，李安弘电脑中勒索软件提供的解密服务联系方式为"><a href="#8、分析计算机检材，李安弘电脑中勒索软件提供的解密服务联系方式为" class="headerlink" title="8、分析计算机检材，李安弘电脑中勒索软件提供的解密服务联系方式为"></a>8、分析计算机检材，李安弘电脑中勒索软件提供的解密服务联系方式为</h3><p>分析可知勒索软件是get_token_linux，<br>反汇编后可以找到main_a和main_main函数，分析后可知是<a href="mailto:&#98;&#x65;&#105;&#106;&#x69;&#x78;&#x69;&#x6e;&#57;&#57;&#x36;&#64;&#x74;&#117;&#116;&#x61;&#110;&#111;&#x74;&#x61;&#46;&#x63;&#x6f;&#x6d;">beijixin996@tutanota.com</a></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">beijixin996@tutanota.com</span><br></pre></td></tr></table></figure>
 
 <h3 id="9、分析计算机检材，李安弘电脑中记录的存放黄金的保险柜编号是"><a href="#9、分析计算机检材，李安弘电脑中记录的存放黄金的保险柜编号是" class="headerlink" title="9、分析计算机检材，李安弘电脑中记录的存放黄金的保险柜编号是"></a>9、分析计算机检材，李安弘电脑中记录的存放黄金的保险柜编号是</h3><p>分析get_token_linux，反汇编后可以找到main_a和main_main函数，分析后可知是通过xor进行加密，解密出mp4后查看可得到保险柜编号</p>
@@ -881,7 +905,7 @@
 </div>
   
   
-    <script async src="/js/copy-codeblock.js?v=1779629707309"></script>
+    <script async src="/js/copy-codeblock.js?v=1779712834632"></script>
   
 
   

