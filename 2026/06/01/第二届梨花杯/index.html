@@ -1,40 +1,55 @@
 <!doctype html>
 <html lang="zh"><head>
-<title>标签：流量分析 - bakamu的博客</title>
+<title>第二届梨花杯-misc - bakamu的博客</title>
 <meta charset="UTF-8">
 <meta name="keywords" content="ctf，取证，misc">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 <link rel="shortcut icon" href="/img/fluid.png" type="image/png" />
-<meta name="description" content="空灵">
-<meta property="og:type" content="website">
-<meta property="og:title" content="bakamu的博客">
-<meta property="og:url" content="http://example.com/tags/%E6%B5%81%E9%87%8F%E5%88%86%E6%9E%90/index.html">
+<meta name="description" content="题目尾巴里的压缩包题目提示说图片尾部有多余数据，直接binwalk提取得到zip文件直接解压  打开flag.txt得到flag 1LHFLAG&#123;tail_zip_webp_9f3a7c2b6e&#125;    你知道CRC吗？很明显图片的宽高有问题，随波逐流得到修复后的图片  1LHFLAG&#123;IHDR_CRC_3E8C7A9D&#125;    保密为人民，保密靠人民直接导">
+<meta property="og:type" content="article">
+<meta property="og:title" content="第二届梨花杯-misc">
+<meta property="og:url" content="http://example.com/2026/06/01/%E7%AC%AC%E4%BA%8C%E5%B1%8A%E6%A2%A8%E8%8A%B1%E6%9D%AF/index.html">
 <meta property="og:site_name" content="bakamu的博客">
-<meta property="og:description" content="空灵">
+<meta property="og:description" content="题目尾巴里的压缩包题目提示说图片尾部有多余数据，直接binwalk提取得到zip文件直接解压  打开flag.txt得到flag 1LHFLAG&#123;tail_zip_webp_9f3a7c2b6e&#125;    你知道CRC吗？很明显图片的宽高有问题，随波逐流得到修复后的图片  1LHFLAG&#123;IHDR_CRC_3E8C7A9D&#125;    保密为人民，保密靠人民直接导">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/wzimg/2026-05-29-19-12-39.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-05-29-19-17-01.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-05-29-19-18-54.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-06-01-20-03-10.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-06-01-20-13-25.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-06-01-20-13-48.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-06-01-20-14-10.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-06-01-20-15-12.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-06-01-20-21-59.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-06-01-19-56-09.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-06-01-20-45-45.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-06-01-20-47-06.png">
+<meta property="article:published_time" content="2026-06-01T04:00:00.000Z">
+<meta property="article:modified_time" content="2026-06-01T12:56:26.459Z">
 <meta property="article:author" content="bakamu">
-<meta property="article:tag" content="ctf，取证，misc">
+<meta property="article:tag" content="CTF">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/wzimg/2026-05-29-19-12-39.png">
 
 <link rel="stylesheet" href="/lib/fancybox/fancybox.css">
 <link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
 
 
-<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1780318766169">
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1780318766128">
 
     <link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
 
-<link rel="stylesheet" href="/css/style.css?v=1780318766169">
+<link rel="stylesheet" href="/css/style.css?v=1780318766128">
 
 
 
 
     
-        <link rel="stylesheet" href="/custom.css?v=1780318766169">
+        <link rel="stylesheet" href="/custom.css?v=1780318766128">
     
-        <link rel="stylesheet" href="/themes/umaru/index.css?v=1780318766169">
+        <link rel="stylesheet" href="/themes/umaru/index.css?v=1780318766128">
     
-        <link rel="stylesheet" href="/themes/asuka/index.css?v=1780318766169">
+        <link rel="stylesheet" href="/themes/asuka/index.css?v=1780318766128">
     
 
 
@@ -54,7 +69,7 @@
 })();
 </script>
 
-<script async src="/js/app.js?v=1780318766169"></script>
+<script async src="/js/app.js?v=1780318766128"></script>
 
  
 
@@ -637,7 +652,7 @@
 </style>
 
 
-    <script async src="/js/search.js?v=1780318766169"></script>
+    <script async src="/js/search.js?v=1780318766128"></script>
         
 
             
@@ -723,22 +738,20 @@
 </div>
 
     </div>
-</div><!-- .nexmoe-drawer --></div><div id="nexmoe-content"><div class="nexmoe-primary"><section class="nexmoe-posts">
-    <div class="nexmoe-post">
-        <a href="/2026/03/09/webshell%E6%B5%81%E9%87%8F%E5%88%86%E6%9E%90-%E7%8E%84%E6%9C%BA/">
-            
-                <div class="nexmoe-post-cover mdui-ripple absolute" style="padding-top: NaN%;"> 
-                    <img src="/img/yinghua.jpg" alt="webshell流量分析——玄机" loading="lazy">
-                    <h1>webshell流量分析——玄机</h1>
-                </div>
-                
-        </a>
-
-        <div class="nexmoe-post-meta">
-    <div class="nexmoe-rainbow">
-        <a class="nexmoefont icon-calendar-fill">2026年03月09日</a>
+</div><!-- .nexmoe-drawer --></div><div id="nexmoe-content"><div class="nexmoe-primary"><div class="nexmoe-post">
+  <article>
+    
+        <div class="nexmoe-post-cover absolute" style="padding-top: NaN%;"> 
+            <img src="/img/mianma.jpg" alt="第二届梨花杯-misc" loading="lazy">
+            <h1>第二届梨花杯-misc</h1>
+        </div>
         
-            <a class="nexmoefont icon-appstore-fill -link" href="/categories/CTF/">CTF</a><a class="nexmoefont icon-appstore-fill -link" href="/categories/CTF/%E5%BF%83%E5%BE%97/">心得</a>
+    
+    <div class="nexmoe-post-meta">
+    <div class="nexmoe-rainbow">
+        <a class="nexmoefont icon-calendar-fill">2026年06月01日</a>
+        
+            <a class="nexmoefont icon-appstore-fill -link" href="/categories/CTF/">CTF</a><a class="nexmoefont icon-appstore-fill -link" href="/categories/CTF/%E8%B5%9B%E9%A2%98wp/">赛题wp</a>
         
         
     </div>
@@ -749,16 +762,117 @@
     
 </div>
 
-        <article>
-            
-        </article>
+    <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><h2 id="尾巴里的压缩包"><a href="#尾巴里的压缩包" class="headerlink" title="尾巴里的压缩包"></a>尾巴里的压缩包</h2><p>题目提示说图片尾部有多余数据，直接binwalk提取得到zip文件直接解压</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-05-29-19-12-39.png" alt="" data-caption="" loading="lazy"></p>
+<p>打开flag.txt得到flag</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LHFLAG&#123;tail_zip_webp_9f3a7c2b6e&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="你知道CRC吗？"><a href="#你知道CRC吗？" class="headerlink" title="你知道CRC吗？"></a>你知道CRC吗？</h2><p>很明显图片的宽高有问题，随波逐流得到修复后的图片</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-05-29-19-17-01.png" alt="" data-caption="" loading="lazy"></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LHFLAG&#123;IHDR_CRC_3E8C7A9D&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="保密为人民，保密靠人民"><a href="#保密为人民，保密靠人民" class="headerlink" title="保密为人民，保密靠人民"></a>保密为人民，保密靠人民</h2><p>直接导出zip文件</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-05-29-19-18-54.png" alt="" data-caption="" loading="lazy"></p>
+<p>解压后在capture_notes文件夹中的flag.txt得到flag</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LHFLAG&#123;tcp_stream_rebuild_http_export_8f3c2a7d&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="网络安全无小事"><a href="#网络安全无小事" class="headerlink" title="网络安全无小事"></a>网络安全无小事</h2><p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-06-01-20-03-10.png" alt="" data-caption="" loading="lazy"><br>题目说了DNS和ICMP存在异常信号，所以先分开来分析，先分析ICMP，看请求包和返回包共3种<br>一下几种<br><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-06-01-20-13-25.png" alt="" data-caption="" loading="lazy"></p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-06-01-20-13-48.png" alt="" data-caption="" loading="lazy"></p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-06-01-20-14-10.png" alt="" data-caption="" loading="lazy"></p>
+<p>会发现第三种中存在异常数据</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-06-01-20-15-12.png" alt="" data-caption="" loading="lazy"></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">seq</span>=001;data=6nyxjl2o</span><br></pre></td></tr></table></figure>
+
+<p>猜测是异常数据，于是直接搜索seq字段吧所有都找出来，就不一一展示了<br>最终得到</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">seq001: 6nyxjl2o</span><br><span class="line">seq003: zywyrt6n</span><br><span class="line">seq005: zyxuwljk</span><br><span class="line">seq007: znf43cjx</span><br><span class="line">seq009: vqcqa5oy</span><br></pre></td></tr></table></figure>
+
+<p>再分析DNS流量包，翻找到异常数据</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-06-01-20-21-59.png" alt="" data-caption="" loading="lazy"></p>
+<p>搜索s0找到所有数据，最终得到</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">s000: pcoph4lq</span><br><span class="line">s002: zevy5t2m</span><br><span class="line">s004: vree3ckp</span><br><span class="line">s006: rfh44sgm</span><br><span class="line">s008: j63eym2k</span><br><span class="line">s010: cc7q</span><br></pre></td></tr></table></figure>
+<p>按照数字顺序把他们拼接起来</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pcoph4lq6nyxjl2ozevy5t2mzywyrt6nvree3ckpzyxuwljkrfh44sgmznf43cjxj63eym2kvqcqa5oycc7q</span><br></pre></td></tr></table></figure>
+
+<p>然后Base32 decode+zlib decompress得到flag</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">import <span class="built_in">base64</span></span><br><span class="line">import zlib</span><br><span class="line">dns_chunks = [</span><br><span class="line">    <span class="string">&quot;pcoph4lq&quot;</span>, </span><br><span class="line">    <span class="string">&quot;zevy5t2m&quot;</span>,  </span><br><span class="line">    <span class="string">&quot;vree3ckp&quot;</span>,  </span><br><span class="line">    <span class="string">&quot;rfh44sgm&quot;</span>, </span><br><span class="line">    <span class="string">&quot;j63eym2k&quot;</span>,   </span><br><span class="line">    <span class="string">&quot;cc7q&quot;</span>,       </span><br><span class="line">]</span><br><span class="line">icmp_chunks = [</span><br><span class="line">    <span class="string">&quot;6nyxjl2o&quot;</span>,  </span><br><span class="line">    <span class="string">&quot;zywyrt6n&quot;</span>,   </span><br><span class="line">    <span class="string">&quot;zyxuwljk&quot;</span>,  </span><br><span class="line">    <span class="string">&quot;znf43cjx&quot;</span>,   </span><br><span class="line">    <span class="string">&quot;vqcqa5oy&quot;</span>,   </span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">combined_chunks = []</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(max(len(dns_chunks), len(icmp_chunks))):</span><br><span class="line">    <span class="keyword">if</span> i &lt; len(dns_chunks):</span><br><span class="line">        combined_chunks.append(dns_chunks[i])</span><br><span class="line">    <span class="keyword">if</span> i &lt; len(icmp_chunks):</span><br><span class="line">        combined_chunks.append(icmp_chunks[i])</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(f<span class="string">&quot;[1] 交错组装 &#123;len(combined_chunks)&#125; 个片段:&quot;</span>)</span><br><span class="line"><span class="keyword">for</span> i, chunk <span class="keyword">in</span> enumerate(combined_chunks):</span><br><span class="line">    <span class="built_in">print</span>(f<span class="string">&quot;    [&#123;i:2d&#125;] &#123;chunk&#125;&quot;</span>)</span><br><span class="line"></span><br><span class="line">decoded_bytes = b<span class="string">&quot;&quot;</span></span><br><span class="line"><span class="keyword">for</span> chunk <span class="keyword">in</span> combined_chunks:</span><br><span class="line">    chunk_upper = chunk.upper()</span><br><span class="line">    padding = (8 - len(chunk_upper) % 8) % 8</span><br><span class="line">    padded = chunk_upper + <span class="string">&quot;=&quot;</span> * padding</span><br><span class="line">    decoded = base64.b32decode(padded)</span><br><span class="line">    decoded_bytes += decoded</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(f<span class="string">&quot;\n[2] Base32 解码 → &#123;len(decoded_bytes)&#125; bytes (zlib compressed)&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(f<span class="string">&quot;    hex: &#123;decoded_bytes.hex()&#125;&quot;</span>)</span><br><span class="line">flag = zlib.decompress(decoded_bytes)</span><br><span class="line"><span class="built_in">print</span>(f<span class="string">&quot;\n[3] zlib 解压 → &#123;len(flag)&#125; bytes&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(f<span class="string">&quot;\n&#123;&#x27;=&#x27;*60&#125;&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(f<span class="string">&quot;  Flag: &#123;flag.decode()&#125;&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(f<span class="string">&quot;&#123;&#x27;=&#x27;*60&#125;&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LHFLAG&#123;dns_icmp_mixed_covert_channel_7c9f2a&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="夜航日志"><a href="#夜航日志" class="headerlink" title="夜航日志"></a>夜航日志</h2><p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-06-01-19-56-09.png" alt="" data-caption="" loading="lazy"><br>既然是4个日志分析，按照题意应该是flag分成了4个隐藏在4个log中<br>手搓的话不太好分析攻击路径，日志太大了，但是可以先猜测flag形式，先把LHFLAG格式转化为base64(TEhGTEFH)编码尝试搜索一下<br>可以在app.log中找到<br><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-06-01-20-45-45.png" alt="" data-caption="" loading="lazy"></p>
+<p>由此锁定了ip:203.0.113.45</p>
+<p>再次搜索<br><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-06-01-20-47-06.png" alt="" data-caption="" loading="lazy"></p>
+<p>会发现更多数据，而且有phase”:2,”checkpoint”:”的后面都会有疑似base64编码的数据<br>全部提取出来</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="string">&quot;ts&quot;</span>:<span class="string">&quot;2026-05-13T02:14:40+08:00&quot;</span>,<span class="string">&quot;level&quot;</span>:<span class="string">&quot;WARN&quot;</span>,<span class="string">&quot;event&quot;</span>:<span class="string">&quot;file_download&quot;</span>,<span class="string">&quot;ip&quot;</span>:<span class="string">&quot;203.0.113.45&quot;</span>,<span class="string">&quot;rid&quot;</span>:<span class="string">&quot;atk675a43ca67dc&quot;</span>,<span class="string">&quot;path&quot;</span>:<span class="string">&quot;/download?file=../../../../var/www/app/.env&quot;</span>,<span class="string">&quot;normalized&quot;</span>:<span class="string">&quot;/srv/app/.env&quot;</span>,<span class="string">&quot;decision&quot;</span>:<span class="string">&quot;allowed_by_legacy_rule&quot;</span>,<span class="string">&quot;forensic_phase&quot;</span>:1,<span class="string">&quot;checkpoint&quot;</span>:<span class="string">&quot;TEhGTEFH&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line">&#123;<span class="string">&quot;ts&quot;</span>:<span class="string">&quot;2026-05-13T02:15:37+08:00&quot;</span>,<span class="string">&quot;level&quot;</span>:<span class="string">&quot;WARN&quot;</span>,<span class="string">&quot;event&quot;</span>:<span class="string">&quot;file_download&quot;</span>,<span class="string">&quot;ip&quot;</span>:<span class="string">&quot;203.0.113.45&quot;</span>,<span class="string">&quot;rid&quot;</span>:<span class="string">&quot;atk8b20fa9e0cd7&quot;</span>,<span class="string">&quot;path&quot;</span>:<span class="string">&quot;/download?file=../../../../var/log/nginx/access.log&quot;</span>,<span class="string">&quot;normalized&quot;</span>:<span class="string">&quot;/var/log/nginx/access.log&quot;</span>,<span class="string">&quot;decision&quot;</span>:<span class="string">&quot;allowed_by_legacy_rule&quot;</span>,<span class="string">&quot;forensic_phase&quot;</span>:2,<span class="string">&quot;checkpoint&quot;</span>:<span class="string">&quot;e2xvZ190&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line">&#123;<span class="string">&quot;ts&quot;</span>:<span class="string">&quot;2026-05-13T02:17:26+08:00&quot;</span>,<span class="string">&quot;level&quot;</span>:<span class="string">&quot;WARN&quot;</span>,<span class="string">&quot;event&quot;</span>:<span class="string">&quot;login_audit&quot;</span>,<span class="string">&quot;ip&quot;</span>:<span class="string">&quot;203.0.113.45&quot;</span>,<span class="string">&quot;user&quot;</span>:<span class="string">&quot;admin&quot;</span>,<span class="string">&quot;result&quot;</span>:<span class="string">&quot;success&quot;</span>,<span class="string">&quot;rid&quot;</span>:<span class="string">&quot;atke79048da6801&quot;</span>,<span class="string">&quot;session&quot;</span>:<span class="string">&quot;s-9f2b7c-admin&quot;</span>,<span class="string">&quot;reason&quot;</span>:<span class="string">&quot;remember_token&quot;</span>,<span class="string">&quot;forensic_phase&quot;</span>:3,<span class="string">&quot;checkpoint&quot;</span>:<span class="string">&quot;aW1lbGlu&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line">&#123;<span class="string">&quot;ts&quot;</span>:<span class="string">&quot;2026-05-13T02:19:07+08:00&quot;</span>,<span class="string">&quot;level&quot;</span>:<span class="string">&quot;ERROR&quot;</span>,<span class="string">&quot;event&quot;</span>:<span class="string">&quot;plugin_upload&quot;</span>,<span class="string">&quot;ip&quot;</span>:<span class="string">&quot;203.0.113.45&quot;</span>,<span class="string">&quot;user&quot;</span>:<span class="string">&quot;admin&quot;</span>,<span class="string">&quot;rid&quot;</span>:<span class="string">&quot;atk5df9e187db8c&quot;</span>,<span class="string">&quot;session&quot;</span>:<span class="string">&quot;s-9f2b7c-admin&quot;</span>,<span class="string">&quot;filename&quot;</span>:<span class="string">&quot;q2_report.php&quot;</span>,<span class="string">&quot;mime&quot;</span>:<span class="string">&quot;application/x-php&quot;</span>,<span class="string">&quot;sha256&quot;</span>:<span class="string">&quot;4159c7982d73b224ed6192d2eb5f58f2d1fdcfe0db37b1e96a9bad47d11c2135&quot;</span>,<span class="string">&quot;forensic_phase&quot;</span>:4,<span class="string">&quot;checkpoint&quot;</span>:<span class="string">&quot;ZV9pcF9j&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line">&#123;<span class="string">&quot;ts&quot;</span>:<span class="string">&quot;2026-05-13T02:21:30+08:00&quot;</span>,<span class="string">&quot;level&quot;</span>:<span class="string">&quot;WARN&quot;</span>,<span class="string">&quot;event&quot;</span>:<span class="string">&quot;admin_export&quot;</span>,<span class="string">&quot;ip&quot;</span>:<span class="string">&quot;198.51.100.211&quot;</span>,<span class="string">&quot;user&quot;</span>:<span class="string">&quot;admin&quot;</span>,<span class="string">&quot;rid&quot;</span>:<span class="string">&quot;atk3bf93ba5330b&quot;</span>,<span class="string">&quot;session&quot;</span>:<span class="string">&quot;s-9f2b7c-admin&quot;</span>,<span class="string">&quot;scope&quot;</span>:<span class="string">&quot;users&quot;</span>,<span class="string">&quot;bytes&quot;</span>:87391,<span class="string">&quot;forensic_phase&quot;</span>:5,<span class="string">&quot;checkpoint&quot;</span>:<span class="string">&quot;aGFpbl83&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line">&#123;<span class="string">&quot;ts&quot;</span>:<span class="string">&quot;2026-05-13T02:22:46+08:00&quot;</span>,<span class="string">&quot;level&quot;</span>:<span class="string">&quot;WARN&quot;</span>,<span class="string">&quot;event&quot;</span>:<span class="string">&quot;backup_sync&quot;</span>,<span class="string">&quot;ip&quot;</span>:<span class="string">&quot;198.51.100.211&quot;</span>,<span class="string">&quot;user&quot;</span>:<span class="string">&quot;admin&quot;</span>,<span class="string">&quot;rid&quot;</span>:<span class="string">&quot;atkc1da5b28db47&quot;</span>,<span class="string">&quot;session&quot;</span>:<span class="string">&quot;s-9f2b7c-admin&quot;</span>,<span class="string">&quot;dest&quot;</span>:<span class="string">&quot;s3://night-archive/tmp&quot;</span>,<span class="string">&quot;note&quot;</span>:<span class="string">&quot;same session moved to second IP&quot;</span>,<span class="string">&quot;forensic_phase&quot;</span>:6,<span class="string">&quot;checkpoint&quot;</span>:<span class="string">&quot;YzkyYTRm&quot;</span>&#125;</span><br><span class="line"></span><br><span class="line">&#123;<span class="string">&quot;ts&quot;</span>:<span class="string">&quot;2026-05-13T02:23:45+08:00&quot;</span>,<span class="string">&quot;level&quot;</span>:<span class="string">&quot;WARN&quot;</span>,<span class="string">&quot;event&quot;</span>:<span class="string">&quot;admin_audit_download&quot;</span>,<span class="string">&quot;ip&quot;</span>:<span class="string">&quot;198.51.100.211&quot;</span>,<span class="string">&quot;user&quot;</span>:<span class="string">&quot;admin&quot;</span>,<span class="string">&quot;rid&quot;</span>:<span class="string">&quot;atk5b698d0ef7c5&quot;</span>,<span class="string">&quot;session&quot;</span>:<span class="string">&quot;s-9f2b7c-admin&quot;</span>,<span class="string">&quot;rows&quot;</span>:4312,<span class="string">&quot;forensic_phase&quot;</span>:7,<span class="string">&quot;checkpoint&quot;</span>:<span class="string">&quot;MX0=&quot;</span>&#125;</span><br></pre></td></tr></table></figure>
+
+<p>拼接一下字符</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">TEhGTEFHe2xvZ190aW1lbGluZV9pcF9jaGFpbl83YzkyYTRmMX0=</span><br></pre></td></tr></table></figure>
+
+<p>base64解码后得到flag</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LHFLAG&#123;log_timeline_ip_chain_7c92a4f1&#125;</span><br></pre></td></tr></table></figure>
+    
+  </article>
+
+  
+      
+    <div class="nexmoe-post-copyright">
+        <strong>本文作者：</strong>bakamu<br>
+        
+        <strong>本文链接：</strong><a href="http://example.com/2026/06/01/%E7%AC%AC%E4%BA%8C%E5%B1%8A%E6%A2%A8%E8%8A%B1%E6%9D%AF/" title="http:&#x2F;&#x2F;example.com&#x2F;2026&#x2F;06&#x2F;01&#x2F;%E7%AC%AC%E4%BA%8C%E5%B1%8A%E6%A2%A8%E8%8A%B1%E6%9D%AF&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;example.com&#x2F;2026&#x2F;06&#x2F;01&#x2F;%E7%AC%AC%E4%BA%8C%E5%B1%8A%E6%A2%A8%E8%8A%B1%E6%9D%AF&#x2F;</a><br>
+
+        
+            <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+
+        
     </div>
-</section> </div><div class="nexmoe-post-right">    <div class="nexmoe-fixed">
+
+
+  
+  
+  <div class="nexmoe-post-meta nexmoe-rainbow">
+   
+    
+        <a class="nexmoefont icon-tag-fill -none-link" href="/tags/CTF/" rel="tag">CTF</a>
+    
+</div>
+  
+  
+    <script async src="/js/copy-codeblock.js?v=1780318766088"></script>
+  
+
+  
+      <div class="nexmoe-post-footer">
+          <div class="valine"></div>
+<script src='https://lib.baomitu.com/valine/1.3.9/Valine.min.js'></script>
+<script>
+  new Valine({
+      el: '.valine',
+      appId: 'r5zxC0st0DDjPA9auXzMV7HY-gzGzoHsz',
+      appKey: '3bqCsovpyfTPHUzTHovd3V3V'
+  })
+</script>
+
+      </div>
+  
+</div></div><div class="nexmoe-post-right">    <div class="nexmoe-fixed">
         <div class="nexmoe-tool">
 
             
 
             
+            
+            <button class="mdui-fab catalog" style="overflow:unset;">
+                <i class="nexmoefont icon-i-catalog"></i>
+                <div class="nexmoe-toc">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE"><span class="toc-number">1.</span> <span class="toc-text">题目</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%BE%E5%B7%B4%E9%87%8C%E7%9A%84%E5%8E%8B%E7%BC%A9%E5%8C%85"><span class="toc-number">1.1.</span> <span class="toc-text">尾巴里的压缩包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%A0%E7%9F%A5%E9%81%93CRC%E5%90%97%EF%BC%9F"><span class="toc-number">1.2.</span> <span class="toc-text">你知道CRC吗？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%9D%E5%AF%86%E4%B8%BA%E4%BA%BA%E6%B0%91%EF%BC%8C%E4%BF%9D%E5%AF%86%E9%9D%A0%E4%BA%BA%E6%B0%91"><span class="toc-number">1.3.</span> <span class="toc-text">保密为人民，保密靠人民</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E6%97%A0%E5%B0%8F%E4%BA%8B"><span class="toc-number">1.4.</span> <span class="toc-text">网络安全无小事</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%9C%E8%88%AA%E6%97%A5%E5%BF%97"><span class="toc-number">1.5.</span> <span class="toc-text">夜航日志</span></a></li></ol></li></ol>
+                </div>
+            </button>
             
 
             
