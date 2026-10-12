@@ -1,0 +1,2195 @@
+<!doctype html>
+<html lang="zh"><head>
+<title>0xGame2026 misc-WP - bakamu的博客</title>
+<meta charset="UTF-8">
+<meta name="keywords" content="ctf，取证，misc">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+<link rel="shortcut icon" href="/img/fluid.png" type="image/png" />
+<meta name="description" content="Week1小伊卡…不胖…不胖…用pngcheck打开看见CRC不正确，再根据题目的“压扁”猜测宽高被修改，用pngcheck修改一下得到flag  10xGame&#123;w0w_thi5_1s_thE_tru3_Length&#125;  欢迎来到CTF的世界！ Base64解密  奶蛙的博客 每个碎片收集一下 12345678910111213141516import requests, r">
+<meta property="og:type" content="article">
+<meta property="og:title" content="0xGame2026 misc-WP">
+<meta property="og:url" content="http://example.com/2026/10/12/0xGame2026/index.html">
+<meta property="og:site_name" content="bakamu的博客">
+<meta property="og:description" content="Week1小伊卡…不胖…不胖…用pngcheck打开看见CRC不正确，再根据题目的“压扁”猜测宽高被修改，用pngcheck修改一下得到flag  10xGame&#123;w0w_thi5_1s_thE_tru3_Length&#125;  欢迎来到CTF的世界！ Base64解密  奶蛙的博客 每个碎片收集一下 12345678910111213141516import requests, r">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/wzimg/2026-09-28-18-01-02.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-09-28-18-03-02.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-09-28-18-03-36.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-09-28-18-06-00.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-09-28-18-23-19.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-09-28-18-25-48.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-09-28-18-27-05.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-09-28-18-27-27.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-09-28-18-39-30.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-09-28-18-39-38.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-09-28-18-40-05.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-09-28-18-41-21.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-09-28-18-46-05.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-09-28-18-51-28.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-09-28-18-57-19.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-09-28-19-03-41.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-09-28-19-06-07.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-09-28-19-12-51.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-09-28-19-15-47.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-09-28-19-16-34.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-09-28-19-25-06.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-09-28-19-26-57.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-09-28-19-28-23.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-09-28-19-29-52.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-09-28-19-31-26.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-09-28-23-35-58.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-09-29-08-41-12.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-10-05-14-30-05.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-10-05-14-36-17.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-10-05-14-44-53.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-10-05-15-03-05.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-10-05-15-06-12.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-10-05-15-09-11.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-10-05-15-18-38.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-10-05-15-20-39.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-10-05-15-21-27.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-10-05-15-23-39.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-10-05-15-24-33.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-10-05-15-26-35.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-10-05-15-47-14.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-10-05-15-48-17.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-10-05-15-48-26.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-10-05-14-49-30.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-10-05-15-28-58.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-10-05-15-29-44.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-10-05-15-30-31.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-10-05-15-34-28.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-10-05-15-39-03.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-10-05-15-39-25.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-10-05-15-40-27.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-10-05-15-57-59.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-10-05-16-15-42.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-10-05-16-28-20.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-10-05-16-32-22.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-10-05-16-32-15.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-10-05-16-36-21.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-10-05-16-41-27.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-10-05-17-22-16.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-10-05-17-24-32.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-10-06-17-31-44.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-10-06-17-32-26.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-10-05-22-32-06.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-10-05-22-38-17.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-10-05-22-39-47.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-10-05-22-40-17.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-10-05-22-45-08.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-10-05-22-54-02.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-10-05-22-45-55.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-10-05-22-47-43.png">
+<meta property="og:image" content="http://example.com/wzimg/2026-10-05-23-06-46.png">
+<meta property="article:published_time" content="2026-10-12T02:00:00.000Z">
+<meta property="article:modified_time" content="2026-10-12T02:19:34.949Z">
+<meta property="article:author" content="bakamu">
+<meta property="article:tag" content="CTF">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/wzimg/2026-09-28-18-01-02.png">
+
+<link rel="stylesheet" href="/lib/fancybox/fancybox.css">
+<link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
+
+
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1791799924396">
+
+    <link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+<link rel="stylesheet" href="/css/style.css?v=1791799924396">
+
+
+
+
+    
+        <link rel="stylesheet" href="/custom.css?v=1791799924396">
+    
+        <link rel="stylesheet" href="/themes/umaru/index.css?v=1791799924396">
+    
+        <link rel="stylesheet" href="/themes/asuka/index.css?v=1791799924396">
+    
+
+
+
+<script src="/lib/mdui_043tiny/mdui.js" async></script>
+<script src="/lib/fancybox/fancybox.umd.js" async></script>
+<script src="/lib/lax.min.js" async></script>
+
+
+<script>
+(function waitFancybox() {
+  if (typeof Fancybox !== 'undefined') {
+    Fancybox.bind('[data-fancybox]', { Hash: false });
+  } else {
+    setTimeout(waitFancybox, 100);
+  }
+})();
+</script>
+
+<script async src="/js/app.js?v=1791799924396"></script>
+
+ 
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1Z7TFL96ZH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-1Z7TFL96ZH');
+</script>
+<script src="/lib/shiki/codeblock.js"></script>
+
+
+<link rel="stylesheet" href="/lib/highlight/atom-one-dark.min.css">
+<meta name="generator" content="Hexo 7.0.0"></head><body class="nexmoe mdui-drawer-body-left"><div id="nexmoe-background"><div class="nexmoe-bg" style="background-image: url(/img/yinghua.jpg)"></div><div class="nexmoe-character"></div><div class="mdui-appbar mdui-shadow-0"><div class="mdui-toolbar"><a class="mdui-btn mdui-btn-icon mdui-ripple" mdui-drawer="{target: &#039;#drawer&#039;, swipe: true}" title="menu"><i class="mdui-icon nexmoefont icon-menu"></i></a><div class="mdui-toolbar-spacer"></div><a class="mdui-btn mdui-btn-icon nexmoe-avatar" href="/" title="bakamu"><img src="/img/touxiang.jpg" alt="bakamu"></a></div></div></div><div id="nexmoe-header"><div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="bakamu">
+            <img src="/img/touxiang.jpg" alt="bakamu" alt="bakamu">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div class="nexmoe-count-item"><span>文章</span>13 <div class="item-radius"></div><div class="item-radius item-right"></div> </div>
+        <div class="nexmoe-count-item"><span>标签</span>7<div class="item-radius"></div><div class="item-radius item-right"></div></div>
+        <div class="nexmoe-count-item"><span>分类</span>7<div class="item-radius"></div><div class="item-radius item-right"></div></div>
+    </div>
+    <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/" title="首页">
+            <i class="mdui-list-item-icon nexmoefont iconfont icon-home-fill"></i>
+            <div class="mdui-list-item-content">
+                首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/archives/" title="归档">
+            <i class="mdui-list-item-icon nexmoefont iconfont icon-archive-fill"></i>
+            <div class="mdui-list-item-content">
+                归档
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/about/" title="关于">
+            <i class="mdui-list-item-icon nexmoefont iconfont icon-user-fill"></i>
+            <div class="mdui-list-item-content">
+                关于
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/links/" title="友链">
+            <i class="mdui-list-item-icon nexmoefont iconfont icon-link-fill"></i>
+            <div class="mdui-list-item-content">
+                友链
+            </div>
+        </a>
+        
+    </div>
+    
+    
+    <div class="nexmoe-widget-wrap">
+        <h3 class="nexmoe-widget-title">文章分类</h3>
+        <div class="nexmoe-widget">
+            <ul class="category-list">
+                
+                <li class="category-list-item" style="padding-left: 0px;">
+                    
+                    <span class="category-toggle" onclick="toggleCategory(this)">
+                        <i class="nexmoefont iconfont icon-caret-down"></i>
+                    </span>
+                    
+                    <a class="category-list-link" href="/categories/电子取证/">电子取证</a>
+                    <span class="category-list-count">4</span>
+                    
+                    <ul class="category-children">
+                        
+                <li class="category-list-item" style="padding-left: 15px;">
+                    
+                    <a class="category-list-link" href="/categories/电子取证/做题笔记/">做题笔记</a>
+                    <span class="category-list-count">3</span>
+                    
+                </li>
+                
+                <li class="category-list-item" style="padding-left: 15px;">
+                    
+                    <a class="category-list-link" href="/categories/电子取证/心得/">心得</a>
+                    <span class="category-list-count">1</span>
+                    
+                </li>
+                
+                    </ul>
+                    
+                </li>
+                
+                <li class="category-list-item" style="padding-left: 0px;">
+                    
+                    <span class="category-toggle" onclick="toggleCategory(this)">
+                        <i class="nexmoefont iconfont icon-caret-down"></i>
+                    </span>
+                    
+                    <a class="category-list-link" href="/categories/CTF/">CTF</a>
+                    <span class="category-list-count">9</span>
+                    
+                    <ul class="category-children">
+                        
+                <li class="category-list-item" style="padding-left: 15px;">
+                    
+                    <a class="category-list-link" href="/categories/CTF/心得/">心得</a>
+                    <span class="category-list-count">3</span>
+                    
+                </li>
+                
+                <li class="category-list-item" style="padding-left: 15px;">
+                    
+                    <a class="category-list-link" href="/categories/CTF/赛题wp/">赛题wp</a>
+                    <span class="category-list-count">4</span>
+                    
+                </li>
+                
+                <li class="category-list-item" style="padding-left: 15px;">
+                    
+                    <a class="category-list-link" href="/categories/CTF/做题笔记/">做题笔记</a>
+                    <span class="category-list-count">2</span>
+                    
+                </li>
+                
+                    </ul>
+                    
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+    
+    
+    <style>
+        .category-toggle {
+            cursor: pointer;
+            display: inline-block;
+            width: 16px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .category-toggle.collapsed i {
+            transform: rotate(-90deg);
+        }
+        .category-children {
+            display: block;
+            transition: all 0.3s;
+        }
+        .category-children.collapsed {
+            display: none;
+        }
+    </style>
+    
+    <script>
+        function toggleCategory(element) {
+            element.classList.toggle('collapsed');
+            var children = element.nextElementSibling.nextElementSibling.nextElementSibling;
+            if (children && children.classList.contains('category-children')) {
+                children.classList.toggle('collapsed');
+            }
+        }
+    </script>
+    
+    
+        
+        <div class="nexmoe-widget-wrap" style="background: transparent;box-shadow: none;">
+    <div class="nexmoe-widget nexmoe-switch-theme">
+        <div class="theme-toggle-container" onclick="useToggle()">
+            <!-- 背景元素 -->
+            <div class="toggle-background">
+                <!-- 白云 -->
+                <div class="clouds">
+                    <div class="cloud cloud1"></div>
+                    <div class="cloud cloud2"></div>
+                    <div class="cloud cloud3"></div>
+                </div>
+                <!-- 星空 -->
+                <div class="stars">
+                    <div class="star star1"></div>
+                    <div class="star star2"></div>
+                    <div class="star star3"></div>
+                    <div class="star star4"></div>
+                    <div class="star star5"></div>
+                </div>
+            </div>
+            <!-- 太阳/月亮滑块 -->
+            <div class="theme-slider">
+                <svg class="theme-icon sun" width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="5" fill="#ffd700"/>
+                    <path d="M12 1V3M12 21V23M4.22 4.22L5.64 5.64M18.36 18.36L19.78 19.78M1 12H3M21 12H23M4.22 19.78L5.64 18.36M18.36 5.64L19.78 4.22" stroke="#ffd700" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <svg class="theme-icon moon" width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    /* 主题切换过渡动画 */
+    ::view-transition-group(root) {
+        animation-duration: 0.7s;
+        animation-timing-function: var(--expo-out);
+    }
+
+    ::view-transition-new(root) {
+        animation-name: reveal-light;
+        animation-fill-mode: both;
+    }
+
+    ::view-transition-old(root),
+    [data-theme="dark"]::view-transition-old(root) {
+        animation: none;
+        animation-fill-mode: both;
+        z-index: -1;
+    }
+
+    [data-theme="dark"]::view-transition-new(root) {
+        animation-name: reveal-dark;
+        animation-fill-mode: both;
+    }
+
+    @keyframes reveal-dark {
+        from {
+            clip-path: polygon(50% -71%, -50% 71%, -50% 71%, 50% -71%);
+        }
+
+        to {
+            clip-path: polygon(50% -71%, -50% 71%, 50% 171%, 171% 50%);
+        }
+    }
+
+    @keyframes reveal-light {
+        from {
+            clip-path: polygon(171% 50%, 50% 171%, 50% 171%, 171% 50%);
+        }
+
+        to {
+            clip-path: polygon(171% 50%, 50% 171%, -50% 71%, 50% -71%);
+        }
+    }
+
+    /* 主题切换矩形样式 */
+    .nexmoe-switch-theme {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .theme-toggle-container {
+        position: relative;
+        width: inherit;
+        height: 70px;
+        background: linear-gradient(135deg, #87CEEB 0%, #E0F7FA 100%);
+        border-radius: 35px;
+        cursor: pointer;
+        overflow: hidden;
+        transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        transform: scale(0.8);
+    }
+
+    /* 深色主题下的背景 */
+    [data-theme="dark"] .theme-toggle-container {
+        background: linear-gradient(135deg, #0a0e27 0%, #1a1a2e 100%);
+    }
+
+    /* 背景元素容器 */
+    .toggle-background {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+    }
+
+    /* 白云样式 */
+    .clouds {
+        position: absolute;
+        left: 70%;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    [data-theme="dark"] .clouds {
+        opacity: 0;
+        right: -50px;
+    }
+
+    .cloud {
+        position: absolute;
+        background: white;
+        border-radius: 50px;
+        opacity: 0.8;
+        animation: cloudFloat 4s ease-in-out infinite;
+    }
+
+    .cloud1 {
+        width: 30px;
+        height: 20px;
+        top: 0;
+        left: 0;
+    }
+
+    .cloud2 {
+        width: 25px;
+        height: 15px;
+        top: 25px;
+        left: 10px;
+        animation-delay: 1s;
+    }
+
+    .cloud3 {
+        width: 20px;
+        height: 15px;
+        top: 10px;
+        left: 35px;
+        animation-delay: 2s;
+    }
+
+    /* 云朵浮动动画 */
+    @keyframes cloudFloat {
+        0%, 100% {
+            transform: translateY(0) rotate(0deg);
+        }
+        50% {
+            transform: translateY(-5px) rotate(2deg);
+        }
+    }
+
+    /* 星空样式 */
+    .stars {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        opacity: 0;
+        transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    [data-theme="dark"] .stars {
+        opacity: 1;
+    }
+
+    .star {
+        position: absolute;
+        background: white;
+        border-radius: 50%;
+        animation: starTwinkle 2s ease-in-out infinite;
+    }
+
+    .star1 {
+        width: 3px;
+        height: 3px;
+        top: 0;
+        left: 0;
+    }
+
+    .star2 {
+        width: 2px;
+        height: 2px;
+        top: 20px;
+        left: 25px;
+        animation-delay: 0.5s;
+    }
+
+    .star3 {
+        width: 4px;
+        height: 4px;
+        top: 10px;
+        left: 50px;
+        animation-delay: 1s;
+    }
+
+    .star4 {
+        width: 2px;
+        height: 2px;
+        top: 30px;
+        left: 35px;
+        animation-delay: 1.5s;
+    }
+
+    .star5 {
+        width: 3px;
+        height: 3px;
+        top: 15px;
+        left: 15px;
+        animation-delay: 2s;
+    }
+
+    /* 星星闪烁动画 */
+    @keyframes starTwinkle {
+        0%, 100% {
+            opacity: 0.3;
+            transform: scale(1);
+        }
+        50% {
+            opacity: 1;
+            transform: scale(1.2);
+            filter: drop-shadow(0 0 3px white);
+        }
+    }
+
+    /* 太阳/月亮滑块 */
+    .theme-slider {
+        position: absolute;
+        left: 5px;
+        top: 5px;
+        width: 60px;
+        height: 60px;
+        background: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+    }
+
+    [data-theme="dark"] .theme-slider {
+        left: calc(100% - 60px - 5px);
+        background: #f0f0f0;
+    }
+
+    /* 太阳和月亮图标 */
+    .theme-icon {
+        position: absolute;
+        transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .sun {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+
+    .moon {
+        opacity: 0;
+        transform: scale(0.8) rotate(-90deg);
+    }
+
+    [data-theme="dark"] .sun {
+        opacity: 0;
+        transform: scale(0.8) rotate(90deg);
+    }
+
+    [data-theme="dark"] .moon {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+
+    /* 太阳和月亮的发光效果 */
+    @keyframes sunPulse {
+        0%, 100% {
+            filter: drop-shadow(0 0 6px #ffd700);
+        }
+        50% {
+            filter: drop-shadow(0 0 12px #ffd700) drop-shadow(0 0 18px rgba(255, 215, 0, 0.7));
+        }
+    }
+
+    @keyframes moonGlow {
+        0%, 100% {
+            filter: drop-shadow(0 0 4px #e0e7ff);
+        }
+        50% {
+            filter: drop-shadow(0 0 8px #e0e7ff) drop-shadow(0 0 12px rgba(224, 231, 255, 0.7));
+        }
+    }
+
+    /* 应用发光动画 */
+    .sun {
+        animation: sunPulse 3s ease-in-out infinite;
+    }
+
+    .moon {
+        animation: moonGlow 3s ease-in-out infinite;
+    }
+
+    /* 鼠标悬停效果 */
+    .theme-toggle-container:hover {
+        transform: scale(0.9);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    /* 点击效果 */
+    .theme-toggle-container:active {
+        transform: scale(0.98);
+    }
+</style>
+<script>
+    const localTheme = typeof localStorage !== "undefined" && localStorage.getItem("hexo-theme")
+    let theme = localTheme || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")
+    document.documentElement.setAttribute("data-theme", theme)
+
+    function switchTheme() {
+        theme = theme === "dark" ? "light" : "dark"
+        document.documentElement.setAttribute("data-theme", theme)
+        localStorage.setItem("hexo-theme", theme)
+    }
+
+    function useToggle() {
+        const isAppearanceTransition = document.startViewTransition && !window.matchMedia("(prefers-reduced-motion: reduce)").matches
+        if (!isAppearanceTransition) switchTheme()
+        document.startViewTransition(switchTheme)
+    }
+</script>
+    
+        
+        <div style="position: relative;">
+    <div class="nexmoe-widget-wrap">
+        <div class="nexmoe-widget nexmoe-search">
+            
+                    <form id="search_form">
+                        <label><input oninput="sinput()" class="st-default-search-input search-input"
+                                style="color:var(--color-text-2);" id="search_value" name="q" type="search"
+                                placeholder="搜索" style="
+                    font-size: 15px !important;
+                    height: 56px !important;
+                    background-image: none;
+                "></label>
+                    </form>
+                    
+        </div>
+    </div>
+
+    <div class="search-body">
+
+    </div>
+</div>
+<style>
+    .search-body {
+        position: absolute;
+        width: calc(100% - 40px);
+        margin: 0 20px;
+        box-sizing: border-box;
+        top: 60px;
+        right: 0;
+        background-color: var(--color-card);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        z-index: 1000;
+        max-height: 300px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        color: var(--color-text-1);
+        border-radius: 12px;
+    }
+    .search-body a {
+        color: var(--color-text-1);
+    }
+    .search-body .keyword {
+        font-weight: bold;
+        color: var(--color-primary);
+    }
+    .search-result {
+       padding: 10px 20px;
+       border-bottom: 1px dashed var(--color-primary);
+       cursor: pointer;
+    }
+
+    .search-result-title {
+        font-size: 16px;
+        font-weight: bold;
+        white-space: nowrap;
+        /* 防止文本换行 */
+        overflow: hidden;
+        /* 隐藏溢出的内容 */
+        text-overflow: ellipsis;
+        /* 显示省略号来代表被修剪的文本 */
+    }
+
+    .search-result-text {
+        font-size: 14px;
+        white-space: nowrap;
+        /* 防止文本换行 */
+        overflow: hidden;
+        /* 隐藏溢出的内容 */
+        text-overflow: ellipsis;
+        /* 显示省略号来代表被修剪的文本 */
+    }
+    
+</style>
+
+
+    <script async src="/js/search.js?v=1791799924396"></script>
+        
+
+            
+    
+        
+        <div class="nexmoe-widget-wrap">
+	<div class="nexmoe-widget nexmoe-social">
+		<a
+			class="mdui-ripple"
+			href="https://github.com/bakamu"
+			target="_blank"
+			mdui-tooltip="{content: 'GitHub'}"
+			style="
+				color: rgb(25, 23, 23);
+				background-color: rgba(25, 23, 23, .15);
+			"
+		>
+			<i
+				class="nexmoefont iconfont icon-github-fill"
+			></i> </a
+		>
+	</div>
+</div>
+
+    
+        
+        
+        
+        
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章归档</h3>
+    <div class="nexmoe-widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2026/">2026</a><span class="archive-list-count">13</span></li></ul>
+    </div>
+  </div>
+
+
+
+    
+        
+        
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">最新文章</h3>
+    <div class="nexmoe-widget">
+      <ul>
+        
+          <li>
+            <a href="/2026/10/12/0xGame2026/">0xGame2026 misc-WP</a>
+          </li>
+        
+          <li>
+            <a href="/2026/09/15/2024%E7%BE%8E%E4%BA%9A%E6%9D%AF/">2024美亚杯复盘</a>
+          </li>
+        
+          <li>
+            <a href="/2026/08/02/SUID%E6%8F%90%E6%9D%83/">SUID提权</a>
+          </li>
+        
+          <li>
+            <a href="/2026/07/28/%E6%89%8B%E6%9C%BA%E5%8F%96%E8%AF%81%E7%AC%94%E8%AE%B0/">手机取证笔记 bakamu</a>
+          </li>
+        
+          <li>
+            <a href="/2026/06/01/%E7%AC%AC%E4%BA%8C%E5%B1%8A%E6%A2%A8%E8%8A%B1%E6%9D%AF/">梨花杯2026-misc</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+    
+        
+   
+    <div class="nexmoe-copyright">
+        &copy; 2026 bakamu
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://github.com/tangyuxian/hexo-theme-tangyuxian" target="_blank">Tangyuxian</a>
+        <br>
+<div style="font-size: 12px">
+   <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+   本站总访问量 <span id="busuanzi_value_site_pv"></span> 次<br />
+   本站访客数 <span id="busuanzi_value_site_uv"></span> 人次
+</div>
+
+    </div>
+</div><!-- .nexmoe-drawer --></div><div id="nexmoe-content"><div class="nexmoe-primary"><div class="nexmoe-post">
+  <article>
+    
+        <div class="nexmoe-post-cover absolute" style="padding-top: NaN%;"> 
+            <img src="/img/baimaoeig.jpg" alt="0xGame2026 misc-WP" loading="lazy">
+            <h1>0xGame2026 misc-WP</h1>
+        </div>
+        
+    
+    <div class="nexmoe-post-meta">
+    <div class="nexmoe-rainbow">
+        <a class="nexmoefont icon-calendar-fill">2026年10月12日</a>
+        
+            <a class="nexmoefont icon-appstore-fill -link" href="/categories/CTF/">CTF</a><a class="nexmoefont icon-appstore-fill -link" href="/categories/CTF/%E8%B5%9B%E9%A2%98wp/">赛题wp</a>
+        
+        
+    </div>
+    
+    
+    
+    
+    
+</div>
+
+    <h1 id="Week1"><a href="#Week1" class="headerlink" title="Week1"></a>Week1</h1><h2 id="小伊卡…不胖…不胖…"><a href="#小伊卡…不胖…不胖…" class="headerlink" title="小伊卡…不胖…不胖…"></a>小伊卡…不胖…不胖…</h2><p>用pngcheck打开看见CRC不正确，再根据题目的“压扁”猜测宽高被修改，用pngcheck修改一下得到flag</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-09-28-18-01-02.png" alt="" data-caption="" loading="lazy"></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0xGame&#123;w0w_thi5_1s_thE_tru3_Length&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="欢迎来到CTF的世界！"><a href="#欢迎来到CTF的世界！" class="headerlink" title="欢迎来到CTF的世界！"></a>欢迎来到CTF的世界！</h2><p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-09-28-18-03-02.png" alt="" data-caption="" loading="lazy"></p>
+<p>Base64解密</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-09-28-18-03-36.png" alt="" data-caption="" loading="lazy"></p>
+<h2 id="奶蛙的博客"><a href="#奶蛙的博客" class="headerlink" title="奶蛙的博客"></a>奶蛙的博客</h2><p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-09-28-18-06-00.png" alt="" data-caption="" loading="lazy"></p>
+<p>每个碎片收集一下</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">import requests, re, html, <span class="built_in">base64</span>, gzip</span><br><span class="line">base = <span class="string">&quot;http://8000-46ff2944-1c10-4eed-83c8-a2bddcd5384d.challenge.ctfplus.cn/page?id=&#123;&#125;&quot;</span></span><br><span class="line">s = <span class="string">&quot;&quot;</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(1, 125):</span><br><span class="line">    r = requests.get(base.format(i))</span><br><span class="line">    r.encoding = <span class="string">&#x27;utf-8&#x27;</span></span><br><span class="line">    m = re.search(r<span class="string">&#x27;&lt;span class=&quot;flag-fragment&quot;&gt;([^&lt;]*)&lt;/span&gt;&#x27;</span>, r.text)</span><br><span class="line">    <span class="keyword">if</span> m:</span><br><span class="line">        s += html.unescape(m.group(1))</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(f<span class="string">&quot;[缺失] id=&#123;i&#125;&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(s)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>:H4sIAAAAAAAA/wTAwQ2AMAgF0JXaADM4xo9BbQ+UA0GrMe7uK/eyjv11rpNhfLYu0OBpAvYNWsxIU0AXxYMjuA3yBGsUEWQnVE8Kp/z+AAAA//+XJ0P/SwAAAA==</span><br></pre></td></tr></table></figure>
+
+<p>然后base64和gunzip解码</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-09-28-18-23-19.png" alt="" data-caption="" loading="lazy"></p>
+<h2 id="ez-traffic"><a href="#ez-traffic" class="headerlink" title="ez_traffic"></a>ez_traffic</h2><p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-09-28-18-25-48.png" alt="" data-caption="" loading="lazy"></p>
+<p>导出搜友http文件，其中secret.zip应该是flag所在压缩包<br><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-09-28-18-27-05.png" alt="" data-caption="" loading="lazy"></p>
+<p>Base64解密得到flag</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-09-28-18-27-27.png" alt="" data-caption="" loading="lazy"></p>
+<h2 id="Interesting-ppt"><a href="#Interesting-ppt" class="headerlink" title="Interesting_ppt"></a>Interesting_ppt</h2><p>得到pptx文件，里面有一个假flag，然后把pptx当做zip解压一下<br>在\0xgame\docProps中的core和custom文件中找到两个可疑字符串</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-09-28-18-39-30.png" alt="" data-caption="" loading="lazy"></p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-09-28-18-39-38.png" alt="" data-caption="" loading="lazy"></p>
+<p>一个可疑Base64解密得到是key，那么另一个应该是密文</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-09-28-18-40-05.png" alt="" data-caption="" loading="lazy"></p>
+<p>尝试xor得到flag</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-09-28-18-41-21.png" alt="" data-caption="" loading="lazy"></p>
+<h2 id="Treasure-island"><a href="#Treasure-island" class="headerlink" title="Treasure_island"></a>Treasure_island</h2><p>先ssh进入服务器<br>ls一下得到题目文件</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-09-28-18-46-05.png" alt="" data-caption="" loading="lazy"></p>
+<p>可以看见线索提示</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">老船长不信任任何锁，只信数字。</span><br><span class="line"></span><br><span class="line">他在沙滩上摆了成千上万个箱子，</span><br><span class="line">并留下了一张图表来记住每个箱子的名字。</span><br><span class="line"></span><br><span class="line">数一数图表记录的东西，数目就能告诉你箱子的名字。</span><br></pre></td></tr></table></figure>
+
+<p>那么chest文件夹里面就是箱子，而real_map.txt则是图表，chest中总共1000个txt文件，而图表总共620行</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-09-28-18-51-28.png" alt="" data-caption="" loading="lazy"></p>
+<p>提示说了看数字，所以看一下第620个箱子的内容</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-09-28-18-57-19.png" alt="" data-caption="" loading="lazy"></p>
+<p>得到提示</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">🏆 你找到了真正的宝箱！</span><br><span class="line"></span><br><span class="line">宝箱是空的。黄金已经被移到 /tmp/flag——</span><br><span class="line">但守护者的心跳封住了它。</span><br><span class="line"></span><br><span class="line">在这座岛上的某个地方，有一颗心在跳动，</span><br><span class="line">每一次跳动都会重新锁住 /tmp/flag。</span><br><span class="line">让这颗心停止跳动，并抹掉它的痕迹，</span><br><span class="line">否则它永远不会放走黄金。</span><br><span class="line"></span><br><span class="line">（ps：下面的守卫对半途而废的人可一点也不手软。）</span><br></pre></td></tr></table></figure>
+
+<p>那么就是要在进程中查找心跳进程并杀掉它，ps aux一下，找到一个heartbeat.sh应该就是</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-09-28-19-03-41.png" alt="" data-caption="" loading="lazy"></p>
+<p>把么就删掉文件并杀掉进程，不过这里杀进程是不允许的，那么sleep3秒重新解锁，最后cat得到flag</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-09-28-19-06-07.png" alt="" data-caption="" loading="lazy"></p>
+<h2 id="Strange-lsb"><a href="#Strange-lsb" class="headerlink" title="Strange_lsb"></a>Strange_lsb</h2><p>说了是lsb，用zsteg分析没有结果，那么用sr&#x3D;tegsolve看一下会发现每当取到单一色的最低位是都会有噪音图</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-09-28-19-12-51.png" alt="" data-caption="" loading="lazy"></p>
+<p>那么把三色噪音图都提取出来分析，题目说“单一的色彩只是噪音，唯有三原色交织之时，真相才会显现。”，那么久用stegsolve的xor功能把三张图片都合并到一起，会得到二维码</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-09-28-19-15-47.png" alt="" data-caption="" loading="lazy"></p>
+<p>这里同样用stegsolve的反色功能反色一下得到flag</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-09-28-19-16-34.png" alt="" data-caption="" loading="lazy"></p>
+<h2 id="粗心的小x"><a href="#粗心的小x" class="headerlink" title="粗心的小x"></a>粗心的小x</h2><p>拿到chat_export.json是chat的记录，同时还有模型的源码，查看一下会发现对话中出现一个很奇怪的api-key，尝试Base64解码一下</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-09-28-19-25-06.png" alt="" data-caption="" loading="lazy"></p>
+<p>发现是一部分flag，于是继续找其他api-key，.env配置文件中可以找到另外两个，但是旧的是假的</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-09-28-19-26-57.png" alt="" data-caption="" loading="lazy"></p>
+<p>还有part2,可以查看git中chat的历史</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git -c safe.directory=<span class="string">&#x27;*&#x27;</span> <span class="built_in">log</span> --all --oneline</span><br></pre></td></tr></table></figure>
+
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-09-28-19-28-23.png" alt="" data-caption="" loading="lazy"></p>
+<p>查看一下e3b5451的记录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git -c safe.directory=<span class="string">&#x27;*&#x27;</span> show e3b5451 --<span class="built_in">stat</span></span><br></pre></td></tr></table></figure>
+
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-09-28-19-29-52.png" alt="" data-caption="" loading="lazy"></p>
+<p>继续看chat.py可以看到一个旧的api</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git -c safe.directory=<span class="string">&#x27;*&#x27;</span> show e3b5451:chat.py</span><br></pre></td></tr></table></figure>
+
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-09-28-19-31-26.png" alt="" data-caption="" loading="lazy"></p>
+<p>得到part2，拼起来就得到了完整flag</p>
+<h2 id="深夜值班室"><a href="#深夜值班室" class="headerlink" title="深夜值班室"></a>深夜值班室</h2><p>又能玩mc题了<br>我用的是hmcl连接的，简单讲一下就是查看03:10左右的log可以看到存在7号备份，读取后就可以得到门禁，解锁后传送得到flag</p>
+<h2 id="模糊二维码"><a href="#模糊二维码" class="headerlink" title="模糊二维码"></a>模糊二维码</h2><p>看图片是29<em>29的二维码，ε&#x3D;(´ο｀</em>)))唉，只能一个一个打01打出来后还原了</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-09-28-23-35-58.png" alt="" data-caption="" loading="lazy"></p>
+<p>但是小的定位符不完全，我们修复一下后用手机扫就能扫出来了</p>
+<h2 id="ez-pytorch"><a href="#ez-pytorch" class="headerlink" title="ez_pytorch"></a>ez_pytorch</h2><p>把pth文件当做zip解压，阅读data.pkl文件，可以看到flag的解密过程</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-09-29-08-41-12.png" alt="" data-caption="" loading="lazy"></p>
+<p>在data文件夹中一一解密</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#p0 循环异或解密</span></span><br><span class="line">b = bytes.fromhex(<span class="string">&#x27;6ADB7B3BCE592190&#x27;</span>)</span><br><span class="line">k = (0x5A, 0xA3, 0x3C)</span><br><span class="line">p0 = bytes(b[i] ^ k[i % 3] <span class="keyword">for</span> i <span class="keyword">in</span> range(len(b)))</span><br><span class="line"><span class="built_in">print</span>(p0)   <span class="comment"># b&#x27;0xGame&#123;3&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#p1 逆序Base64解码</span></span><br><span class="line">rNWMw9le-&gt;el9wMWNr-&gt;z_p1ck</span><br><span class="line"></span><br><span class="line"><span class="comment">#p 2逐字节减索引</span></span><br><span class="line">b = bytes.fromhex(<span class="string">&#x27;6c346169537765&#x27;</span>)</span><br><span class="line">p2 = bytes((b[i] - i) &amp; <span class="number">0</span>xFF for i in range(len(b)))</span><br><span class="line"><span class="built_in">print</span>(p2)   <span class="comment"># b&#x27;l3_fOr_&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#p3 Base64异或</span></span><br><span class="line">import <span class="built_in">base64</span></span><br><span class="line">b = base64.b64decode(<span class="string">&#x27;1azY6Jr5kew=&#x27;</span>)</span><br><span class="line">p3 = bytes(b[0] ^ 0xA5 <span class="keyword">if</span> i == 0 <span class="keyword">else</span> b[i] ^ b[i-1] <span class="keyword">for</span> i <span class="keyword">in</span> range(len(b)))</span><br><span class="line"><span class="built_in">print</span>(p3)   <span class="comment"># b&#x27;pyt0rch&#125;&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>拼接得到flag</p>
+<h1 id="Week2"><a href="#Week2" class="headerlink" title="Week2"></a>Week2</h1><h2 id="取证大师！"><a href="#取证大师！" class="headerlink" title="取证大师！"></a>取证大师！</h2><p>拿到的是电脑镜像，拖入火眼中分析</p>
+<h3 id="受害业务主机上，被攻击的-Web-服务端口是？-例如：3000"><a href="#受害业务主机上，被攻击的-Web-服务端口是？-例如：3000" class="headerlink" title="受害业务主机上，被攻击的 Web 服务端口是？(例如：3000)"></a>受害业务主机上，被攻击的 Web 服务端口是？(例如：3000)</h3><p>在tomcat中可以看到端口</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-10-05-14-30-05.png" alt="" data-caption="" loading="lazy"></p>
+<p>同时在最近文件localhost_access_log$0.2026-10-04.txt中可以看到报错</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-10-05-14-36-17.png" alt="" data-caption="" loading="lazy"></p>
+<h3 id="攻击者利用的漏洞-CVE-编号是？-例如：CVE-2021-44228"><a href="#攻击者利用的漏洞-CVE-编号是？-例如：CVE-2021-44228" class="headerlink" title="攻击者利用的漏洞 CVE 编号是？(例如：CVE-2021-44228)"></a>攻击者利用的漏洞 CVE 编号是？(例如：CVE-2021-44228)</h3><p>在上一题的文件中可以看到是通过上传shell.jsp木马文件来攻击，同时找到catalina.2026-10-04.log，可以看到在文件上传成功后，日志中出现了大量对同一个 shell.jsp 的 POST 请求，且返回了 200。这说明攻击者正在通过这个 WebShell 反复执行系统命令，所以对应CVE-2017-12617</p>
+<h3 id="攻击者使用的-webshell-工具是？-例如：冰蝎"><a href="#攻击者使用的-webshell-工具是？-例如：冰蝎" class="headerlink" title="攻击者使用的 webshell 工具是？(例如：冰蝎)"></a>攻击者使用的 webshell 工具是？(例如：冰蝎)</h3><p>找到shell.jsp文件<br><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-10-05-14-44-53.png" alt="" data-caption="" loading="lazy"></p>
+<p>只用到了Base64传参，联系POST多次执行，像是一句话木马攻击，所以应该是蚁剑</p>
+<h3 id="密码喷洒攻击最终命中的域账号是？-例如：admin"><a href="#密码喷洒攻击最终命中的域账号是？-例如：admin" class="headerlink" title="密码喷洒攻击最终命中的域账号是？(例如：admin)"></a>密码喷洒攻击最终命中的域账号是？(例如：admin)</h3><p>还是在最近文件中，可以看到sync_backup这个文件，打开就能看见答案</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-10-05-15-03-05.png" alt="" data-caption="" loading="lazy"></p>
+<p>OXGAAAAAME：这是 NetBIOS 域名<br>backup_svc：这是域内的服务账号</p>
+<h3 id="攻击者窃取的备份文件中，积分榜排名第一的队伍名称是？-例如：RedTeam"><a href="#攻击者窃取的备份文件中，积分榜排名第一的队伍名称是？-例如：RedTeam" class="headerlink" title="攻击者窃取的备份文件中，积分榜排名第一的队伍名称是？(例如：RedTeam)"></a>攻击者窃取的备份文件中，积分榜排名第一的队伍名称是？(例如：RedTeam)</h3><p>在下载中可以看到备份文件</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-10-05-15-06-12.png" alt="" data-caption="" loading="lazy"></p>
+<p>解压有一个csv文件，打开可以看到</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-10-05-15-09-11.png" alt="" data-caption="" loading="lazy"></p>
+<h3 id="请提交域用户所在的域名。-例如：corp-local"><a href="#请提交域用户所在的域名。-例如：corp-local" class="headerlink" title="请提交域用户所在的域名。(例如：corp.local)"></a>请提交域用户所在的域名。(例如：corp.local)</h3><p>在事件日志中可以看到</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-10-05-15-18-38.png" alt="" data-caption="" loading="lazy"></p>
+<p>也就是oxgaaaaame.local</p>
+<h3 id="请给出域控的主机名称。"><a href="#请给出域控的主机名称。" class="headerlink" title="请给出域控的主机名称。"></a>请给出域控的主机名称。</h3><p>在ConsoleHost_history.txt中可以找到更多完整信息</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-10-05-15-20-39.png" alt="" data-caption="" loading="lazy"></p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-10-05-15-21-27.png" alt="" data-caption="" loading="lazy"></p>
+<p>可以看到是0XGAME-DC01</p>
+<h3 id="请提交攻击者在数据库中修改的管理员密码。"><a href="#请提交攻击者在数据库中修改的管理员密码。" class="headerlink" title="请提交攻击者在数据库中修改的管理员密码。"></a>请提交攻击者在数据库中修改的管理员密码。</h3><p>在panel.db中可以看到信息</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-10-05-15-23-39.png" alt="" data-caption="" loading="lazy"></p>
+<p>是Sup3rP@nel_0x26!!</p>
+<h3 id="被攻陷的机器中，本地用户-0xPlayer-的明文密码是？"><a href="#被攻陷的机器中，本地用户-0xPlayer-的明文密码是？" class="headerlink" title="被攻陷的机器中，本地用户 0xPlayer 的明文密码是？"></a>被攻陷的机器中，本地用户 0xPlayer 的明文密码是？</h3><p>火眼直接分析出来了</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-10-05-15-24-33.png" alt="" data-caption="" loading="lazy"></p>
+<h3 id="请提交机器中攻击者没有注意到的秘密文件的内容。-例如：just-a-string"><a href="#请提交机器中攻击者没有注意到的秘密文件的内容。-例如：just-a-string" class="headerlink" title="请提交机器中攻击者没有注意到的秘密文件的内容。(例如：just_a_string)"></a>请提交机器中攻击者没有注意到的秘密文件的内容。(例如：just_a_string)</h3><p>加密文件是secret<br><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-10-05-15-26-35.png" alt="" data-caption="" loading="lazy"></p>
+<p>那么就要找到容器密码<br>找了很久，最终锁定了这个很阴间的图片The_Big_Three.jpg</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-10-05-15-47-14.png" alt="" data-caption="" loading="lazy"></p>
+<p>一个很可疑的文件，尝试把它作为秘钥文件用veracrypt挂载secret，成功挂载了</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-10-05-15-48-17.png" alt="" data-caption="" loading="lazy"></p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-10-05-15-48-26.png" alt="" data-caption="" loading="lazy"></p>
+<p>解决了所有题目，得到flag</p>
+<h2 id="小伊卡…不胖…不胖…（已黑化）"><a href="#小伊卡…不胖…不胖…（已黑化）" class="headerlink" title="小伊卡…不胖…不胖…（已黑化）"></a>小伊卡…不胖…不胖…（已黑化）</h2><p>随波逐流直接解决了</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-10-05-14-49-30.png" alt="" data-caption="" loading="lazy"></p>
+<h2 id="ez-ftp"><a href="#ez-ftp" class="headerlink" title="ez_ftp"></a>ez_ftp</h2><p>导出ftp传输的文件</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-10-05-15-28-58.png" alt="" data-caption="" loading="lazy"></p>
+<p>看了一下都是加密文件，尝试爆破可以发现README.zip是弱口令，密码是123456</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-10-05-15-29-44.png" alt="" data-caption="" loading="lazy"></p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-10-05-15-30-31.png" alt="" data-caption="" loading="lazy"></p>
+<p>给出了信息</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 备份服务器使用须知</span></span><br><span class="line"></span><br><span class="line">1. 本服务器仅用于运维部内部数据备份，**严禁外传**。</span><br><span class="line">2. `backup.zip` 由本部门负责备份的同事维护。</span><br><span class="line">3. 压缩包密码规则：**维护人的工号(大写) + 入职年月(YYYYMM)**，例如工号 `NQ1001`、2020 年 3 月入职，则密码为 `NQ1001202003`。</span><br><span class="line">4. 员工信息见本目录 `roster.xlsx`（涉及薪资等敏感信息已加密，密码与运维 FTP 登录口令相同）。</span><br><span class="line">5. 每日 03:00 自动增量备份，校验日志见 zip 内 `backup_manifest.log`。</span><br></pre></td></tr></table></figure>
+
+<p>那么就要分析运维登陆口令<br>过滤FTP流后可以看到大量登陆信息，有很多有Response arg: Login or password incorrect!<br>找到成功的真正账户密码</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-10-05-15-34-28.png" alt="" data-caption="" loading="lazy"></p>
+<p>所以密码是Bk_Ops#2026<br>同时在爆破过程中可以看到凭据工号</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-10-05-15-39-03.png" alt="" data-caption="" loading="lazy"></p>
+<p>锁定NQ2077</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-10-05-15-39-25.png" alt="" data-caption="" loading="lazy"></p>
+<p>那么密码就是NQ2077202107<br>解压backup.zip中的flag.txt得到答案</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-10-05-15-40-27.png" alt="" data-caption="" loading="lazy"></p>
+<h2 id="Zip医生"><a href="#Zip医生" class="headerlink" title="Zip医生"></a>Zip医生</h2><p>拿到一个加密文件，用7-zip打开可以看到是Zipcrypt store加密的，不出意外的话是要明文攻击的</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-10-05-15-57-59.png" alt="" data-caption="" loading="lazy"></p>
+<p>很明显是利用.pyc进行明文攻击，题目文件已经提示了是python3.13版本的pyc，所以确定了文件头和标志位是：f3 0d 0d 0a 00 00 00 00<br>再看一下py的大小</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-10-05-16-15-42.png" alt="" data-caption="" loading="lazy"></p>
+<p>源文件大小对应hex：E8 01 00 00，构造攻击口令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.\bkcrack.exe -C D:\mis杂项\0xGame2026\secret.zip -c locked.cpython-313.pyc -x 0 F30D0D0A00000000 -x 12 E8010000</span><br></pre></td></tr></table></figure>
+
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-10-05-16-28-20.png" alt="" data-caption="" loading="lazy"></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.\bkcrack.exe -C D:\mis杂项\0xGame2026\secret.zip -k 64917537 61b24fcf b564419c -D D:\mis杂项\0xGame2026\secret1.zip</span><br></pre></td></tr></table></figure>
+
+<p>成功解压</p>
+<p>打开locked.py是一个crypto的RSA解密题目，分解一下n<br><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-10-05-16-32-22.png" alt="" data-caption="" loading="lazy"></p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-10-05-16-32-15.png" alt="" data-caption="" loading="lazy"></p>
+<p>写一下代码解密</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">from Crypto.Util.number import long_to_bytes</span><br><span class="line"></span><br><span class="line">p = 1238926361552897</span><br><span class="line">q = 93461639715357977769163558199606896584051237541638188580280321</span><br><span class="line">n = p * q</span><br><span class="line">e = 65537</span><br><span class="line">c = 19411058501260029511744403653712197844299720287315419561082722362568892501402</span><br><span class="line"></span><br><span class="line">phi = (p - 1) * (q - 1)</span><br><span class="line">d = pow(e, -1, phi)</span><br><span class="line">m = pow(c, d, n)</span><br><span class="line"><span class="built_in">print</span>(long_to_bytes(m))</span><br></pre></td></tr></table></figure>
+
+<p>得到flag</p>
+<h2 id="挽尊糕手"><a href="#挽尊糕手" class="headerlink" title="挽尊糕手"></a>挽尊糕手</h2><p>题目中提示了雪，应该是snow隐写<br>要找到密码，先分析图片zsteg分析LSB会发现提示</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-10-05-16-36-21.png" alt="" data-caption="" loading="lazy"></p>
+<p>好吧，还要看角色的生日，不过图片的名称已经给了，是3月7日</p>
+<p>但是再分析可以发现文本中存在零宽字符隐写，解密得到</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-10-05-16-41-27.png" alt="" data-caption="" loading="lazy"></p>
+<p>是Never Gonna Give You Up的歌词，神了<br>保存为1.txt后用3.7作为密码snow提取得到一个zip压缩包</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-10-05-17-22-16.png" alt="" data-caption="" loading="lazy"></p>
+<p>解压得到一个奇怪的字符串，不是flag</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-10-05-17-24-32.png" alt="" data-caption="" loading="lazy"></p>
+<p>猜测是md5值，用在线网站解密一下得到flag</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-10-06-17-31-44.png" alt="" data-caption="" loading="lazy"></p>
+<p>当然图片的hex值里面也给了网址</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-10-06-17-32-26.png" alt="" data-caption="" loading="lazy"></p>
+<h2 id="ez-chain"><a href="#ez-chain" class="headerlink" title="ez_chain"></a>ez_chain</h2><p>先创建账户</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-10-05-22-32-06.png" alt="" data-caption="" loading="lazy"></p>
+<p>然后用自己本地的metamask登陆连接RPC然后领取测试币，然后发送到账户上至少0.001币</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-10-05-22-38-17.png" alt="" data-caption="" loading="lazy"></p>
+<p>然后选2部署合约</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-10-05-22-39-47.png" alt="" data-caption="" loading="lazy"></p>
+<p>选4查看源码</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-10-05-22-40-17.png" alt="" data-caption="" loading="lazy"></p>
+<p>然后既可以打开remix了，这里建议下载一个到本地</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-10-05-22-45-08.png" alt="" data-caption="" loading="lazy"></p>
+<p>先要连接metamask</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-10-05-22-54-02.png" alt="" data-caption="" loading="lazy"></p>
+<p>然后compile，这里选择0.8.9版本，因为合约中的版本是0.8.9，然后分析</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-10-05-22-45-55.png" alt="" data-caption="" loading="lazy"></p>
+<p>这个比较简单的代码，就是要greeting &#x3D;&#x3D; “HelloChainFlag”就能isSolved() </p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-10-05-22-47-43.png" alt="" data-caption="" loading="lazy"></p>
+<p>所以这里输入合约的地址，at address后输入hello的内容，依次点击setGreeting和greet就能通过了，最后点击isolved可以看到返回了true</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/wzimg/2026-10-05-23-06-46.png" alt="" data-caption="" loading="lazy"></p>
+<p>回到nc领取flag就可以了</p>
+
+    
+  </article>
+
+  
+      
+    <div class="nexmoe-post-copyright">
+        <strong>本文作者：</strong>bakamu<br>
+        
+        <strong>本文链接：</strong><a href="http://example.com/2026/10/12/0xGame2026/" title="http:&#x2F;&#x2F;example.com&#x2F;2026&#x2F;10&#x2F;12&#x2F;0xGame2026&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;example.com&#x2F;2026&#x2F;10&#x2F;12&#x2F;0xGame2026&#x2F;</a><br>
+
+        
+            <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+
+        
+    </div>
+
+
+  
+  
+  <div class="nexmoe-post-meta nexmoe-rainbow">
+   
+    
+        <a class="nexmoefont icon-tag-fill -none-link" href="/tags/CTF/" rel="tag">CTF</a>
+    
+</div>
+  
+  
+    <script async src="/js/copy-codeblock.js?v=1791799924342"></script>
+  
+
+  
+      <div class="nexmoe-post-footer">
+          <div class="giscus"></div>
+<script src="https://giscus.app/client.js"
+        data-repo="bakamu/bakamu.github.io"
+        data-repo-id="R_kgDORhIyeg"
+        data-category="Announcements"
+        data-category-id="DIC_kwDORhIyes4C-ebs"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+
+      </div>
+  
+</div></div><div class="nexmoe-post-right">    <div class="nexmoe-fixed">
+        <div class="nexmoe-tool">
+
+            
+
+            
+            
+            <button class="mdui-fab catalog" style="overflow:unset;">
+                <i class="nexmoefont icon-i-catalog"></i>
+                <div class="nexmoe-toc">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Week1"><span class="toc-number">1.</span> <span class="toc-text">Week1</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%8F%E4%BC%8A%E5%8D%A1%E2%80%A6%E4%B8%8D%E8%83%96%E2%80%A6%E4%B8%8D%E8%83%96%E2%80%A6"><span class="toc-number">1.1.</span> <span class="toc-text">小伊卡…不胖…不胖…</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AC%A2%E8%BF%8E%E6%9D%A5%E5%88%B0CTF%E7%9A%84%E4%B8%96%E7%95%8C%EF%BC%81"><span class="toc-number">1.2.</span> <span class="toc-text">欢迎来到CTF的世界！</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A5%B6%E8%9B%99%E7%9A%84%E5%8D%9A%E5%AE%A2"><span class="toc-number">1.3.</span> <span class="toc-text">奶蛙的博客</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ez-traffic"><span class="toc-number">1.4.</span> <span class="toc-text">ez_traffic</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Interesting-ppt"><span class="toc-number">1.5.</span> <span class="toc-text">Interesting_ppt</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Treasure-island"><span class="toc-number">1.6.</span> <span class="toc-text">Treasure_island</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Strange-lsb"><span class="toc-number">1.7.</span> <span class="toc-text">Strange_lsb</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B2%97%E5%BF%83%E7%9A%84%E5%B0%8Fx"><span class="toc-number">1.8.</span> <span class="toc-text">粗心的小x</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B7%B1%E5%A4%9C%E5%80%BC%E7%8F%AD%E5%AE%A4"><span class="toc-number">1.9.</span> <span class="toc-text">深夜值班室</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%A1%E7%B3%8A%E4%BA%8C%E7%BB%B4%E7%A0%81"><span class="toc-number">1.10.</span> <span class="toc-text">模糊二维码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ez-pytorch"><span class="toc-number">1.11.</span> <span class="toc-text">ez_pytorch</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Week2"><span class="toc-number">2.</span> <span class="toc-text">Week2</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%96%E8%AF%81%E5%A4%A7%E5%B8%88%EF%BC%81"><span class="toc-number">2.1.</span> <span class="toc-text">取证大师！</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%97%E5%AE%B3%E4%B8%9A%E5%8A%A1%E4%B8%BB%E6%9C%BA%E4%B8%8A%EF%BC%8C%E8%A2%AB%E6%94%BB%E5%87%BB%E7%9A%84-Web-%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%8F%A3%E6%98%AF%EF%BC%9F-%E4%BE%8B%E5%A6%82%EF%BC%9A3000"><span class="toc-number">2.1.1.</span> <span class="toc-text">受害业务主机上，被攻击的 Web 服务端口是？(例如：3000)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%94%BB%E5%87%BB%E8%80%85%E5%88%A9%E7%94%A8%E7%9A%84%E6%BC%8F%E6%B4%9E-CVE-%E7%BC%96%E5%8F%B7%E6%98%AF%EF%BC%9F-%E4%BE%8B%E5%A6%82%EF%BC%9ACVE-2021-44228"><span class="toc-number">2.1.2.</span> <span class="toc-text">攻击者利用的漏洞 CVE 编号是？(例如：CVE-2021-44228)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%94%BB%E5%87%BB%E8%80%85%E4%BD%BF%E7%94%A8%E7%9A%84-webshell-%E5%B7%A5%E5%85%B7%E6%98%AF%EF%BC%9F-%E4%BE%8B%E5%A6%82%EF%BC%9A%E5%86%B0%E8%9D%8E"><span class="toc-number">2.1.3.</span> <span class="toc-text">攻击者使用的 webshell 工具是？(例如：冰蝎)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%86%E7%A0%81%E5%96%B7%E6%B4%92%E6%94%BB%E5%87%BB%E6%9C%80%E7%BB%88%E5%91%BD%E4%B8%AD%E7%9A%84%E5%9F%9F%E8%B4%A6%E5%8F%B7%E6%98%AF%EF%BC%9F-%E4%BE%8B%E5%A6%82%EF%BC%9Aadmin"><span class="toc-number">2.1.4.</span> <span class="toc-text">密码喷洒攻击最终命中的域账号是？(例如：admin)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%94%BB%E5%87%BB%E8%80%85%E7%AA%83%E5%8F%96%E7%9A%84%E5%A4%87%E4%BB%BD%E6%96%87%E4%BB%B6%E4%B8%AD%EF%BC%8C%E7%A7%AF%E5%88%86%E6%A6%9C%E6%8E%92%E5%90%8D%E7%AC%AC%E4%B8%80%E7%9A%84%E9%98%9F%E4%BC%8D%E5%90%8D%E7%A7%B0%E6%98%AF%EF%BC%9F-%E4%BE%8B%E5%A6%82%EF%BC%9ARedTeam"><span class="toc-number">2.1.5.</span> <span class="toc-text">攻击者窃取的备份文件中，积分榜排名第一的队伍名称是？(例如：RedTeam)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B7%E6%8F%90%E4%BA%A4%E5%9F%9F%E7%94%A8%E6%88%B7%E6%89%80%E5%9C%A8%E7%9A%84%E5%9F%9F%E5%90%8D%E3%80%82-%E4%BE%8B%E5%A6%82%EF%BC%9Acorp-local"><span class="toc-number">2.1.6.</span> <span class="toc-text">请提交域用户所在的域名。(例如：corp.local)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B7%E7%BB%99%E5%87%BA%E5%9F%9F%E6%8E%A7%E7%9A%84%E4%B8%BB%E6%9C%BA%E5%90%8D%E7%A7%B0%E3%80%82"><span class="toc-number">2.1.7.</span> <span class="toc-text">请给出域控的主机名称。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B7%E6%8F%90%E4%BA%A4%E6%94%BB%E5%87%BB%E8%80%85%E5%9C%A8%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%AD%E4%BF%AE%E6%94%B9%E7%9A%84%E7%AE%A1%E7%90%86%E5%91%98%E5%AF%86%E7%A0%81%E3%80%82"><span class="toc-number">2.1.8.</span> <span class="toc-text">请提交攻击者在数据库中修改的管理员密码。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A2%AB%E6%94%BB%E9%99%B7%E7%9A%84%E6%9C%BA%E5%99%A8%E4%B8%AD%EF%BC%8C%E6%9C%AC%E5%9C%B0%E7%94%A8%E6%88%B7-0xPlayer-%E7%9A%84%E6%98%8E%E6%96%87%E5%AF%86%E7%A0%81%E6%98%AF%EF%BC%9F"><span class="toc-number">2.1.9.</span> <span class="toc-text">被攻陷的机器中，本地用户 0xPlayer 的明文密码是？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B7%E6%8F%90%E4%BA%A4%E6%9C%BA%E5%99%A8%E4%B8%AD%E6%94%BB%E5%87%BB%E8%80%85%E6%B2%A1%E6%9C%89%E6%B3%A8%E6%84%8F%E5%88%B0%E7%9A%84%E7%A7%98%E5%AF%86%E6%96%87%E4%BB%B6%E7%9A%84%E5%86%85%E5%AE%B9%E3%80%82-%E4%BE%8B%E5%A6%82%EF%BC%9Ajust-a-string"><span class="toc-number">2.1.10.</span> <span class="toc-text">请提交机器中攻击者没有注意到的秘密文件的内容。(例如：just_a_string)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%8F%E4%BC%8A%E5%8D%A1%E2%80%A6%E4%B8%8D%E8%83%96%E2%80%A6%E4%B8%8D%E8%83%96%E2%80%A6%EF%BC%88%E5%B7%B2%E9%BB%91%E5%8C%96%EF%BC%89"><span class="toc-number">2.2.</span> <span class="toc-text">小伊卡…不胖…不胖…（已黑化）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ez-ftp"><span class="toc-number">2.3.</span> <span class="toc-text">ez_ftp</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Zip%E5%8C%BB%E7%94%9F"><span class="toc-number">2.4.</span> <span class="toc-text">Zip医生</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8C%BD%E5%B0%8A%E7%B3%95%E6%89%8B"><span class="toc-number">2.5.</span> <span class="toc-text">挽尊糕手</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ez-chain"><span class="toc-number">2.6.</span> <span class="toc-text">ez_chain</span></a></li></ol></li></ol>
+                </div>
+            </button>
+            
+
+            
+
+            <a href="#nexmoe-content" class="backtop toc-link" aria-label="Back To Top" title="top"><button class="mdui-fab mdui-ripple"><i class="nexmoefont icon-caret-top"></i></button></a>
+        </div>
+    </div>
+</div></div><div id="nexmoe-pendant"><div class="nexmoe-drawer  nexmoe-pd" id="drawer" style="overflow-x: auto;overflow-y: auto;">
+
+     
+        
+
+        <div class="nexmoe-pd-item">
+    <div class="clock">
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="needle" id="hours"></div>
+        <div class="needle" id="minutes"></div>
+        <div class="needle" id="seconds"></div>
+        <div class="clock_logo">
+
+        </div>
+
+    </div>
+</div>
+<script>
+    // ----- Variable declaration
+
+    var data = {
+        dt: new Date(),
+        hours: {
+            el: document.querySelector('#hours'),
+            val: 0
+        },
+
+        minutes: {
+            el: document.querySelector('#minutes'),
+            val: 0
+        },
+
+        seconds: {
+            el: document.querySelector('#seconds'),
+            val: 0
+        },
+
+        renderTime: 1000
+    };
+
+
+    // ----- Clock rendering logic
+
+    updateTime = () => {
+        let hour = data.dt.getHours();
+        let minute = data.dt.getMinutes();
+        let second = data.dt.getSeconds();
+
+        data.hours.el.classList.add('moving');
+        data.minutes.el.classList.add('moving');
+        data.seconds.el.classList.add('moving');
+
+        data.hours.val = hour == 0 && data.hours.val == 59 * 6 * 5 ? 360 : hour * 6 * 5;
+        data.minutes.val = minute == 0 && data.minutes.val == 59 * 6 ? 360 : minute * 6;
+        data.seconds.val = second == 0 && data.seconds.val == 59 * 6 ? 360 : second * 6;
+
+        data.hours.el.style.transform = `translate(-50%, -75%) rotate(${data.hours.val}deg)`;
+        data.minutes.el.style.transform = `translate(-50%, -75%) rotate(${data.minutes.val}deg)`;
+        data.seconds.el.style.transform = `translate(-50%, -75%) rotate(${data.seconds.val}deg)`;
+
+        data.dt.setSeconds(second + 1);
+    };
+
+    // ----- Clock execution
+
+    setInterval(() => {
+        updateTime();
+    }, data.renderTime);
+
+    updateTime();
+
+    // ----- Events area
+
+    data.seconds.el.addEventListener('transitionend', () => {
+        data.hours.el.classList.remove('moving');
+        data.minutes.el.classList.remove('moving');
+        data.seconds.el.classList.remove('moving');
+
+        // if (data.hours.val == 360) {
+        //   data.hours.el.style.transform = 'translate(-50%, -75%) rotate(0deg)';
+        // }
+
+        if (data.minutes.val == 360) {
+            data.minutes.el.style.transform = 'translate(-50%, -75%) rotate(0deg)';
+        }
+
+        if (data.seconds.val == 360) {
+            data.seconds.el.style.transform = 'translate(-50%, -75%) rotate(0deg)';
+        }
+    });
+
+</script>
+<style>
+    .clock {
+        background-color: #ffffff;
+        width: 70vw;
+        height: 70vw;
+        max-width: 70vh;
+        max-height: 70vh;
+        border: solid 2.8vw var(--color-primary);
+        position: relative;
+        overflow: hidden;
+        border-radius: 50%;
+        box-sizing: border-box;
+        box-shadow: 0 1.4vw 2.8vw var(--color2);
+        zoom: 0.2
+    }
+
+    .memory {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform-origin: center;
+    }
+
+    .memory:nth-child(1) {
+        background-color: var(--color-primary);
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(0deg) translateY(-520%);
+    }
+
+    .memory:nth-child(2) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(6deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(3) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(12deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(4) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(18deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(5) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(24deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(6) {
+        background-color: var(--color-primary);
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(30deg) translateY(-520%);
+    }
+
+    .memory:nth-child(7) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(36deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(8) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(42deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(9) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(48deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(10) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(54deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(11) {
+        background-color: var(--color-primary);
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(60deg) translateY(-520%);
+    }
+
+    .memory:nth-child(12) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(66deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(13) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(72deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(14) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(78deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(15) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(84deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(16) {
+        background-color: var(--color-primary);
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(90deg) translateY(-520%);
+    }
+
+    .memory:nth-child(17) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(96deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(18) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(102deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(19) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(108deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(20) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(114deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(21) {
+        background-color: var(--color-primary);
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(120deg) translateY(-520%);
+    }
+
+    .memory:nth-child(22) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(126deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(23) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(132deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(24) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(138deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(25) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(144deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(26) {
+        background-color: var(--color-primary);
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(150deg) translateY(-520%);
+    }
+
+    .memory:nth-child(27) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(156deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(28) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(162deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(29) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(168deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(30) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(174deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(31) {
+        background-color: var(--color-primary);
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(180deg) translateY(-520%);
+    }
+
+    .memory:nth-child(32) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(186deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(33) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(192deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(34) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(198deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(35) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(204deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(36) {
+        background-color: var(--color-primary);
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(210deg) translateY(-520%);
+    }
+
+    .memory:nth-child(37) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(216deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(38) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(222deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(39) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(228deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(40) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(234deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(41) {
+        background-color: var(--color-primary);
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(240deg) translateY(-520%);
+    }
+
+    .memory:nth-child(42) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(246deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(43) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(252deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(44) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(258deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(45) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(264deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(46) {
+        background-color: var(--color-primary);
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(270deg) translateY(-520%);
+    }
+
+    .memory:nth-child(47) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(276deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(48) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(282deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(49) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(288deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(50) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(294deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(51) {
+        background-color: var(--color-primary);
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(300deg) translateY(-520%);
+    }
+
+    .memory:nth-child(52) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(306deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(53) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(312deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(54) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(318deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(55) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(324deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(56) {
+        background-color: var(--color-primary);
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(330deg) translateY(-520%);
+    }
+
+    .memory:nth-child(57) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(336deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(58) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(342deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(59) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(348deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(60) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(354deg) translateY(-1461%);
+    }
+
+    .needle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform-origin: center;
+    }
+
+    .needle#hours {
+        background-color: #1f1f1f;
+        width: 4%;
+        height: 30%;
+        transform-origin: center 75%;
+        transform: translate(-50%, -75%);
+    }
+
+    .needle#hours.moving {
+        transition: transform 150ms ease-out;
+    }
+
+    .needle#hours:after {
+        content: '';
+        background-color: #1f1f1f;
+        width: 4vw;
+        height: 4vw;
+        max-width: 4vh;
+        max-height: 4vh;
+        display: block;
+        position: absolute;
+        top: 75%;
+        left: 50%;
+        box-sizing: border-box;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .needle#minutes {
+        background-color: #1f1f1f;
+        width: 2%;
+        height: 45%;
+        transform-origin: center 75%;
+        transform: translate(-50%, -75%);
+    }
+
+    .needle#minutes.moving {
+        transition: transform 150ms ease-out;
+    }
+
+    .needle#minutes:after {
+        content: '';
+        background-color: #1f1f1f;
+        width: 4vw;
+        height: 4vw;
+        max-width: 4vh;
+        max-height: 4vh;
+        display: block;
+        position: absolute;
+        top: 75%;
+        left: 50%;
+        box-sizing: border-box;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .needle#seconds {
+        background-color: #cb2f2f;
+        width: 1%;
+        height: 50%;
+        transform-origin: center 75%;
+        transform: translate(-50%, -75%);
+    }
+
+    .needle#seconds.moving {
+        transition: transform 150ms ease-out;
+    }
+
+    .needle#seconds:after {
+        content: '';
+        background-color: #cb2f2f;
+        width: 2.5vw;
+        height: 2.5vw;
+        max-width: 2.5vh;
+        max-height: 2.5vh;
+        display: block;
+        position: absolute;
+        top: 75%;
+        left: 50%;
+        box-sizing: border-box;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .clock_logo {
+        width: 10vw;
+        height: 10vw;
+        max-width: 10vh;
+        max-height: 10vh;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        box-sizing: border-box;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+
+    .clock_logo {
+        width: 10vw;
+        height: 10vw;
+        max-width: 10vh;
+        max-height: 10vh;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        box-sizing: border-box;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        background-image: var(--clock-logo);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+
+    @media (min-width: 100vh) {
+        .clock {
+            border: solid 2.8vh var(--color-primary);
+            box-shadow: 0 1.4vh 2.8vh var(--color2);
+        }
+    }
+</style>
+
+    
+        
+
+        <div class="nexmoe-pd-item">
+    <div class="qweather">
+        <div id="he-plugin-standard">
+            <iframe allowtransparency="true" frameborder="0" width="304" height="96" scrolling="no"
+                src="//tianqi.2345.com/plugin/widget/index.htm?s=2&z=1&t=0&v=0&d=2&bd=0&k=000000&f=ff8040&ltf=009944&htf=cc0000&q=1&e=1&a=1&c=54511&w=300&h=96&align=center"></iframe>
+        </div>
+        <div class="qweather-logo">
+
+        </div>
+    </div>
+</div>
+
+<style>
+    .qweather {
+        position: relative;
+        padding-right: 5px;
+    }
+
+    .qweather #he-plugin-standard {
+        border: 2px solid var(--color-primary);
+        box-shadow: 0 1px 0 0 var(--color-primary), 0 1px 2px 0 var(--color-primary);
+        border-radius: 8px;
+        width: 300px;
+        overflow: hidden;
+    }
+
+    .qweather-logo {
+        position: absolute;
+        right: 0;
+        top: -15px;
+        width: 40px;
+        height: 40px;
+        background-image: var(--qweather-logo);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+</style>
+
+    
+</div>
+<style>
+    .nexmoe-pd {
+        position: fixed;
+        left: auto;
+        top: 40px;
+        right: 0;
+    }
+    .nexmoe-pd-item{
+       display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+    #nexmoe-pendant .mdui-drawer{
+        width: 305px;
+    }
+    @media screen and (max-width: 1600px) {
+        #nexmoe-pendant {
+            display: none
+        }
+    }
+</style>
+</div><div id="nexmoe-chatbot">
+
+<!-- AI Chatbot Window -->
+<div id="ai-chatbot-window" class="ai-chatbot-window">
+  <div class="ai-chatbot-header">
+    <div class="ai-chatbot-title">糖糖的AI分身(BETA)</div>
+    <button id="ai-chatbot-close" class="ai-chatbot-close">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+  </div>
+  <div class="ai-chatbot-content" id="ai-chatbot-content">
+    <!-- Loading Animation -->
+    <div id="ai-chatbot-loading" class="ai-chatbot-loading">
+      <div class="ai-chatbot-loading-spinner"></div>
+      <div class="ai-chatbot-loading-text">如果加载时间过长，可尝试打开系统代理</div>
+    </div>
+    <!-- iframe will be dynamically loaded here when chatbot is opened -->
+  </div>
+</div>
+
+<script>
+  // Get elements
+  const chatbotButton = document.getElementById('ai-chatbot-button');
+  const chatbotWindow = document.getElementById('ai-chatbot-window');
+  const chatbotClose = document.getElementById('ai-chatbot-close');
+  const chatbotContent = document.getElementById('ai-chatbot-content');
+  const chatbotLoading = document.getElementById('ai-chatbot-loading');
+  let iframeLoaded = false;
+  let isProcessing = false;
+
+  // Toggle chatbot window
+  function toggleChatbot() {
+    if (isProcessing) return;
+    isProcessing = true;
+
+    const isOpening = !chatbotWindow.classList.contains('ai-chatbot-window-open');
+    chatbotWindow.classList.toggle('ai-chatbot-window-open');
+    
+    // Handle background scrolling
+    if (isOpening) {
+      // Disable background scrolling when opening chatbot
+      document.body.style.overflow = 'hidden';
+      document.body.style.touchAction = 'none';
+    } else {
+      // Enable background scrolling when closing chatbot
+      document.body.style.overflow = '';
+      document.body.style.touchAction = '';
+    }
+    
+    // Load iframe only when opening the chatbot for the first time
+    if (isOpening && !iframeLoaded) {
+      // Wait for the window to be fully visible before loading iframe
+      setTimeout(() => {
+        const iframe = document.createElement('iframe');
+        iframe.src = 'https://www.tangyuxian.com/weifu.html';
+        iframe.style.cssText = 'width: 100%; height: 100%;overflow: hidden;';
+        iframe.frameBorder = '0';
+        iframe.allow = 'microphone';
+        
+        // Set timeout to hide loading animation after 5 seconds
+        const loadingTimeout = setTimeout(() => {
+          if (chatbotLoading) {
+            chatbotLoading.style.display = 'none';
+          }
+        }, 5000);
+        
+        // Hide loading animation when iframe is loaded (if before 5 seconds)
+        iframe.onload = () => {
+          clearTimeout(loadingTimeout);
+          if (chatbotLoading) {
+            chatbotLoading.style.display = 'none';
+          }
+        };
+        
+        chatbotContent.appendChild(iframe);
+        iframeLoaded = true;
+      }, 300); // Wait for CSS transition to complete
+    }
+
+    // Reset processing flag after a short delay
+    setTimeout(() => {
+      isProcessing = false;
+    }, 300);
+  }
+
+  // Add event listeners for both click and touch events
+  if (chatbotButton) {
+    chatbotButton.addEventListener('click', toggleChatbot);
+    chatbotButton.addEventListener('touchstart', (e) => {
+      e.preventDefault();
+      toggleChatbot();
+    }, { passive: false });
+  }
+
+  // Close chatbot window
+  function closeChatbot() {
+    if (chatbotWindow) {
+      chatbotWindow.classList.remove('ai-chatbot-window-open');
+      // Enable background scrolling when closing chatbot
+      document.body.style.overflow = '';
+      document.body.style.touchAction = '';
+    }
+  }
+
+  if (chatbotClose) {
+    chatbotClose.addEventListener('click', closeChatbot);
+    chatbotClose.addEventListener('touchstart', (e) => {
+      e.stopPropagation();
+      closeChatbot();
+    }, { passive: true });
+  }
+
+  // Close chatbot window when clicking outside
+  window.addEventListener('click', (e) => {
+    if (e.target === chatbotWindow) {
+      chatbotWindow.classList.remove('ai-chatbot-window-open');
+      // Enable background scrolling when closing chatbot
+      document.body.style.overflow = '';
+      document.body.style.touchAction = '';
+    }
+  });
+
+  // Prevent scroll propagation from chatbot window to background
+  if (chatbotWindow) {
+    // Touch events for mobile
+    chatbotWindow.addEventListener('touchstart', (e) => {
+      e.stopPropagation();
+    }, { passive: true });
+    
+    chatbotWindow.addEventListener('touchmove', (e) => {
+      e.stopPropagation();
+    }, { passive: true });
+    
+    chatbotWindow.addEventListener('touchend', (e) => {
+      e.stopPropagation();
+    }, { passive: true });
+    
+    // Mouse events for desktop
+    chatbotWindow.addEventListener('wheel', (e) => {
+      e.stopPropagation();
+    }, { passive: true });
+  }
+</script>
+
+<style>
+  /* Chatbot Button */
+  @keyframes ai-pulse {
+    0% {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15), 0 0 0 0 var(--color-primary);
+      transform: scale(1);
+    }
+    50% {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15), 0 0 0 15px var(--color-primary-bg);
+      transform: scale(1.05);
+    }
+    100% {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15), 0 0 0 0 var(--color-primary-bg);
+      transform: scale(1);
+    }
+  }
+
+  @keyframes ai-glow {
+    0% {
+      filter: drop-shadow(0 0 3px var(--color-primary));
+    }
+    50% {
+      filter: drop-shadow(0 0 8px var(--color-primary));
+    }
+    100% {
+      filter: drop-shadow(0 0 3px var(--color-primary));
+    }
+  }
+
+  .ai-chatbot-button {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 6rem;
+    height: 6rem;
+    background-color: var(--color-primary);
+    background-image: var(--chat);
+    background-size: 100% 100%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    z-index: 9998;
+    color: white;
+    font-size: 1.5rem;
+    animation: ai-pulse 2.5s infinite, ai-glow 3s infinite;
+  }
+
+  .ai-chatbot-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Chatbot Window */
+  .ai-chatbot-window {
+    position: fixed;
+    bottom: 10rem;
+    right: 2rem;
+    width: 24rem;
+    height: 45rem;
+    background-color: var(--color-primary);
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+  }
+
+  .ai-chatbot-window-open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  /* Chatbot Header */
+  .ai-chatbot-header {
+    padding: 0.5rem;
+    background-color: var(--color-primary);
+    border-bottom: 1px solid var(--color-primary);
+    border-radius: 12px 12px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .ai-chatbot-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+  }
+
+  .ai-chatbot-close {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    padding: 0.25rem;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+  }
+
+  .ai-chatbot-close:hover {
+   
+  }
+
+  /* Chatbot Content */
+  .ai-chatbot-content {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--color-card);
+  }
+
+  /* Loading Animation */
+  .ai-chatbot-loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-card);
+    z-index: 10;
+  }
+
+  .ai-chatbot-loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: var(--color-text-1);
+    animation: ai-spin 1s linear infinite;
+    margin-bottom: 1rem;
+  }
+
+  @keyframes ai-spin {
+    to { transform: rotate(360deg); }
+  }
+
+  .ai-chatbot-loading-text {
+    color: var(--color-text-1);
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 0 1rem;
+    line-height: 1.5;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .ai-chatbot-button {
+      width: 5rem;
+      height: 5rem;
+      bottom: 10rem;
+      right: 1rem;
+      /* 保持动画效果在移动设备上 */
+      animation: ai-pulse 2.5s infinite, ai-glow 3s infinite;
+    }
+
+    .ai-chatbot-window {
+      width: 100vw;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      border-radius: 0;
+    }
+  }
+</style></div><div id="nexmoe-footer"><!--!--></div><div id="nexmoe-search-space"><div class="search-container"><div class="search-header"><div class="search-input-container"><input class="search-input" type="text" placeholder="搜索" onInput="sinput();"></div><a class="search-close" onclick="sclose();">×</a></div><div class="search-body"></div></div></div><div></div></body></html>
